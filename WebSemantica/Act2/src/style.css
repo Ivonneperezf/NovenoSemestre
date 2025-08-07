@@ -1,0 +1,94 @@
+/* Formato del cuerpo */
+body {
+    font-family: Arial, sans-serif;      /* cambia el tipo de letra */
+    line-height: 1.5;                    /* espacio entre lineas */
+    background-color: #f3e9df;           /* color de fondo */
+    color: #4b3b2b;                      /* color del texto */
+    margin: 20px;                        /* espacio alrededor */
+    max-width: 800px;                    /* ancho maximo de todo */
+    margin-left: auto;                  /* centra horizontal */
+    margin-right: auto;                 /* centra horizontal */
+}
+
+/* Formato para el header */
+header {
+    text-align: center;                  /* todo centrado */
+    margin-bottom: 30px;                 /* espacio abajo */
+}
+
+/* Formato para títulos h1 en el header */
+header h1 {
+    margin-bottom: 5px;                  /* espacio debajo del titulo */
+    font-size: 2.2em;                    /* tamaño del titulo */
+    color: #a0522d;                      /* color del titulo */
+}
+
+/* Estilo para párrafos en el header */
+header p {
+    margin: 3px 0;                       /* espacio vertical */
+    font-size: 1em;                      /* tamaño de letra normal */
+    color: #6e4b3a;                      /* color del texto */
+}
+
+/* Estilo para imagen en el header */
+header img {
+    margin-top: 15px;                    /* espacio arriba */
+    border-radius: 50%;                  /* redondea la imagen */
+    border: 2px solid #a0522d;           /* borde de color */
+}
+
+/* Estilos para cada sección */
+section {
+    background-color: #fff8f0;           /* fondo claro */
+    padding: 15px 20px;                  /* espacio interno */
+    margin-bottom: 20px;                 /* espacio entre secciones */
+    border-radius: 8px;                  /* esquinas redondeadas */
+    box-shadow: 0 0 7px rgba(165, 105, 79, 0.2);  /* sombra ligera */
+}
+
+/* Estilo para subtítulos de sección */
+section h2 {
+    border-bottom: 2px solid #a0522d;    /* linea abajo del titulo */
+    padding-bottom: 5px;                 /* espacio entre texto y linea */
+    margin-bottom: 15px;                 /* espacio abajo del titulo */
+    color: #a0522d;                      /* color del subtitulo */
+    font-size: 1.5em;                    /* tamaño del subtitulo */
+}
+
+/* Estilos para listas no ordenadas */
+ul {
+    list-style-type: disc;               /* usa viñetas normales */
+    padding-left: 20px;                  /* sangria de la lista */
+}
+
+/* Estilo para cada ítem de lista */
+ul li {
+    margin-bottom: 10px;                 /* espacio entre puntos */
+}
+
+/* Si dentro de un ítem hay párrafos */
+ul li p {
+    margin: 5px 0 0 0;                   /* espacio arriba del texto */
+}
+
+/* Estilo para textos en negrita */
+strong {
+    color: #7b4a29;                      /* color mas fuerte */
+}
+
+/* Estilo para textos en cursiva */
+em {
+    color: #a67c52;                      /* color suave */
+}
+
+/* Estilo para imágenes dentro de secciones */
+section img {
+    display: block;                      /* imagen como bloque */
+    margin: 10px auto 0 auto;            /* la centra */
+    width: 120px;                        /* ancho fijo */
+    height: 120px;                       /* alto fijo */
+    object-fit: cover;                   /* recorta bien la imagen */
+    border-radius: 12px;                 /* esquinas redondeadas */
+    border: 2px solid #d4b29d;           /* borde color claro */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* sombra leve */
+}
