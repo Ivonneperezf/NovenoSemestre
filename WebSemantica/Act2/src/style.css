@@ -73,7 +73,7 @@ ul li p {
 
 /* Estilo para textos en negrita */
 strong {
-    color: #7b4a29;                      /* color mas fuerte */
+    color: #7b4a29;                      /* color fuerte */
 }
 
 /* Estilo para textos en cursiva */
@@ -84,11 +84,19 @@ em {
 /* Estilo para imágenes dentro de secciones */
 section img {
     display: block;                      /* imagen como bloque */
-    margin: 10px auto 0 auto;            /* la centra */
-    width: 120px;                        /* ancho fijo */
-    height: 120px;                       /* alto fijo */
-    object-fit: cover;                   /* recorta bien la imagen */
-    border-radius: 12px;                 /* esquinas redondeadas */
-    border: 2px solid #d4b29d;           /* borde color claro */
+    margin: 10px auto 0 auto;            /* centrado */
+    width: 120px;                        /* ancho */
+    height: 120px;                       /* alto */
+    object-fit: cover;                   /* recorte correcto de la imagen */
+    border: 2px solid #d4b29d;           /* borde claro */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* sombra leve */
+}
+
+/* Estilo para el pie de pagina */
+footer {
+    text-align: center;                 /* texto centrado */
+    padding: 20px;                      /* espacio interno */
+    background-color: #fff8f0;          /* fondo igual que secciones */
+    font-size: 14px;                    /* letra pequeña */
+    color: #333;                        /* color del texto */
 }
