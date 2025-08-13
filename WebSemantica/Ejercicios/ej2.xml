@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<alumno>
+    <nombre>Ivonne</nombre>
+    <edad>22 años</edad>
+    <telefono>2482002294</telefono>
+    <matricula>202141158</matricula>
+    <direccion>5ta Privada Emiliano Zapata</direccion>
+    <carrera>ingenieria en ciencias de la computacion<carrera>
+    <horario>
+        <clase>
+            <dia> Lunes</dia>
+            <hora> 9:00 - 10:00</hora>
+        </clase>
+        <clase>
+            <dia> Miercoles</dia>
+            <hora> 9:00 - 11:00</hora>
+        </clase>
+        <clase>
+            <dia> Viernes</dia>
+            <hora> 9:00 - 11:00</hora>
+        </clase>
+    </horario>
+</alumno>

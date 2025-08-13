@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cd="http://www.ivonneinfo/cd#">
+  <rdf:Description rdf:about="http://www.ivonneinfo/cd/info">
+    <cd:name>Ivonne</cd:name>
+    <cd:lastname>Perez Flores</cd:lastname>
+    <cd:country>MX</cd:country>
+    <cd:state>Puebla</cd:state>
+    <cd:age>22</cd:age>
+    <cd:educationLevel>Licenciatura</cd:educationLevel>
+    <cd:birthDate>2 de abril de 2003</cd:birthDate>
+    <cd:favoriteFruit>Sandía</cd:favoriteFruit>
+    <cd:favoriteColor>Rosa</cd:favoriteColor>
+  </rdf:Description>
+</rdf:RDF>

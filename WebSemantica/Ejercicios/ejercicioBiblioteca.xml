@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <!-- Ejemplo de Biblioteca  -->
+ <biblioteca>
+ <!-- libro 1 -->
+   <libro ISBN="	9786075274546">
+        <titulo>Todos los dias son nuestros</titulo> 
+        <autor>
+           <nombre>Catalina Aguilar Mastreta</nombre> 
+           <email>catmas@correo.com</email> 
+           <direccion>Las flores, col. arboles   </direccion> 
+        </autor>
+        <capitulo nombre="Introduccion">
+              XML Concepts 
+           <seccion>
+                <nombre>Introducing XML</nombre> 
+                <contenido>bla bla bla bla...</contenido> 
+           </seccion>
+        </capitulo>
+   </libro>
+ </biblioteca>
