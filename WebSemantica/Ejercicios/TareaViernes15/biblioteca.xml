@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<biblioteca>
+    <!-- libro 1 -->
+    <libro>
+        <titulo>Los siete maridos de Evelyn Hugo</titulo>
+        <autor>
+            <nombre>Taylor Jenkins Reid</nombre>
+            <fechaNac>20-12-1983</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>Una legendaria actriz de Hollywood narra su vida, sus matrimonios 
+                    y secretos ocultos a una joven periodista.</resumen>
+        <categoria>Novela romántica / Ficción histórica</categoria>
+        <isbn>9788419030733</isbn>
+        <paginas>384</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Umbriel Editores</nombre>
+            <direccion>Barcelona, España</direccion>
+        </editorial>
+        <anioedicion>2022</anioedicion>
+    </libro>
+
+    <!-- libro 2 -->
+    <libro>
+        <titulo>Bajo la misma estrella</titulo>
+        <autor>
+            <nombre>John Green</nombre>
+            <fechaNac>24-08-1977</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>Dos adolescentes con cáncer se conocen en un grupo de apoyo y 
+                viven un intenso romance marcado por la enfermedad.</resumen>
+        <categoria>Novela romántica / Juvenil</categoria>
+        <isbn>978-84-15594-30-5</isbn>
+        <paginas>304</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Nube de Tinta</nombre>
+            <direccion>Barcelona, España</direccion>
+        </editorial>
+        <anioedicion>2012</anioedicion>
+    </libro>
+
+    <!-- libro 3 -->
+    <libro>
+        <titulo>Yo antes de ti</titulo>
+        <autor>
+            <nombre>Jojo Moyes</nombre>
+            <fechaNac>04-08-1969</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>Louisa Clark se convierte en cuidadora de Will Traynor, un 
+                joven tetrapléjico, desarrollando un amor transformador.</resumen>
+        <categoria>Novela romántica / Drama</categoria>
+        <isbn>978-84-15750-80-0</isbn>
+        <paginas>496</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Suma de Letras</nombre>
+            <direccion>Madrid, España</direccion>
+        </editorial>
+        <anioedicion>2014</anioedicion>
+    </libro>
+
+    <!-- libro 4 -->
+    <libro>
+        <titulo>Orgullo y prejuicio</titulo>
+        <autor>
+            <nombre>Jane Austen</nombre>
+            <fechaNac>16-12-1775</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>La historia de Elizabeth Bennet y el señor Darcy, marcada por 
+                malentendidos, orgullo y amor.</resumen>
+        <categoria>Novela romántica / Clásico</categoria>
+        <isbn>978-84-376-0494-7</isbn>
+        <paginas>432</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Alianza Editorial</nombre>
+            <direccion>Madrid, España</direccion>
+        </editorial>
+        <anioedicion>1813</anioedicion>
+    </libro>
+
+    <!-- libro 5 -->
+    <libro>
+        <titulo>Un cuento perfecto</titulo>
+        <autor>
+            <nombre>Elísabet Benavent</nombre>
+            <fechaNac>03-07-1984</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>Margot huye de su vida perfecta y conoce a David, con quien 
+                vivirá una historia de amor inesperada.</resumen>
+        <categoria>Novela romántica / Contemporánea</categoria>
+        <isbn>978-84-08-22645-0</isbn>
+        <paginas>640</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Penguin Random House Grupo Editorial</nombre>
+            <direccion>Barcelona, España</direccion>
+        </editorial>
+        <anioedicion>2020</anioedicion>
+    </libro>
+
+    <!-- libro 6 -->
+    <libro>
+        <titulo>Call Me by Your Name</titulo>
+        <autor>
+            <nombre>André Aciman</nombre>
+            <fechaNac>02-01-1951</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>En la Riviera italiana, un joven y un estudiante visitante 
+                viven un romance de verano inolvidable.</resumen>
+        <categoria>Novela romántica / Drama</categoria>
+        <isbn>978-0-374-53155-6</isbn>
+        <paginas>256</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Farrar, Straus and Giroux</nombre>
+            <direccion>Nueva York, EE.UU.</direccion>
+        </editorial>
+        <anioedicion>2007</anioedicion>
+    </libro>
+
+    <!-- libro 7 -->
+    <libro>
+        <titulo>Antes de diciembre</titulo>
+        <autor>
+            <nombre>Joana Marcús</nombre>
+            <fechaNac>31-01-2000</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>Jenna, en su primer año universitario, conoce a Jack, con 
+                quien vivirá un romance con fecha de caducidad.</resumen>
+        <categoria>Novela romántica / Juvenil</categoria>
+        <isbn>978-84-18742-41-0</isbn>
+        <paginas>448</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Crossbooks</nombre>
+            <direccion>Barcelona, España</direccion>
+        </editorial>
+        <anioedicion>2022</anioedicion>
+    </libro>
+
+    <!-- libro 8 -->
+    <libro>
+        <titulo>Posdata: Te amo</titulo>
+        <autor>
+            <nombre>Cecelia Ahern</nombre>
+            <fechaNac>30-09-1981</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>Holly recibe cartas de su difunto esposo que la ayudan a 
+                superar su duelo y seguir adelante.</resumen>
+        <categoria>Novela romántica / Drama</categoria>
+        <isbn>978-84-08-07206-4</isbn>
+        <paginas>384</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Ediciones B</nombre>
+            <direccion>Barcelona, España</direccion>
+        </editorial>
+        <anioedicion>2004</anioedicion>
+    </libro>
+
+    <!-- libro 9 -->
+    <libro>
+        <titulo>La química del amor</titulo>
+        <autor>
+            <nombre>Ali Hazelwood</nombre>
+            <fechaNac>1989</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>Bee Königswasser enfrenta a su rival profesional Levi Ward
+                mientras surge una inesperada conexión romántica.</resumen>
+        <categoria>Novela romántica / Comedia</categoria>
+        <isbn>978-84-18845-50-0</isbn>
+        <paginas>384</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Contraluz</nombre>
+            <direccion>Barcelona, España</direccion>
+        </editorial>
+        <anioedicion>2023</anioedicion>
+    </libro>
+
+    <!-- libro 10 -->
+    <libro>
+        <titulo>La hipótesis del amor</titulo>
+        <autor>
+            <nombre>Ali Hazelwood</nombre>
+            <fechaNac>1989</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>Olive Smith finge una relación con un profesor para probar un 
+                punto, pero termina involucrando sentimientos reales.</resumen>
+        <categoria>Novela romántica / Comedia</categoria>
+        <isbn>978-84-18483-96-7</isbn>
+        <paginas>384</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Contraluz</nombre>
+            <direccion>Barcelona, España</direccion>
+        </editorial>
+        <anioedicion>2021</anioedicion>
+    </libro>
+
+    <!-- libro 11 -->
+    <libro>
+        <titulo>La canción de Aquiles</titulo>
+        <autor>
+            <nombre>Madeline Miller</nombre>
+            <fechaNac>24-07-1978</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>Relato del romance y destino trágico entre Aquiles y 
+                Patroclo en el contexto de la Guerra de Troya.</resumen>
+        <categoria>Novela romántica / Mitología</categoria>
+        <isbn>978-84-18239-14-4</isbn>
+        <paginas>416</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Alianza de Novelas</nombre>
+            <direccion>Madrid, España</direccion>
+        </editorial>
+        <anioedicion>2011</anioedicion>
+    </libro>
+
+    <!-- libro 12 -->
+    <libro>
+        <titulo>El cuaderno de Noah</titulo>
+        <autor>
+            <nombre>Nicholas Sparks</nombre>
+            <fechaNac>31-12-1965</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>La historia de amor entre Noah y Allie, marcada por la pasión, 
+                el tiempo y la memoria.</resumen>
+        <categoria>Novela romántica / Drama</categoria>
+        <isbn>978-84-08-01538-2</isbn>
+        <paginas>224</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Roca Editorial</nombre>
+            <direccion>Barcelona, España</direccion>
+        </editorial>
+        <anioedicion>1996</anioedicion>
+    </libro>
+
+    <!-- libro 13 -->
+    <libro>
+        <titulo>Cumbres borrascosas</titulo>
+        <autor>
+            <nombre>Emily Brontë</nombre>
+            <fechaNac>30-07-1818</fechaNac>
+            <afiliacion>Independiente</afiliacion>
+        </autor>
+        <resumen>Una historia intensa de amor y venganza entre Heathcliff y 
+                Catherine en los páramos de Yorkshire.</resumen>
+        <categoria>Novela romántica / Gótica</categoria>
+        <isbn>978-84-376-0493-0</isbn>
+        <paginas>416</paginas>
+        <edicion>1</edicion>
+        <editorial>
+            <nombre>Alianza Editorial</nombre>
+            <direccion>Madrid, España</direccion>
+        </editorial>
+        <anioedicion>1847</anioedicion>
+    </libro>
+</biblioteca>
