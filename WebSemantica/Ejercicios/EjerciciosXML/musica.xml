@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<playlist>
+    <!-- cancion 1 -->
+    <cancion>
+        <nombre>dime</nombre>
+        <interpretes>
+            <interprete>kevin kaarl</interprete>
+        </interpretes>
+        <compositores>
+            <compositor>Kevin Eduardo Hernandez Carlos</compositor>
+        </compositores>
+        <letristas>
+            <letrista>Kevin Eduardo Hernandez Carlos</letrista>
+        </letristas>
+        <duracion>3:55 min</duracion>
+        <genero>folk</genero>
+        <album>ultrasodade</album>
+        <anioLanzamiento>2025</anioLanzamiento>
+    </cancion>
+
+    <!-- cancion 2 -->
+    <cancion>
+        <nombre>Pelicula</nombre>
+        <interpretes>
+            <interprete>Siddharta</interprete>
+        </interpretes>
+        <compositores>
+            <compositor>Rul Velazquez</compositor>
+        </compositores>
+        <letristas>
+            <letrista>Siddharta</letrista>
+        </letristas>
+        <duracion>3:35 min</duracion>
+        <genero>rock</genero>
+        <album>memoria futuro</album>
+        <anioLanzamiento>2020</anioLanzamiento>
+    </cancion>
+
+    <!-- cancion 3 -->
+    <cancion>
+        <nombre>Si en tu mente estuve</nombre>
+        <interpretes>
+            <interprete>Nsqk</interprete>
+        </interpretes>
+        <compositores>
+            <compositor>Nsqk</compositor>
+        </compositores>
+        <letristas>
+            <letrista>Rodrigo Torres de la Garza</letrista>
+        </letristas>
+        <duracion>3:11 min</duracion>
+        <genero>rock</genero>
+        <album>los alpes</album>
+        <anioLanzamiento>2020</anioLanzamiento>
+    </cancion>
+
+    <!-- cancion 4 -->
+    <cancion>
+        <nombre>Flaco</nombre>
+        <interpretes>
+            <interprete>Mon Laferte</interprete>
+        </interpretes>
+        <compositores>
+            <compositor>Mon Laferte</compositor>
+        </compositores>
+        <letristas>
+            <letrista>Mon Laferte</letrista>
+        </letristas>
+        <duracion>4:16 min</duracion>
+        <genero>rock</genero>
+        <album>la trenza</album>
+        <anioLanzamiento>2018</anioLanzamiento>
+    </cancion>
+
+    <!-- cancion 5 -->
+    <cancion>
+        <nombre>Pelicula</nombre>
+        <interpretes>
+            <interprete>Sabino</interprete>
+        </interpretes>
+        <compositores>
+            <compositor>Pablo Castañeda Amutio</compositor>
+            <compositor>Daniel Salazar Garcia</compositor>
+        </compositores>
+        <letristas>
+            <letrista>Pablo Castañeda Amutio</letrista>
+            <letrista>Daniel Salazar Garcia</letrista>
+        </letristas>
+        <duracion>4:56 min</duracion>
+        <genero>rap alternativo</genero>
+        <album>Pelicula</album>
+        <anioLanzamiento>2018</anioLanzamiento>
+    </cancion>
+
+    <!-- cancion 6 -->
+    <cancion>
+        <nombre>Dopamina</nombre>
+        <interpretes>
+            <interprete>Belinda</interprete>
+        </interpretes>
+        <compositores>
+            <compositor>Belinda</compositor>
+            <compositor>Jorgen Ringqvist</compositor>
+            <compositor>D. Barkman</compositor>
+        </compositores>
+        <letristas>
+            <letrista>Belinda</letrista>
+        </letristas>
+        <duracion>3:16 min</duracion>
+        <genero>pop</genero>
+        <album>Belinda</album>
+        <anioLanzamiento>2009</anioLanzamiento>
+    </cancion>
+
+    <!-- cancion 7 -->
+    <cancion>
+        <nombre>Mi fiesta</nombre>
+        <interpretes>
+            <interprete>Bandalos Chinos</interprete>
+        </interpretes>
+        <compositores>
+            <compositor>Gregorio Degano</compositor>
+            <compositor>Tomas Verduga</compositor>
+        </compositores>
+        <letristas>
+            <letrista>Gregorio Degano</letrista>
+        </letristas>
+        <duracion>3:12 min</duracion>
+        <genero>rock alternativo</genero>
+        <album>ep</album>
+        <anioLanzamiento>2020</anioLanzamiento>
+    </cancion>
+
+    <!-- cancion 8 -->
+    <cancion>
+        <nombre>Tangerine</nombre>
+        <interpretes>
+            <interprete>Damiano David</interprete>
+            <interprete>d4dv</interprete>
+        </interpretes>
+        <compositores>
+            <compositor>Damiano David</compositor>
+            <compositor>Amy Allen</compositor>
+        </compositores>
+        <letristas>
+            <letrista>Damiano David</letrista>
+            <letrista>Amy Allen</letrista>
+        </letristas>
+        <duracion>3:21 min</duracion>
+        <genero>pop</genero>
+        <album>Damiano David</album>
+        <anioLanzamiento>2025</anioLanzamiento>
+    </cancion>
+
+    <!-- cancion 9 -->
+    <cancion>
+        <nombre>Es verdad</nombre>
+        <interpretes>
+            <interprete>Daniel, me estas matando</interprete>
+        </interpretes>
+        <compositores>
+            <compositor>Daniel Zepeda</compositor>
+        </compositores>
+        <letristas>
+            <letrista>Daniel Zepeda</letrista>
+        </letristas>
+        <duracion>2:41 min</duracion>
+        <genero>Bolero</genero>
+        <album>Boleros</album>
+        <anioLanzamiento>2024</anioLanzamiento>
+    </cancion>
+
+    <!-- cancion 10 -->
+    <cancion>
+        <nombre>Kintsugi</nombre>
+        <interpretes>
+            <interprete>Humbe</interprete>
+        </interpretes>
+        <compositores>
+            <compositor>Humberto Rodriguez Terrazas</compositor>
+            <compositor>Nicollas de la Espriella</compositor>
+        </compositores>
+        <letristas>
+            <letrista>Humberto Rodriguez Terrazas</letrista>
+            <letrista>Nicollas de la Espriella</letrista>
+        </letristas>
+        <duracion>3:57 min</duracion>
+        <genero>rock</genero>
+        <album>Kintsugi</album>
+        <anioLanzamiento>2024</anioLanzamiento>
+    </cancion>
+</playlist>
