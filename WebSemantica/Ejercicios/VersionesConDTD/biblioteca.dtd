@@ -1,0 +1,14 @@
+<!ELEMENT biblioteca (libro+)>
+<!ELEMENT libro (autor+, resumen, categoria, paginas, edicion,
+editorial, anioedicion)>
+<!ATTLIST libro titulo CDATA #REQUIRED
+                isbn ID #REQUIRED>
+<!ELEMENT autor (nombre)>
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST autor fechaNac CDATA #IMPLIED
+                afiliacion CDATA #REQUIRED>
+<!ELEMENT resumen (#PCDATA)>
+<!ELEMENT categoria (#PCDATA)>
+<!ELEMENT paginas (#PCDATA)>
+<!ELEMENT edicion (#PCDATA)>
+<!ELEMENT editorial (nombre, direccion*)>
