@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE recetario SYSTEM "recetario.dtd">
+<recetario>
+    <!-- Receta 1 -->
+    <receta nombre="Ensalada César" tipo="ensalada" dificultad="fácil" tiempoPreparacion="15 min" porciones="2">
+        <categoria>Ensalada</categoria>
+        <origen>Internacional</origen>
+        <ingredientes>
+            <ingrediente cantidad="100" unidad="g">Lechuga romana</ingrediente>
+            <ingrediente cantidad="50" unidad="g">Queso parmesano</ingrediente>
+            <ingrediente cantidad="50" unidad="g">Croutons</ingrediente>
+            <ingrediente cantidad="30" unidad="ml">Aderezo César</ingrediente>
+        </ingredientes>
+        <preparacion>
+            <paso numero="1">Lavar y cortar la lechuga.</paso>
+            <paso numero="2">Agregar croutons y queso parmesano.</paso>
+            <paso numero="3">Verter el aderezo y mezclar.</paso>
+        </preparacion>
+    </receta>
+
+    <!-- Receta 2 -->
+    <receta nombre="Spaghetti a la Boloñesa" tipo="pasta" dificultad="media" tiempoPreparacion="45 min" porciones="4">
+        <categoria>Pasta</categoria>
+        <origen>Italia</origen>
+        <ingredientes>
+            <ingrediente cantidad="400" unidad="g">Spaghetti</ingrediente>
+            <ingrediente cantidad="300" unidad="g">Carne molida</ingrediente>
+            <ingrediente cantidad="200" unidad="ml">Salsa de tomate</ingrediente>
+            <ingrediente cantidad="1" unidad="cucharadita">Aceite de oliva</ingrediente>
+        </ingredientes>
+        <preparacion>
+            <paso numero="1">Cocer la pasta según instrucciones.</paso>
+            <paso numero="2">Dorar la carne con aceite y agregar salsa de tomate.</paso>
+            <paso numero="3">Mezclar la pasta con la salsa y servir.</paso>
+        </preparacion>
+    </receta>
+
+    <!-- Receta 3 -->
+    <receta nombre="Tacos de Pollo" tipo="comida rápida" dificultad="fácil" tiempoPreparacion="25 min" porciones="3">
+        <categoria>Mexicana</categoria>
+        <origen>México</origen>
+        <ingredientes>
+            <ingrediente cantidad="300" unidad="g">Pechuga de pollo</ingrediente>
+            <ingrediente cantidad="6" unidad="unidad">Tortillas</ingrediente>
+            <ingrediente cantidad="50" unidad="g">Lechuga</ingrediente>
+            <ingrediente cantidad="50" unidad="g">Queso rallado</ingrediente>
+        </ingredientes>
+        <preparacion>
+            <paso numero="1">Cocinar el pollo y cortarlo en tiras.</paso>
+            <paso numero="2">Calentar las tortillas.</paso>
+            <paso numero="3">Rellenar las tortillas con pollo, lechuga y queso.</paso>
+        </preparacion>
+    </receta>
+
+    <!-- Receta 4 -->
+    <receta nombre="Smoothie de Plátano y Fresa" tipo="bebida" dificultad="fácil" tiempoPreparacion="10 min" porciones="2">
+        <categoria>Bebida</categoria>
+        <origen>Internacional</origen>
+        <ingredientes>
+            <ingrediente cantidad="1" unidad="unidad">Plátano</ingrediente>
+            <ingrediente cantidad="150" unidad="g">Fresas</ingrediente>
+            <ingrediente cantidad="200" unidad="ml">Leche</ingrediente>
+        </ingredientes>
+        <preparacion>
+            <paso numero="1">Lavar y cortar las frutas.</paso>
+            <paso numero="2">Licuar las frutas con la leche hasta obtener mezcla homogénea.</paso>
+            <paso numero="3">Servir frío.</paso>
+        </preparacion>
+    </receta>
+
+    <!-- Receta 5 -->
+    <receta nombre="Omelette de Queso" tipo="desayuno" dificultad="fácil" tiempoPreparacion="10 min" porciones="1">
+        <categoria>Desayuno</categoria>
+        <origen>Internacional</origen>
+        <ingredientes>
+            <ingrediente cantidad="2" unidad="unidad">Huevos</ingrediente>
+            <ingrediente cantidad="50" unidad="g">Queso</ingrediente>
+            <ingrediente cantidad="1" unidad="cucharadita">Aceite</ingrediente>
+        </ingredientes>
+        <preparacion>
+            <paso numero="1">Batir los huevos.</paso>
+            <paso numero="2">Calentar el aceite en sartén y verter los huevos.</paso>
+            <paso numero="3">Agregar el queso y doblar el omelette.</paso>
+        </preparacion>
+    </receta>
+
+    <!-- Receta 6 -->
+    <receta nombre="Sopa de Verduras" tipo="sopa" dificultad="media" tiempoPreparacion="40 min" porciones="4">
+        <categoria>Sopa</categoria>
+        <origen>Internacional</origen>
+        <ingredientes>
+            <ingrediente cantidad="2" unidad="unidad">Zanahorias</ingrediente>
+            <ingrediente cantidad="2" unidad="unidad">Papas</ingrediente>
+            <ingrediente cantidad="1" unidad="unidad">Cebolla</ingrediente>
+            <ingrediente cantidad="1" unidad="litro">Agua</ingrediente>
+        </ingredientes>
+        <preparacion>
+            <paso numero="1">Pelar y cortar las verduras.</paso>
+            <paso numero="2">Hervir agua y añadir verduras.</paso>
+            <paso numero="3">Cocinar 30 minutos y servir caliente.</paso>
+        </preparacion>
+    </receta>
+
+    <!-- Receta 7 -->
+    <receta nombre="Pizza Margarita" tipo="comida rápida" dificultad="media" tiempoPreparacion="50 min" porciones="4">
+        <categoria>Pizza</categoria>
+        <origen>Italia</origen>
+        <ingredientes>
+            <ingrediente cantidad="300" unidad="g">Masa para pizza</ingrediente>
+            <ingrediente cantidad="100" unidad="g">Queso mozzarella</ingrediente>
+            <ingrediente cantidad="50" unidad="g">Salsa de tomate</ingrediente>
+            <ingrediente cantidad="5" unidad="hojas">Albahaca</ingrediente>
+        </ingredientes>
+        <preparacion>
+            <paso numero="1">Extender la masa y cubrir con salsa de tomate.</paso>
+            <paso numero="2">Agregar queso y hojas de albahaca.</paso>
+            <paso numero="3">Hornear 20 minutos a 200°C.</paso>
+        </preparacion>
+    </receta>
+
+    <!-- Receta 8 -->
+    <receta nombre="Brownies de Chocolate" tipo="postre" dificultad="media" tiempoPreparacion="35 min" porciones="8">
+        <categoria>Postre</categoria>
+        <origen>Internacional</origen>
+        <ingredientes>
+            <ingrediente cantidad="200" unidad="g">Chocolate</ingrediente>
+            <ingrediente cantidad="150" unidad="g">Mantequilla</ingrediente>
+            <ingrediente cantidad="150" unidad="g">Azúcar</ingrediente>
+            <ingrediente cantidad="3" unidad="unidad">Huevos</ingrediente>
+            <ingrediente cantidad="100" unidad="g">Harina</ingrediente>
+        </ingredientes>
+        <preparacion>
+            <paso numero="1">Derretir chocolate y mantequilla juntos.</paso>
+            <paso numero="2">Mezclar con azúcar y huevos.</paso>
+            <paso numero="3">Agregar harina y mezclar bien.</paso>
+            <paso numero="4">Hornear 25 minutos a 180°C.</paso>
+        </preparacion>
+    </receta>
+</recetario>
