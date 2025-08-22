@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<!DOCTYPE playlist SYSTEM "musica.dtd">
+<playlist>
+    <!-- cancion 1 -->
+    <cancion nombre="dime" duracion="3:55 min" genero="folk" album="ultrasodade" aniolanzamiento="2025">
+        <interpretes>
+            <interprete>
+                <nombre>Kevin Eduardo</nombre>
+                <alias>Kevin Kaarl</alias>
+            </interprete>
+        </interpretes>
+        <compositores>
+            <compositor>
+                <nombre>Kevin Eduardo Hernandez Carlos</nombre>
+            </compositor>
+        </compositores>
+        <letristas>
+            <letrista>
+                <nombre>Kevin Eduardo Hernandez Carlos</nombre>
+            </letrista>
+        </letristas>
+    </cancion>
+
+    <!-- cancion 2 -->
+    <cancion nombre="Pelicula" duracion="3:35 min" genero="rock" album="memoria futuro" aniolanzamiento="2020">
+        <interpretes>
+            <interprete>
+                <nombre>Siddharta</nombre>
+            </interprete>
+        </interpretes>
+        <compositores>
+            <compositor>
+                <nombre>Rul Velazquez</nombre>
+            </compositor>
+        </compositores>
+        <letristas>
+            <letrista>
+                <nombre>Siddharta</nombre>
+            </letrista>
+        </letristas>
+    </cancion>
+
+    <!-- cancion 3 -->
+    <cancion nombre="Si en tu mente estuve" duracion="3:11 min" genero="rock" album="los alpes" aniolanzamiento="2020">
+        <interpretes>
+            <interprete>
+                <nombre>Nsqk</nombre>
+            </interprete>
+        </interpretes>
+        <compositores>
+            <compositor>
+                <nombre>Nsqk</nombre>
+            </compositor>
+        </compositores>
+        <letristas>
+            <letrista>
+                <nombre>Rodrigo Torres de la Garza</nombre>
+            </letrista>
+        </letristas>
+    </cancion>
+
+    <!-- cancion 4 -->
+    <cancion nombre="Flaco" duracion="4:16 min" genero="rock" album="la trenza" aniolanzamiento="2018">
+        <interpretes>
+            <interprete>
+                <nombre>Mon Laferte</nombre>
+            </interprete>
+        </interpretes>
+        <compositores>
+            <compositor>
+                <nombre>Mon Laferte</nombre>
+            </compositor>
+        </compositores>
+        <letristas>
+            <letrista>
+                <nombre>Mon Laferte</nombre>
+            </letrista>
+        </letristas>
+    </cancion>
+
+    <!-- cancion 5 -->
+    <cancion nombre="Pelicula" duracion="4:56 min" genero="rap alternativo" album="Pelicula" aniolanzamiento="2018">
+        <interpretes>
+            <interprete>
+                <nombre>Sabino</nombre>
+            </interprete>
+        </interpretes>
+        <compositores>
+            <compositor>
+                <nombre>Pablo Castañeda Amutio</nombre>
+            </compositor>
+            <compositor>
+                <nombre>Daniel Salazar Garcia</nombre>
+            </compositor>
+        </compositores>
+        <letristas>
+            <letrista>
+                <nombre>Pablo Castañeda Amutio</nombre>
+            </letrista>
+            <letrista>
+                <nombre>Daniel Salazar Garcia</nombre>
+            </letrista>
+        </letristas>
+    </cancion>
+
+    <!-- cancion 6 -->
+    <cancion nombre="Dopamina" duracion="3:16 min" genero="pop" album="Belinda" aniolanzamiento="2009">
+        <interpretes>
+            <interprete>
+                <nombre>Belinda</nombre>
+            </interprete>
+        </interpretes>
+        <compositores>
+            <compositor>
+                <nombre>Belinda</nombre>
+            </compositor>
+            <compositor>
+                <nombre>Jorgen Ringqvist</nombre>
+            </compositor>
+            <compositor>
+                <nombre>D. Barkman</nombre>
+            </compositor>
+        </compositores>
+        <letristas>
+            <letrista>
+                <nombre>Belinda</nombre>
+            </letrista>
+        </letristas>
+    </cancion>
+
+    <!-- cancion 7 -->
+    <cancion nombre="Mi fiesta" duracion="3:12 min" genero="rock alternativo" album="ep" aniolanzamiento="2020">
+        <interpretes>
+            <interprete>
+                <nombre>Bandalos Chinos</nombre>
+            </interprete>
+        </interpretes>
+        <compositores>
+            <compositor>
+                <nombre>Gregorio Degano</nombre>
+            </compositor>
+            <compositor>
+                <nombre>Tomas Verduga</nombre>
+            </compositor>
+        </compositores>
+        <letristas>
+            <letrista>
+                <nombre>Gregorio Degano</nombre>
+            </letrista>
+        </letristas>
+    </cancion>
+
+    <!-- cancion 8 -->
+    <cancion nombre="Tangerine" duracion="3:21 min" genero="pop" album="Damiano David" aniolanzamiento="2025">
+        <interpretes>
+            <interprete>
+                <nombre>Damiano David</nombre>
+                <alias>d4dv</alias>
+            </interprete>
+        </interpretes>
+        <compositores>
+            <compositor>
+                <nombre>Damiano David</nombre>
+            </compositor>
+            <compositor>
+                <nombre>Amy Allen</nombre>
+            </compositor>
+        </compositores>
+        <letristas>
+            <letrista>
+                <nombre>Damiano David</nombre>
+            </letrista>
+            <letrista>
+                <nombre>Amy Allen</nombre>
+            </letrista>
+        </letristas>
+    </cancion>
+
+    <!-- cancion 9 -->
+    <cancion nombre="Es verdad" duracion="2:41 min" genero="Bolero" album="Boleros" aniolanzamiento="2024">
+        <interpretes>
+            <interprete>
+                <nombre>Daniel, me estas matando</nombre>
+            </interprete>
+        </interpretes>
+        <compositores>
+            <compositor>
+                <nombre>Daniel Zepeda</nombre>
+            </compositor>
+        </compositores>
+        <letristas>
+            <letrista>
+                <nombre>Daniel Zepeda</nombre>
+            </letrista>
+        </letristas>
+    </cancion>
+
+    <!-- cancion 10 -->
+    <cancion nombre="Kintsugi" duracion="3:57 min" genero="rock" album="Kintsugi" aniolanzamiento="2024">
+        <interpretes>
+            <interprete>
+                <nombre>Humbe</nombre>
+            </interprete>
+        </interpretes>
+        <compositores>
+            <compositor>
+                <nombre>Humberto Rodriguez Terrazas</nombre>
+            </compositor>
+            <compositor>
+                <nombre>Nicollas de la Espriella</nombre>
+            </compositor>
+        </compositores>
+        <letristas>
+            <letrista>
+                <nombre>Humberto Rodriguez Terrazas</nombre>
+            </letrista>
+            <letrista>
+                <nombre>Nicollas de la Espriella</nombre>
+            </letrista>
+        </letristas>
+    </cancion>
+</playlist>

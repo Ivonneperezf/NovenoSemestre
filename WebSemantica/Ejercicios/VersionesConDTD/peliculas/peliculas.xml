@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<!DOCTYPE peliculas SYSTEM "peliculas.dtd">
+<peliculas>
+    <!-- pelicula 1 -->
+    <pelicula titulo="Mision imposible: Sentencia final" fechaEstreno="23 de mayo de 2025">
+        <director>Christopher McQuarrie</director>
+        <generos>
+            <genero>Accion</genero>
+            <genero>Espionaje</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Tom Cruise</nombre>
+            </actor>
+            <actor>
+                <nombre>Ving Rhames</nombre>
+            </actor>
+            <actor>
+                <nombre>Simon Pegg</nombre>
+            </actor>
+            <actor>
+                <nombre>Vanessa Kirby</nombre>
+            </actor>
+        </reparto>
+        <resumen>Octava entrega de la saga, con Ethan Hunt enfrentandose a una peligrosa mision final</resumen>
+        <distribuidora>Paramount Pictures</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 2 -->
+    <pelicula titulo="Captain America: Brave New World" fechaEstreno="14 de febrero de 2025">
+        <director>Julius Onah</director>
+        <generos>
+            <genero>Accion</genero>
+            <genero>Aventura</genero>
+            <genero>Ciencia ficcion</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Anthony Mackie</nombre>
+            </actor>
+            <actor>
+                <nombre>Harrison Ford</nombre>
+            </actor>
+        </reparto>
+        <resumen>Se presenta al nuevo Capitán América en el universo cinematografico de Marvel</resumen>
+        <distribuidora>Walt Disney Studios Motion Pictures</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 3 -->
+    <pelicula titulo="Mickey 17" fechaEstreno="7 de marzo de 2025">
+        <director>Bong Joon Ho</director>
+        <generos>
+            <genero>Ciencia ficcion</genero>
+            <genero>Comedia negra</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Robert Pattinson</nombre>
+            </actor>
+            <actor>
+                <nombre>Naomi Ackie</nombre>
+            </actor>
+            <actor>
+                <nombre>Steven Yeun</nombre>
+            </actor>
+        </reparto>
+        <resumen>Un clon desechable en una colonia espacial renace cada vez que muere</resumen>
+        <distribuidora>Warner Bros. Pictures</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 4 -->
+    <pelicula titulo="The Gorge" fechaEstreno="14 de febrero de 2025">
+        <director>Scott Derrickson</director>
+        <generos>
+            <genero>Ciencia ficcion</genero>
+            <genero>Romance</genero>
+            <genero>Accion</genero>
+            <genero>Horror</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Miles Teller</nombre>
+            </actor>
+            <actor>
+                <nombre>Anya Taylor-Joy</nombre>
+            </actor>
+            <actor>
+                <nombre>Sigourney Weaver</nombre>
+            </actor>
+        </reparto>
+        <resumen>Dos francotiradores deben custodiar un cañon sin saber que se oculta dentro</resumen>
+        <distribuidora>Skydance Media</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 5 -->
+    <pelicula titulo="Companion" fechaEstreno="31 de enero de 2025">
+        <director>Drew Hancock</director>
+        <generos>
+            <genero>Ciencia ficcion</genero>
+            <genero>Thriller</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Sophie Thatcher</nombre>
+            </actor>
+            <actor>
+                <nombre>Jack Quaid</nombre>
+            </actor>
+        </reparto>
+        <resumen>Un fin de semana en una cabaña se vuelve caotico tras la revelación de un invitado robot.</resumen>
+        <distribuidora>New Line Cinema</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 6 -->
+    <pelicula titulo="Shiver Me Timbers" fechaEstreno="1 de abril de 2025">
+        <director>Paul Stephen Mann</director>
+        <generos>
+            <genero>Horror</genero>
+            <genero>Comedia splatter</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Murdo Adams</nombre>
+            </actor>
+            <actor>
+                <nombre>Amy Mackie</nombre>
+            </actor>
+        </reparto>
+        <resumen>Una version horrorifica de Popeye en tono grotesco y comico.</resumen>
+        <distribuidora>Independiente</distribuidora>
+        <paisOrigen>Reino Unido</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 7 -->
+    <pelicula titulo="The Astronaut" fechaEstreno="Primavera de 2025">
+        <director>Jess Varley</director>
+        <generos>
+            <genero>Ciencia ficcion</genero>
+            <genero>Thriller</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Kate Mara</nombre>
+            </actor>
+            <actor>
+                <nombre>Laurence Fishburne</nombre>
+            </actor>
+            <actor>
+                <nombre>Gabriel Luna</nombre>
+            </actor>
+        </reparto>
+        <resumen>Una astronauta regresa en circunstancias extrañas y vive sucesos inquietantes durante su cuarentena</resumen>
+        <distribuidora>XYZ Films</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 8 -->
+    <pelicula titulo="The Monkey" fechaEstreno="21 de febrero de 2025">
+        <director>Osgood Perkins</director>
+        <generos>
+            <genero>Terror</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Theo James</nombre>
+            </actor>
+            <actor>
+                <nombre>Tatiana Maslany</nombre>
+            </actor>
+            <actor>
+                <nombre>Elijah Wood</nombre>
+            </actor>
+        </reparto>
+        <resumen>Basada en cuento de Stephen King: un mono de juguete trae muertes horribles.</resumen>
+        <distribuidora>Universal Pictures</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 9 -->
+    <pelicula titulo="Minecraft: The Movie" fechaEstreno="4 de abril de 2025">
+        <director>Jared Hess</director>
+        <generos>
+            <genero>Fantasia</genero>
+            <genero>Familia</genero>
+            <genero>Aventura</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Jack Black</nombre>
+            </actor>
+            <actor>
+                <nombre>Jason Momoa</nombre>
+            </actor>
+        </reparto>
+        <resumen>Adaptacion de accion real del popular videojuego, con tono divertido y aventurero.</resumen>
+        <distribuidora>Warner Bros. Pictures</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 10 -->
+    <pelicula titulo="Thunderbolts" fechaEstreno="2 de mayo de 2025">
+        <director>Jake Schreier</director>
+        <generos>
+            <genero>Superheroes</genero>
+            <genero>Accion</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Florence Pugh</nombre>
+            </actor>
+            <actor>
+                <nombre>Sebastian Stan</nombre>
+            </actor>
+            <actor>
+                <nombre>David Harbour</nombre>
+            </actor>
+        </reparto>
+        <resumen>Equipo de antihéroes dentro del Universo Marvel con dinamicas nuevas.</resumen>
+        <distribuidora>Walt Disney Studios Motion Pictures</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 11 -->
+    <pelicula titulo="Ballerina" fechaEstreno="6 de junio de 2025">
+        <director>Len Wiseman</director>
+        <generos>
+            <genero>Accion</genero>
+            <genero>Thriller</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Ana de Armas</nombre>
+            </actor>
+            <actor>
+                <nombre>Keanu Reeves</nombre>
+            </actor>
+        </reparto>
+        <resumen>Spin-off del universo John Wick centrado en una nueva asesina.</resumen>
+        <distribuidora>Lionsgate</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+
+    <!-- pelicula 12 -->
+    <pelicula titulo="Materialistas" fechaEstreno="2025">
+        <director>Celine Song</director>
+        <generos>
+            <genero>Romance</genero>
+            <genero>Drama</genero>
+        </generos>
+        <reparto>
+            <actor>
+                <nombre>Dakota Johnson</nombre>
+            </actor>
+            <actor>
+                <nombre>Chris Evans</nombre>
+            </actor>
+            <actor>
+                <nombre>Pedro Pascal</nombre>
+            </actor>
+        </reparto>
+        <resumen>Triangulo amoroso que explora estabilidad emocional vs. económica.</resumen>
+        <distribuidora>A24</distribuidora>
+        <paisOrigen>Estados Unidos</paisOrigen>
+    </pelicula>
+</peliculas>
