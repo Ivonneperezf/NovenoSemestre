@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elemento raíz -->
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="libro" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición de libro -->
+    <xs:element name="libro" type="LibroType"/>
+
+    <xs:complexType name="LibroType">
+        <xs:sequence>
+            <xs:element ref="autor" maxOccurs="unbounded"/>
+            <xs:element ref="resumen"/>
+            <xs:element ref="categoria"/>
+            <xs:element ref="paginas"/>
+            <xs:element ref="edicion"/>
+            <xs:element ref="editorial"/>
+            <xs:element ref="anioedicion"/>
+        </xs:sequence>
+        <xs:attribute name="titulo" type="xs:string" use="required"/>
+        <xs:attribute name="isbn" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Definición de autor -->
+    <xs:element name="autor" type="AutorType"/>
+
+    <xs:complexType name="AutorType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="fechaNac" type="xs:string" use="optional"/>
+        <xs:attribute name="afiliacion" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Definición de resumen -->
+    <xs:element name="resumen" type="xs:string"/>
+
+    <!-- Definición de categoria -->
+    <xs:element name="categoria" type="xs:string"/>
+
+    <!-- Definición de paginas -->
+    <xs:element name="paginas" type="xs:positiveInteger"/>
+
+    <!-- Definición de edicion -->
+    <xs:element name="edicion" type="xs:positiveInteger"/>
+
+    <!-- Definición de editorial -->
+    <xs:element name="editorial" type="EditorialType"/>
+
+    <xs:complexType name="EditorialType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="direccion" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definición de año de edición -->
+    <xs:element name="anioedicion" type="xs:gYear"/>
+
+</xs:schema>
