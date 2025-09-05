@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!-- Elemento raíz -->
+    <xs:element name="playlist">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="cancion" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Canción -->
+    <xs:element name="cancion" type="cancionType"/>
+
+    <!-- Tipo base de canción -->
+    <xs:complexType name="cancionBaseType">
+        <xs:sequence>
+            <xs:element ref="interpretes"/>
+            <xs:element ref="compositores"/>
+            <xs:element ref="letristas"/>
+        </xs:sequence>
+        <xs:attribute name="nombre" type="xs:string" use="required"/>
+        <xs:attribute name="duracion" type="xs:string" use="required"/>
+        <xs:attribute name="genero" type="xs:string" use="required"/>
+        <xs:attribute name="album" type="xs:string" use="required"/>
+        <xs:attribute name="aniolanzamiento" type="xs:gYear" use="required"/>
+    </xs:complexType>
+
+    <!-- Canción con extensión (herencia) -->
+    <xs:complexType name="cancionType">
+        <xs:complexContent>
+            <xs:extension base="cancionBaseType">
+                <xs:attribute name="idioma" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- Interpretes -->
+    <xs:element name="interpretes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="interprete" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Persona base (herencia) -->
+    <xs:complexType name="personaBaseType">
+        <xs:sequence>
+            <xs:element ref="nombre"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Interprete hereda de persona -->
+    <xs:complexType name="interpreteType">
+        <xs:complexContent>
+            <xs:extension base="personaBaseType">
+                <xs:sequence>
+                    <xs:element ref="alias" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="interprete" type="interpreteType"/>
+
+    <!-- Compositores -->
+    <xs:element name="compositores">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="compositor" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="compositorType">
+        <xs:complexContent>
+            <xs:extension base="personaBaseType"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="compositor" type="compositorType"/>
+
+    <!-- Letristas -->
+    <xs:element name="letristas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="letrista" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="letristaType">
+        <xs:complexContent>
+            <xs:extension base="personaBaseType"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="letrista" type="letristaType"/>
+
+    <!-- Elementos simples -->
+    <xs:element name="nombre" type="xs:string"/>
+    <xs:element name="alias" type="xs:string"/>
+
+</xs:schema>
