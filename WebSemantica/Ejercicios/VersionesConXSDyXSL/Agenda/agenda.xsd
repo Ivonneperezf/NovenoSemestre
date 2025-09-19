@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Tipos simples reutilizables -->
+
+    <!-- Tipo para teléfono -->
+    <xs:simpleType name="tipoTelefonoType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="casa"/>
+            <xs:enumeration value="movil"/>
+            <xs:enumeration value="trabajo"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="telefonoSimpleType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+?[0-9]{7,15}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo para correo -->
+    <xs:simpleType name="tipoCorreoType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="personal"/>
+            <xs:enumeration value="trabajo"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="correoSimpleType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipos para dirección -->
+    <xs:simpleType name="calleType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="ciudadType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="estadoType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="codigoPostalType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{4,10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="paisType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <!-- Tipo de grupo -->
+    <xs:simpleType name="grupoType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Amigos"/>
+            <xs:enumeration value="Familia"/>
+            <xs:enumeration value="Trabajo"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Elemento raíz -->
+    <xs:element name="agenda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="contacto" type="contactoType" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición de contacto -->
+    <xs:complexType name="contactoType">
+        <xs:sequence>
+            <xs:element name="telefono" type="telefonoType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="correo" type="correoType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="direccion" type="direccionType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="nombre" type="xs:string" use="required"/>
+        <xs:attribute name="apellido" type="xs:string" use="required"/>
+        <xs:attribute name="fechaNacimiento" type="xs:date" use="optional"/>
+        <xs:attribute name="nickname" type="xs:string" use="optional"/>
+        <xs:attribute name="grupo" type="grupoType" use="optional"/>
+    </xs:complexType>
+
+    <!-- Teléfono -->
+    <xs:complexType name="telefonoType">
+        <xs:simpleContent>
+            <xs:extension base="telefonoSimpleType">
+                <xs:attribute name="tipo" type="tipoTelefonoType" use="optional" default="movil"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- Correo -->
+    <xs:complexType name="correoType">
+        <xs:simpleContent>
+            <xs:extension base="correoSimpleType">
+                <xs:attribute name="tipo" type="tipoCorreoType" use="optional" default="personal"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- Dirección -->
+    <xs:complexType name="direccionType">
+        <xs:sequence>
+            <xs:element name="calle" type="calleType"/>
+            <xs:element name="ciudad" type="ciudadType"/>
+            <xs:element name="estado" type="estadoType"/>
+            <xs:element name="codigoPostal" type="codigoPostalType"/>
+            <xs:element name="pais" type="paisType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

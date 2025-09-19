@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="agenda.xsl"?>
 <agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="agenda.xsd">
 
     <!-- Contacto 1 -->
-    <contacto nombre="Ivonne" apellido="Pérez" fechaNacimiento="1995-08-21" nickname="IvP" grupo="Amigos">
-        <telefono tipo="movil">+52 1 555 123 4567</telefono>
-        <telefono tipo="casa">+52 55 987 6543</telefono>
-        <correo tipo="personal">ivonne.perez@mail.com</correo>
-        <correo tipo="trabajo">ivonne.perez@empresa.com</correo>
+    <contacto nombre="Emilia" apellido="Rosas" fechaNacimiento="1995-08-21" nickname="EmR" grupo="Amigos">
+        <telefono tipo="movil">5551234567</telefono>
+        <telefono tipo="casa">559876543</telefono>
+        <correo tipo="personal">emi.ros@mail.com</correo>
+        <correo tipo="trabajo">emi.ros@empresa.com</correo>
         <direccion>
             <calle>Av. Reforma 123</calle>
             <ciudad>Ciudad de México</ciudad>
@@ -18,8 +19,8 @@
     </contacto>
 
     <!-- Contacto 2 -->
-    <contacto nombre="Carlos" apellido="Ramírez" fechaNacimiento="1990-02-15" grupo="Trabajo">
-        <telefono tipo="trabajo">+52 55 112 2334</telefono>
+    <contacto nombre="Carlos" apellido="Ramírez" fechaNacimiento="2001-02-15" grupo="Trabajo">
+        <telefono tipo="trabajo">551122334</telefono>
         <correo tipo="trabajo">carlos.ramirez@empresa.com</correo>
         <direccion>
             <calle>Calle del Sol 45</calle>
@@ -32,13 +33,13 @@
 
     <!-- Contacto 3 -->
     <contacto nombre="María" apellido="González" nickname="MG" grupo="Familia">
-        <telefono tipo="movil">+52 1 555 987 6543</telefono>
+        <telefono tipo="movil">5559876543</telefono>
         <correo tipo="personal">maria.gonzalez@mail.com</correo>
     </contacto>
 
     <!-- Contacto 4 -->
-    <contacto nombre="Juan" apellido="Hernández" fechaNacimiento="1988-11-30" grupo="Amigos">
-        <telefono tipo="movil">+52 1 555 234 5678</telefono>
+    <contacto nombre="Juan" apellido="Hernández" fechaNacimiento="2008-11-30" grupo="Amigos">
+        <telefono tipo="movil">5552345678</telefono>
         <correo tipo="personal">juan.hernandez@mail.com</correo>
         <direccion>
             <calle>Av. Insurgentes 456</calle>
@@ -51,13 +52,13 @@
 
     <!-- Contacto 5 -->
     <contacto nombre="Ana" apellido="Martínez" grupo="Trabajo">
-        <telefono tipo="trabajo">+52 55 334 4556</telefono>
+        <telefono tipo="trabajo">553344556</telefono>
         <correo tipo="trabajo">ana.martinez@empresa.com</correo>
     </contacto>
 
     <!-- Contacto 6 -->
     <contacto nombre="Luis" apellido="Torres" fechaNacimiento="1992-07-10" grupo="Familia">
-        <telefono tipo="movil">1 555 345 6789</telefono>
+        <telefono tipo="movil">5553456789</telefono>
         <correo tipo="personal">luis.torres@mail.com</correo>
         <direccion>
             <calle>Calle Luna 789</calle>
@@ -70,7 +71,7 @@
 
     <!-- Contacto 7 -->
     <contacto nombre="Sofía" apellido="Vargas" nickname="SofiV" grupo="Amigos">
-        <telefono tipo="movil">1 555 456 7890</telefono>
+        <telefono tipo="movil">5554567890</telefono>
         <correo tipo="personal">sofia.vargas@mail.com</correo>
     </contacto>
 

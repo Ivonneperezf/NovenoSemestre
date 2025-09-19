@@ -1,20 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+  <!-- Tipos simples reutilizables -->
+
+  <!-- Género -->
+  <xs:simpleType name="generoType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Masculino"/>
+      <xs:enumeration value="Femenino"/>
+      <xs:enumeration value="Otro"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Teléfono -->
+  <xs:simpleType name="telefonoType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\+?[0-9]{7,15}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Correo -->
+  <xs:simpleType name="correoType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Dirección -->
+  <xs:simpleType name="calleType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="ciudadType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="paisType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
   <!-- Tipo de Dirección -->
   <xs:complexType name="DireccionType">
     <xs:sequence>
-      <xs:element name="Calle" type="xs:string" minOccurs="0"/>
-      <xs:element name="Ciudad" type="xs:string" minOccurs="0"/>
-      <xs:element name="Pais" type="xs:string" minOccurs="0"/>
+      <xs:element name="Calle" type="calleType" minOccurs="0"/>
+      <xs:element name="Ciudad" type="ciudadType" minOccurs="0"/>
+      <xs:element name="Pais" type="paisType" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 
   <!-- Tipo de Contacto -->
   <xs:complexType name="ContactoType">
     <xs:sequence>
-      <xs:element name="Telefono" type="xs:string" minOccurs="0"/>
-      <xs:element name="Email" type="xs:string" minOccurs="0"/>
+      <xs:element name="Telefono" type="telefonoType" minOccurs="0"/>
+      <xs:element name="Email" type="correoType" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -32,10 +70,10 @@
       <xs:element name="Nota" type="xs:string" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:ID" use="required"/>
-    <xs:attribute name="genero" type="xs:string" use="required"/>
+    <xs:attribute name="genero" type="generoType" use="required"/>
     <xs:attribute name="fechaNacimiento" type="xs:date" use="required"/>
-    <xs:attribute name="correo" type="xs:string" use="optional"/>
-    <xs:attribute name="telefono" type="xs:string" use="optional"/>
+    <xs:attribute name="correo" type="correoType" use="optional"/>
+    <xs:attribute name="telefono" type="telefonoType" use="optional"/>
   </xs:complexType>
 
   <!-- Tipo de Matrimonio -->

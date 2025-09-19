@@ -33,7 +33,6 @@
     <xs:complexType name="recetaType">
         <xs:complexContent>
             <xs:extension base="recetaBaseType">
-                <!-- A futuro se podrían agregar más atributos aquí -->
                 <xs:attribute name="calorias" type="xs:string" use="optional"/>
             </xs:extension>
         </xs:complexContent>
