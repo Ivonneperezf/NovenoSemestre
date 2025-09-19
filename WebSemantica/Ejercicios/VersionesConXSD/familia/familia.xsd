@@ -1,90 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <!-- Elemento raíz -->
-    <xs:element name="familia">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="integrante" type="personaType" maxOccurs="unbounded"/>
-                <xs:element name="relaciones" type="relacionesType" minOccurs="0"/>
-            </xs:sequence>
-            <xs:attribute name="apellido" type="xs:string" use="required"/>
-            <xs:attribute name="origen" type="xs:string" use="optional"/>
-        </xs:complexType>
-    </xs:element>
+  <!-- Tipo de Dirección -->
+  <xs:complexType name="DireccionType">
+    <xs:sequence>
+      <xs:element name="Calle" type="xs:string" minOccurs="0"/>
+      <xs:element name="Ciudad" type="xs:string" minOccurs="0"/>
+      <xs:element name="Pais" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
 
-    <!-- Tipo base para persona -->
-    <xs:complexType name="personaBaseType">
-        <xs:sequence>
-            <xs:element name="nombre" type="xs:string"/>
-            <xs:element name="fechaNacimiento" type="xs:date"/>
-            <xs:element name="fechaDefuncion" type="xs:date" minOccurs="0"/>
-        </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="required"/>
-        <xs:attribute name="genero" use="required">
-            <xs:simpleType>
-                <xs:restriction base="xs:string">
-                    <xs:enumeration value="M"/>
-                    <xs:enumeration value="F"/>
-                </xs:restriction>
-            </xs:simpleType>
-        </xs:attribute>
+  <!-- Tipo de Contacto -->
+  <xs:complexType name="ContactoType">
+    <xs:sequence>
+      <xs:element name="Telefono" type="xs:string" minOccurs="0"/>
+      <xs:element name="Email" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo de Persona -->
+  <xs:complexType name="PersonaType">
+    <xs:sequence>
+      <xs:element name="Nombre" type="xs:string"/>
+      <xs:element name="Apellido" type="xs:string"/>
+      <xs:element name="Padre" type="xs:IDREF" minOccurs="0"/>
+      <xs:element name="Madre" type="xs:IDREF" minOccurs="0"/>
+      <xs:element name="Direccion" type="DireccionType" minOccurs="0"/>
+      <xs:element name="Contacto" type="ContactoType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Ocupacion" type="xs:string" minOccurs="0"/>
+      <xs:element name="Estudios" type="xs:string" minOccurs="0"/>
+      <xs:element name="Nota" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="genero" type="xs:string" use="required"/>
+    <xs:attribute name="fechaNacimiento" type="xs:date" use="required"/>
+    <xs:attribute name="correo" type="xs:string" use="optional"/>
+    <xs:attribute name="telefono" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- Tipo de Matrimonio -->
+  <xs:complexType name="MatrimonioType">
+    <xs:sequence>
+      <xs:element name="Conyuge1" type="xs:IDREF"/>
+      <xs:element name="Conyuge2" type="xs:IDREF"/>
+    </xs:sequence>
+    <xs:attribute name="fechaInicio" type="xs:date" use="optional"/>
+  </xs:complexType>
+
+  <!-- Elemento raíz -->
+  <xs:element name="ArbolGenealogico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Persona" type="PersonaType" maxOccurs="unbounded"/>
+        <xs:element name="Matrimonio" type="MatrimonioType" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
     </xs:complexType>
-
-    <!-- Herencia: Hombre -->
-    <xs:complexType name="hombreType">
-        <xs:complexContent>
-            <xs:extension base="personaBaseType">
-                <xs:sequence>
-                    <xs:element name="profesion" type="xs:string" minOccurs="0"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <!-- Herencia: Mujer -->
-    <xs:complexType name="mujerType">
-        <xs:complexContent>
-            <xs:extension base="personaBaseType">
-                <xs:sequence>
-                    <xs:element name="ocupacion" type="xs:string" minOccurs="0"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <!-- Tipo abstracto: persona (puede ser hombre o mujer) -->
-    <xs:complexType name="personaType">
-        <xs:choice>
-            <xs:element name="hombre" type="hombreType"/>
-            <xs:element name="mujer" type="mujerType"/>
-        </xs:choice>
-    </xs:complexType>
-
-    <!-- Relaciones familiares -->
-    <xs:complexType name="relacionesType">
-        <xs:sequence>
-            <xs:element name="relacion" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:attribute name="tipo" use="required">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:enumeration value="padre"/>
-                                <xs:enumeration value="madre"/>
-                                <xs:enumeration value="hijo"/>
-                                <xs:enumeration value="hija"/>
-                                <xs:enumeration value="conyuge"/>
-                                <xs:enumeration value="hermano"/>
-                                <xs:enumeration value="hermana"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:attribute>
-                    <xs:attribute name="de" type="xs:IDREF" use="required"/>
-                    <xs:attribute name="a" type="xs:IDREF" use="required"/>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
+  </xs:element>
 
 </xs:schema>

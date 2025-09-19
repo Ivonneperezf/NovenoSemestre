@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArbolGenealogico xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="familia.xsd">
+
+  <!-- Abuelos maternos -->
+  <Persona id="AB1" genero="Masculino" fechaNacimiento="1945-05-10" telefono="2481000001" correo="hflores@example.com">
+    <Nombre>Humberto</Nombre>
+    <Apellido>Flores</Apellido>
+    <Direccion>
+      <Calle>Calle Central 101</Calle>
+      <Ciudad>Puebla</Ciudad>
+      <Pais>México</Pais>
+    </Direccion>
+    <Ocupacion>Jubilado</Ocupacion>
+    <Estudios>Licenciatura en Contabilidad</Estudios>
+    <Nota>Padre de María Lucía</Nota>
+  </Persona>
+
+  <Persona id="AB2" genero="Femenino" fechaNacimiento="1947-11-22" telefono="2481000002" correo="gubaldo@example.com">
+    <Nombre>Guillermina</Nombre>
+    <Apellido>Ubaldo</Apellido>
+    <Direccion>
+      <Calle>Calle Central 101</Calle>
+      <Ciudad>Puebla</Ciudad>
+      <Pais>México</Pais>
+    </Direccion>
+    <Ocupacion>Ama de casa</Ocupacion>
+    <Estudios>Secundaria completa</Estudios>
+    <Nota>Madre de María Lucía</Nota>
+  </Persona>
+
+  <!-- Padres -->
+  <Persona id="f1" genero="Femenino" fechaNacimiento="1972-10-29" telefono="2481800705" correo="mariafl@gmail.com">
+    <Nombre>María Lucía</Nombre>
+    <Apellido>Flores Ubaldo</Apellido>
+    <Padre>AB1</Padre>
+    <Madre>AB2</Madre>
+    <Direccion>
+      <Calle>Av. Reforma 123</Calle>
+      <Ciudad>Puebla</Ciudad>
+      <Pais>México</Pais>
+    </Direccion>
+    <Ocupacion>Comerciante</Ocupacion>
+    <Estudios>Licenciatura en Administración</Estudios>
+    <Nota>Madre de cuatro hijos</Nota>
+  </Persona>
+
+  <Persona id="f2" genero="Masculino" fechaNacimiento="1973-07-09" telefono="2481800706" correo="yaelp@example.com">
+    <Nombre>Yael</Nombre>
+    <Apellido>Pérez Mendéz</Apellido>
+    <Direccion>
+      <Calle>Av. Reforma 123</Calle>
+      <Ciudad>Puebla</Ciudad>
+      <Pais>México</Pais>
+    </Direccion>
+    <Ocupacion>Ingeniero</Ocupacion>
+    <Estudios>Ingeniería Electrónica</Estudios>
+    <Nota>Padre de cuatro hijos</Nota>
+  </Persona>
+
+  <!-- Hijos -->
+  <Persona id="f3" genero="Masculino" fechaNacimiento="1998-07-22" telefono="2481814177" correo="urielperez@gmail.com">
+    <Nombre>Uriel</Nombre>
+    <Apellido>Pérez Flores</Apellido>
+    <Padre>f2</Padre>
+    <Madre>f1</Madre>
+    <Direccion>
+      <Calle>Calle Los Pinos 45</Calle>
+      <Ciudad>Puebla</Ciudad>
+      <Pais>México</Pais>
+    </Direccion>
+    <Ocupacion>Maestro en Ciencias de la Electrónica</Ocupacion>
+    <Estudios>Maestría en Electrónica</Estudios>
+    <Nota>Hijo mayor</Nota>
+  </Persona>
+
+  <Persona id="f4" genero="Masculino" fechaNacimiento="2001-09-13" telefono="2481335008" correo="aldolink123@gmail.com">
+    <Nombre>Aldo</Nombre>
+    <Apellido>Pérez Flores</Apellido>
+    <Padre>f2</Padre>
+    <Madre>f1</Madre>
+    <Direccion>
+      <Calle>Calle Los Pinos 45</Calle>
+      <Ciudad>Puebla</Ciudad>
+      <Pais>México</Pais>
+    </Direccion>
+    <Estudios>Estudiante de Ingeniería Química</Estudios>
+    <Nota>Segundo hijo</Nota>
+  </Persona>
+
+  <Persona id="f5" genero="Femenino" fechaNacimiento="2003-04-02" telefono="2482152153" correo="ivonneperezfl23@gmail.com">
+    <Nombre>Ivonne</Nombre>
+    <Apellido>Pérez Flores</Apellido>
+    <Padre>f2</Padre>
+    <Madre>f1</Madre>
+    <Direccion>
+      <Calle>Calle Los Pinos 45</Calle>
+      <Ciudad>Puebla</Ciudad>
+      <Pais>México</Pais>
+    </Direccion>
+    <Estudios>Estudiante de Ingeniería en Ciencias de la Computación</Estudios>
+    <Nota>Gemela de Dayana</Nota>
+  </Persona>
+
+  <Persona id="f6" genero="Femenino" fechaNacimiento="2003-04-02" telefono="2481683383" correo="dayanaprzfls@gmail.com">
+    <Nombre>Dayana</Nombre>
+    <Apellido>Pérez Flores</Apellido>
+    <Padre>f2</Padre>
+    <Madre>f1</Madre>
+    <Direccion>
+      <Calle>Calle Los Pinos 45</Calle>
+      <Ciudad>Puebla</Ciudad>
+      <Pais>México</Pais>
+    </Direccion>
+    <Estudios>Estudiante de Ingeniería en Ciencias de la Computación</Estudios>
+    <Nota>Gemela de Ivonne</Nota>
+  </Persona>
+
+  <!-- Matrimonios -->
+  <Matrimonio fechaInicio="1997-06-15">
+    <Conyuge1>f1</Conyuge1>
+    <Conyuge2>f2</Conyuge2>
+  </Matrimonio>
+
+  <Matrimonio fechaInicio="1962-11-10">
+    <Conyuge1>AB1</Conyuge1>
+    <Conyuge2>AB2</Conyuge2>
+  </Matrimonio>
+
+</ArbolGenealogico>
