@@ -1,7 +1,23 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="recetario.xsl"?>
-<recetario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:noNamespaceSchemaLocation="recetario.xsd">
+<!DOCTYPE recetario [
+    <!ELEMENT recetario (receta+)>
+    <!ELEMENT receta (categoria, origen, ingredientes, preparacion)>
+    <!ATTLIST receta nombre CDATA #REQUIRED
+            tipo CDATA #REQUIRED
+            dificultad CDATA #REQUIRED
+            tiempoPreparacion CDATA #REQUIRED
+            porciones CDATA #REQUIRED>
+    <!ELEMENT categoria (#PCDATA)>
+    <!ELEMENT origen (#PCDATA)>
+    <!ELEMENT ingredientes (ingrediente+)>
+    <!ELEMENT ingrediente (#PCDATA)>
+    <!ATTLIST ingrediente cantidad CDATA #IMPLIED
+            unidad CDATA #IMPLIED>
+    <!ELEMENT preparacion (paso+)>
+    <!ELEMENT paso (#PCDATA)>
+    <!ATTLIST paso numero CDATA #REQUIRED>
+]>
+<recetario>
     <!-- Receta 1 -->
     <receta nombre="Ensalada César" tipo="ensalada" dificultad="fácil" tiempoPreparacion="15 min" porciones="2">
         <categoria>Ensalada</categoria>

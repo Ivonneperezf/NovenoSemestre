@@ -1,7 +1,21 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="peliculas.xsl"?>
-<peliculas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:noNamespaceSchemaLocation="peliculas.xsd">
+<!DOCTYPE peliculas [
+    <!ELEMENT peliculas (pelicula+)>
+    <!ELEMENT pelicula (director, generos, reparto,
+                        resumen, distribuidora, paisOrigen)>
+    <!ATTLIST pelicula titulo CDATA #REQUIRED
+                    fechaEstreno CDATA #REQUIRED>
+    <!ELEMENT director (#PCDATA)>
+    <!ELEMENT generos (genero+)>
+    <!ELEMENT genero (#PCDATA)>
+    <!ELEMENT reparto (actor+)>
+    <!ELEMENT actor (nombre, fechanacimiento*)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT fechanacimiento (#PCDATA)>
+    <!ELEMENT resumen (#PCDATA)>
+    <!ELEMENT distribuidora (#PCDATA)>
+    <!ELEMENT paisOrigen (#PCDATA)>]>
+<peliculas>
     <!-- pelicula 1 -->
     <pelicula titulo="Mision imposible: Sentencia final" fechaEstreno="23 de mayo de 2025">
         <director>Christopher McQuarrie</director>

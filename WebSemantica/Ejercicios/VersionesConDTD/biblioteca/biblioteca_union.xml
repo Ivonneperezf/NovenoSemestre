@@ -1,8 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="biblioteca.xsl"?>
-<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:noNamespaceSchemaLocation="biblioteca.xsd">
-
+<?xml version="1.0"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libro+)>
+    <!ELEMENT libro (autor+, resumen, categoria, paginas, edicion, editorial, anioedicion)>
+    <!ATTLIST libro titulo CDATA #REQUIRED
+                    isbn CDATA #REQUIRED>
+    <!ELEMENT autor (nombre)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ATTLIST autor fechaNac CDATA #IMPLIED
+                    afiliacion CDATA #REQUIRED>
+    <!ELEMENT resumen (#PCDATA)>
+    <!ELEMENT categoria (#PCDATA)>
+    <!ELEMENT paginas (#PCDATA)>
+    <!ELEMENT edicion (#PCDATA)>
+    <!ELEMENT editorial (nombre, direccion*)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT anioedicion (#PCDATA)>
+]>
+<biblioteca>
     <!-- libro 1 -->
     <libro titulo="Los siete maridos de Evelyn Hugo" isbn="9788419030733">
         <autor fechaNac="20-12-1983" afiliacion="Independiente">

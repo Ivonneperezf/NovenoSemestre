@@ -1,7 +1,22 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="musica.xsl"?>
-<playlist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:noNamespaceSchemaLocation="musica.xsd">
+<!DOCTYPE playlist [
+    <!ELEMENT playlist (cancion+)>
+    <!ELEMENT cancion (interpretes+, compositores+, letristas+)>
+    <!ATTLIST cancion nombre CDATA #REQUIRED
+                    duracion CDATA #REQUIRED
+                    genero CDATA #REQUIRED
+                    album CDATA #REQUIRED
+                    aniolanzamiento CDATA #REQUIRED>
+    <!ELEMENT interpretes (interprete+)>
+    <!ELEMENT interprete (nombre, alias*)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT alias (#PCDATA)>
+    <!ELEMENT compositores (compositor+)>
+    <!ELEMENT compositor (nombre)>
+    <!ELEMENT letristas (letrista+)>
+    <!ELEMENT letrista (nombre)>
+]>
+<playlist>
     <!-- cancion 1 -->
     <cancion nombre="dime" duracion="3:55 min" genero="folk" album="ultrasodade" aniolanzamiento="2025">
         <interpretes>
