@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Tipos simples reutilizables -->
+
+  <!-- Género -->
+  <xs:simpleType name="generoType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Masculino"/>
+      <xs:enumeration value="Femenino"/>
+      <xs:enumeration value="Otro"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Teléfono -->
+  <xs:simpleType name="telefonoType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\+?[0-9]{7,15}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Correo -->
+  <xs:simpleType name="correoType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Dirección -->
+  <xs:simpleType name="calleType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="ciudadType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="paisType">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- Tipo de Dirección -->
+  <xs:complexType name="DireccionType">
+    <xs:sequence>
+      <xs:element name="Calle" type="calleType" minOccurs="0"/>
+      <xs:element name="Ciudad" type="ciudadType" minOccurs="0"/>
+      <xs:element name="Pais" type="paisType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo de Contacto -->
+  <xs:complexType name="ContactoType">
+    <xs:sequence>
+      <xs:element name="Telefono" type="telefonoType" minOccurs="0"/>
+      <xs:element name="Email" type="correoType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Tipo de Persona -->
+  <xs:complexType name="PersonaType">
+    <xs:sequence>
+      <xs:element name="Nombre" type="xs:string"/>
+      <xs:element name="Apellido" type="xs:string"/>
+      <xs:element name="Padre" type="xs:IDREF" minOccurs="0"/>
+      <xs:element name="Madre" type="xs:IDREF" minOccurs="0"/>
+      <xs:element name="Direccion" type="DireccionType" minOccurs="0"/>
+      <xs:element name="Contacto" type="ContactoType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Ocupacion" type="xs:string" minOccurs="0"/>
+      <xs:element name="Estudios" type="xs:string" minOccurs="0"/>
+      <xs:element name="Nota" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="genero" type="generoType" use="required"/>
+    <xs:attribute name="fechaNacimiento" type="xs:date" use="required"/>
+    <xs:attribute name="correo" type="correoType" use="optional"/>
+    <xs:attribute name="telefono" type="telefonoType" use="optional"/>
+  </xs:complexType>
+
+  <!-- Tipo de Matrimonio -->
+  <xs:complexType name="MatrimonioType">
+    <xs:sequence>
+      <xs:element name="Conyuge1" type="xs:IDREF"/>
+      <xs:element name="Conyuge2" type="xs:IDREF"/>
+    </xs:sequence>
+    <xs:attribute name="fechaInicio" type="xs:date" use="optional"/>
+  </xs:complexType>
+
+  <!-- Elemento raíz -->
+  <xs:element name="ArbolGenealogico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Persona" type="PersonaType" maxOccurs="unbounded"/>
+        <xs:element name="Matrimonio" type="MatrimonioType" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

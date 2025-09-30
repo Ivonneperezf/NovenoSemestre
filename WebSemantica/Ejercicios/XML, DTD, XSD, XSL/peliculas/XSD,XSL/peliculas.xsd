@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elemento raíz -->
+    <xs:element name="peliculas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="pelicula" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Pelicula -->
+    <xs:element name="pelicula" type="peliculaType"/>
+
+    <xs:complexType name="peliculaBaseType">
+        <xs:sequence>
+            <xs:element ref="director"/>
+            <xs:element ref="generos"/>
+            <xs:element ref="reparto"/>
+            <xs:element ref="resumen"/>
+            <xs:element ref="distribuidora"/>
+            <xs:element ref="paisOrigen"/>
+        </xs:sequence>
+        <xs:attribute name="titulo" type="xs:string" use="required"/>
+        <xs:attribute name="fechaEstreno" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Ejemplo de herencia: peliculaType extiende peliculaBaseType -->
+    <xs:complexType name="peliculaType">
+        <xs:complexContent>
+            <xs:extension base="peliculaBaseType">
+                <!-- Podríamos añadir atributos adicionales en el futuro -->
+                <xs:attribute name="clasificacion" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- Director -->
+    <xs:element name="director" type="xs:string"/>
+
+    <!-- Generos -->
+    <xs:element name="generos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="genero" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="genero" type="xs:string"/>
+
+    <!-- Reparto -->
+    <xs:element name="reparto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="actor" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Actor con herencia -->
+    <xs:complexType name="personaBaseType">
+        <xs:sequence>
+            <xs:element ref="nombre"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="actorType">
+        <xs:complexContent>
+            <xs:extension base="personaBaseType">
+                <xs:sequence>
+                    <xs:element ref="fechanacimiento" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="actor" type="actorType"/>
+
+    <!-- Nombre -->
+    <xs:element name="nombre" type="xs:string"/>
+
+    <!-- Fecha nacimiento -->
+    <xs:element name="fechanacimiento" type="xs:date"/>
+
+    <!-- Resumen -->
+    <xs:element name="resumen" type="xs:string"/>
+
+    <!-- Distribuidora -->
+    <xs:element name="distribuidora" type="xs:string"/>
+
+    <!-- Pais Origen -->
+    <xs:element name="paisOrigen" type="xs:string"/>
+
+</xs:schema>

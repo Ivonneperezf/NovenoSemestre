@@ -1,0 +1,32 @@
+<!ELEMENT ArbolGenealogico (Persona*, Matrimonio*)>
+<!-- Persona -->
+<!ELEMENT Persona (Nombre, Apellido, Padre?, Madre?, Direccion?, Contacto*, Ocupacion?, Estudios?, Nota?)>
+<!ATTLIST Persona
+    id ID #REQUIRED
+    genero (Masculino | Femenino | Otro) #REQUIRED
+    fechaNacimiento CDATA #REQUIRED
+    correo CDATA #IMPLIED
+    telefono CDATA #IMPLIED>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Apellido (#PCDATA)>
+<!ELEMENT Padre (#PCDATA)>
+<!ELEMENT Madre (#PCDATA)>
+<!-- Direccion -->
+<!ELEMENT Direccion (Calle?, Ciudad?, Pais?)>
+<!ELEMENT Calle (#PCDATA)>
+<!ELEMENT Ciudad (#PCDATA)>
+<!ELEMENT Pais (#PCDATA)>
+<!-- Contacto -->
+<!ELEMENT Contacto (Telefono?, Email?)>
+<!ELEMENT Telefono (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!-- Campos opcionales de Persona -->
+<!ELEMENT Ocupacion (#PCDATA)>
+<!ELEMENT Estudios (#PCDATA)>
+<!ELEMENT Nota (#PCDATA)>
+<!-- Matrimonio -->
+<!ELEMENT Matrimonio (Conyuge1, Conyuge2)>
+<!ATTLIST Matrimonio
+    fechaInicio CDATA #IMPLIED>
+<!ELEMENT Conyuge1 (#PCDATA)>
+<!ELEMENT Conyuge2 (#PCDATA)>

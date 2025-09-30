@@ -1,0 +1,15 @@
+<!ELEMENT peliculas (pelicula+)>
+<!ELEMENT pelicula (director, generos, reparto,
+                    resumen, distribuidora, paisOrigen)>
+<!ATTLIST pelicula titulo CDATA #REQUIRED
+                   fechaEstreno CDATA #REQUIRED>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT generos (genero+)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT reparto (actor+)>
+<!ELEMENT actor (nombre, fechanacimiento*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fechanacimiento (#PCDATA)>
+<!ELEMENT resumen (#PCDATA)>
+<!ELEMENT distribuidora (#PCDATA)>
+<!ELEMENT paisOrigen (#PCDATA)>
