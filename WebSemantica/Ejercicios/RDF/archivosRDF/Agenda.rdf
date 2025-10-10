@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:agd="http://example.org/agenda#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <!-- CONTACTO 1 -->
+  <rdf:Description rdf:about="http://example.org/agenda/contacto/emilia-rosas">
+    <agd:nombre>Emilia</agd:nombre>
+    <agd:apellido>Rosas</agd:apellido>
+    <agd:fechaNacimiento rdf:datatype="xsd:date">1995-08-21</agd:fechaNacimiento>
+    <agd:nickname>EmR</agd:nickname>
+    <agd:grupo>Amigos</agd:grupo>
+
+    <agd:telefonos>
+      <rdf:Bag>
+        <rdf:li>movil: 5551234567</rdf:li>
+        <rdf:li>casa: 559876543</rdf:li>
+      </rdf:Bag>
+    </agd:telefonos>
+
+    <agd:correos>
+      <rdf:Bag>
+        <rdf:li>personal: emi.ros@mail.com</rdf:li>
+        <rdf:li>trabajo: emi.ros@empresa.com</rdf:li>
+      </rdf:Bag>
+    </agd:correos>
+
+    <agd:direccion>
+      <rdf:Description>
+        <agd:calle>Av. Reforma 123</agd:calle>
+        <agd:ciudad>Ciudad de México</agd:ciudad>
+        <agd:estado>CDMX</agd:estado>
+        <agd:codigoPostal rdf:datatype="xsd:string">01234</agd:codigoPostal>
+        <agd:pais>México</agd:pais>
+      </rdf:Description>
+    </agd:direccion>
+  </rdf:Description>
+
+  <!-- CONTACTO 2 -->
+  <rdf:Description rdf:about="http://example.org/agenda/contacto/carlos-ramirez">
+    <agd:nombre>Carlos</agd:nombre>
+    <agd:apellido>Ramírez</agd:apellido>
+    <agd:fechaNacimiento rdf:datatype="xsd:date">2001-02-15</agd:fechaNacimiento>
+    <agd:grupo>Trabajo</agd:grupo>
+
+    <agd:telefonos>
+      <rdf:Bag>
+        <rdf:li>trabajo: 551122334</rdf:li>
+      </rdf:Bag>
+    </agd:telefonos>
+
+    <agd:correos>
+      <rdf:Bag>
+        <rdf:li>trabajo: carlos.ramirez@empresa.com</rdf:li>
+      </rdf:Bag>
+    </agd:correos>
+
+    <agd:direccion>
+      <rdf:Description>
+        <agd:calle>Calle del Sol 45</agd:calle>
+        <agd:ciudad>Guadalajara</agd:ciudad>
+        <agd:estado>Jalisco</agd:estado>
+        <agd:codigoPostal rdf:datatype="xsd:string">44100</agd:codigoPostal>
+        <agd:pais>México</agd:pais>
+      </rdf:Description>
+    </agd:direccion>
+  </rdf:Description>
+
+  <!-- CONTACTO 3 -->
+  <rdf:Description rdf:about="http://example.org/agenda/contacto/maria-gonzalez">
+    <agd:nombre>María</agd:nombre>
+    <agd:apellido>González</agd:apellido>
+    <agd:nickname>MG</agd:nickname>
+    <agd:grupo>Familia</agd:grupo>
+
+    <agd:telefonos>
+      <rdf:Bag>
+        <rdf:li>movil: 5559876543</rdf:li>
+      </rdf:Bag>
+    </agd:telefonos>
+
+    <agd:correos>
+      <rdf:Bag>
+        <rdf:li>personal: maria.gonzalez@mail.com</rdf:li>
+      </rdf:Bag>
+    </agd:correos>
+  </rdf:Description>
+
+  <!-- CONTACTO 4 -->
+  <rdf:Description rdf:about="http://example.org/agenda/contacto/juan-hernandez">
+    <agd:nombre>Juan</agd:nombre>
+    <agd:apellido>Hernández</agd:apellido>
+    <agd:fechaNacimiento rdf:datatype="xsd:date">2008-11-30</agd:fechaNacimiento>
+    <agd:grupo>Amigos</agd:grupo>
+
+    <agd:telefonos>
+      <rdf:Bag>
+        <rdf:li>movil: 5552345678</rdf:li>
+      </rdf:Bag>
+    </agd:telefonos>
+
+    <agd:correos>
+      <rdf:Bag>
+        <rdf:li>personal: juan.hernandez@mail.com</rdf:li>
+      </rdf:Bag>
+    </agd:correos>
+
+    <agd:direccion>
+      <rdf:Description>
+        <agd:calle>Av. Insurgentes 456</agd:calle>
+        <agd:ciudad>Ciudad de México</agd:ciudad>
+        <agd:estado>CDMX</agd:estado>
+        <agd:codigoPostal rdf:datatype="xsd:string">01010</agd:codigoPostal>
+        <agd:pais>México</agd:pais>
+      </rdf:Description>
+    </agd:direccion>
+  </rdf:Description>
+
+  <!-- CONTACTO 5 -->
+  <rdf:Description rdf:about="http://example.org/agenda/contacto/ana-martinez">
+    <agd:nombre>Ana</agd:nombre>
+    <agd:apellido>Martínez</agd:apellido>
+    <agd:grupo>Trabajo</agd:grupo>
+
+    <agd:telefonos>
+      <rdf:Bag>
+        <rdf:li>trabajo: 553344556</rdf:li>
+      </rdf:Bag>
+    </agd:telefonos>
+
+    <agd:correos>
+      <rdf:Bag>
+        <rdf:li>trabajo: ana.martinez@empresa.com</rdf:li>
+      </rdf:Bag>
+    </agd:correos>
+  </rdf:Description>
+
+  <!-- CONTACTO 6 -->
+  <rdf:Description rdf:about="http://example.org/agenda/contacto/luis-torres">
+    <agd:nombre>Luis</agd:nombre>
+    <agd:apellido>Torres</agd:apellido>
+    <agd:fechaNacimiento rdf:datatype="xsd:date">1992-07-10</agd:fechaNacimiento>
+    <agd:grupo>Familia</agd:grupo>
+
+    <agd:telefonos>
+      <rdf:Bag>
+        <rdf:li>movil: 5553456789</rdf:li>
+      </rdf:Bag>
+    </agd:telefonos>
+
+    <agd:correos>
+      <rdf:Bag>
+        <rdf:li>personal: luis.torres@mail.com</rdf:li>
+      </rdf:Bag>
+    </agd:correos>
+
+    <agd:direccion>
+      <rdf:Description>
+        <agd:calle>Calle Luna 789</agd:calle>
+        <agd:ciudad>Monterrey</agd:ciudad>
+        <agd:estado>Nuevo León</agd:estado>
+        <agd:codigoPostal rdf:datatype="xsd:string">64000</agd:codigoPostal>
+        <agd:pais>México</agd:pais>
+      </rdf:Description>
+    </agd:direccion>
+  </rdf:Description>
+
+  <!-- CONTACTO 7 -->
+  <rdf:Description rdf:about="http://example.org/agenda/contacto/sofia-vargas">
+    <agd:nombre>Sofía</agd:nombre>
+    <agd:apellido>Vargas</agd:apellido>
+    <agd:nickname>SofiV</agd:nickname>
+    <agd:grupo>Amigos</agd:grupo>
+
+    <agd:telefonos>
+      <rdf:Bag>
+        <rdf:li>movil: 5554567890</rdf:li>
+      </rdf:Bag>
+    </agd:telefonos>
+
+    <agd:correos>
+      <rdf:Bag>
+        <rdf:li>personal: sofia.vargas@mail.com</rdf:li>
+      </rdf:Bag>
+    </agd:correos>
+  </rdf:Description>
+
+</rdf:RDF>

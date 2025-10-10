@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:lib="http://example.org/biblioteca#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <!-- Libro 1 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#LosSieteMaridosDeEvelynHugo">
+        <lib:titulo>Los siete maridos de Evelyn Hugo</lib:titulo>
+        <lib:isbn>9788419030733</lib:isbn>
+        <lib:resumen>Una legendaria actriz de Hollywood narra su vida, sus matrimonios y secretos ocultos a una joven periodista.</lib:resumen>
+        <lib:categoria>Novela romántica / Ficción histórica</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">384</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2022</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#TaylorJenkinsReid"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#UmbrielEditores"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#TaylorJenkinsReid">
+        <lib:nombre>Taylor Jenkins Reid</lib:nombre>
+        <lib:fechaNac>1983-12-20</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#UmbrielEditores">
+        <lib:nombre>Umbriel Editores</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </rdf:Description>
+
+    <!-- Libro 2 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#BajoLaMismaEstrella">
+        <lib:titulo>Bajo la misma estrella</lib:titulo>
+        <lib:isbn>978-84-15594-30-5</lib:isbn>
+        <lib:resumen>Dos adolescentes con cáncer se conocen en un grupo de apoyo y viven un intenso romance marcado por la enfermedad.</lib:resumen>
+        <lib:categoria>Novela romántica / Juvenil</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">304</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2012</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#JohnGreen"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#NubeDeTinta"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#JohnGreen">
+        <lib:nombre>John Green</lib:nombre>
+        <lib:fechaNac>1977-08-24</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#NubeDeTinta">
+        <lib:nombre>Nube de Tinta</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </rdf:Description>
+
+    <!-- Libro 3 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#YoAntesDeTi">
+        <lib:titulo>Yo antes de ti</lib:titulo>
+        <lib:isbn>978-84-15750-80-0</lib:isbn>
+        <lib:resumen>Louisa Clark se convierte en cuidadora de Will Traynor, un joven tetrapléjico, desarrollando un amor transformador.</lib:resumen>
+        <lib:categoria>Novela romántica / Drama</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">496</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2014</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#JojoMoyes"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#SumaDeLetras"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#JojoMoyes">
+        <lib:nombre>Jojo Moyes</lib:nombre>
+        <lib:fechaNac>1969-08-04</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#SumaDeLetras">
+        <lib:nombre>Suma de Letras</lib:nombre>
+        <lib:direccion>Madrid, España</lib:direccion>
+    </rdf:Description>
+
+    <!-- Libro 4 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#OrgulloYPrejuicio">
+        <lib:titulo>Orgullo y prejuicio</lib:titulo>
+        <lib:isbn>978-84-376-0494-7</lib:isbn>
+        <lib:resumen>La historia de Elizabeth Bennet y el señor Darcy, marcada por malentendidos, orgullo y amor.</lib:resumen>
+        <lib:categoria>Novela romántica / Clásico</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">432</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">1813</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#JaneAusten"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#AlianzaEditorial"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#JaneAusten">
+        <lib:nombre>Jane Austen</lib:nombre>
+        <lib:fechaNac>1775-12-16</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#AlianzaEditorial">
+        <lib:nombre>Alianza Editorial</lib:nombre>
+        <lib:direccion>Madrid, España</lib:direccion>
+    </rdf:Description>
+
+    <!-- Libro 5 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#UnCuentoPerfecto">
+        <lib:titulo>Un cuento perfecto</lib:titulo>
+        <lib:isbn>978-84-08-22645-0</lib:isbn>
+        <lib:resumen>Margot huye de su vida perfecta y conoce a David, con quien vivirá una historia de amor inesperada.</lib:resumen>
+        <lib:categoria>Novela romántica / Contemporánea</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">640</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2020</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#ElisabetBenavent"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#PenguinRandomHouse"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#ElisabetBenavent">
+        <lib:nombre>Elísabet Benavent</lib:nombre>
+        <lib:fechaNac>1984-07-03</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#PenguinRandomHouse">
+        <lib:nombre>Penguin Random House Grupo Editorial</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </rdf:Description>
+
+        <!-- Libro 6 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#CallMeByYourName">
+        <lib:titulo>Call Me by Your Name</lib:titulo>
+        <lib:isbn>978-0-374-53155-6</lib:isbn>
+        <lib:resumen>En la Riviera italiana, un joven y un estudiante visitante viven un romance de verano inolvidable.</lib:resumen>
+        <lib:categoria>Novela romántica / Drama</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">256</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2007</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#AndreAciman"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#FarrarStrausGiroux"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#AndreAciman">
+        <lib:nombre>André Aciman</lib:nombre>
+        <lib:fechaNac>1951-01-02</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#FarrarStrausGiroux">
+        <lib:nombre>Farrar, Straus and Giroux</lib:nombre>
+        <lib:direccion>Nueva York, EE.UU.</lib:direccion>
+    </rdf:Description>
+
+    <!-- Libro 7 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#AntesDeDiciembre">
+        <lib:titulo>Antes de diciembre</lib:titulo>
+        <lib:isbn>978-84-18742-41-0</lib:isbn>
+        <lib:resumen>Jenna, en su primer año universitario, conoce a Jack, con quien vivirá un romance con fecha de caducidad.</lib:resumen>
+        <lib:categoria>Novela romántica / Juvenil</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">448</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2022</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#JoanaMarcus"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#Crossbooks"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#JoanaMarcus">
+        <lib:nombre>Joana Marcús</lib:nombre>
+        <lib:fechaNac>2000-01-31</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#Crossbooks">
+        <lib:nombre>Crossbooks</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </rdf:Description>
+
+    <!-- Libro 8 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#PosdataTeAmo">
+        <lib:titulo>Posdata: Te amo</lib:titulo>
+        <lib:isbn>978-84-08-07206-4</lib:isbn>
+        <lib:resumen>Holly recibe cartas de su difunto esposo que la ayudan a superar su duelo y seguir adelante.</lib:resumen>
+        <lib:categoria>Novela romántica / Drama</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">384</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2004</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#CeceliaAhern"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#EdicionesB"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#CeceliaAhern">
+        <lib:nombre>Cecelia Ahern</lib:nombre>
+        <lib:fechaNac>1981-09-30</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#EdicionesB">
+        <lib:nombre>Ediciones B</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </rdf:Description>
+
+    <!-- Libro 9 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#LaQuimicaDelAmor">
+        <lib:titulo>La química del amor</lib:titulo>
+        <lib:isbn>978-84-18845-50-0</lib:isbn>
+        <lib:resumen>Bee Königswasser enfrenta a su rival profesional Levi Ward mientras surge una inesperada conexión romántica.</lib:resumen>
+        <lib:categoria>Novela romántica / Comedia</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">384</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2023</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#AliHazelwood"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#Contraluz"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#AliHazelwood">
+        <lib:nombre>Ali Hazelwood</lib:nombre>
+        <lib:fechaNac>1989</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#Contraluz">
+        <lib:nombre>Contraluz</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </rdf:Description>
+
+        <!-- Libro 10 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#LaHipotesisDelAmor">
+        <lib:titulo>La hipótesis del amor</lib:titulo>
+        <lib:isbn>978-84-18483-96-7</lib:isbn>
+        <lib:resumen>Olive Smith finge una relación con un profesor para probar un punto, pero termina involucrando sentimientos reales.</lib:resumen>
+        <lib:categoria>Novela romántica / Comedia</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">384</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2021</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#AliHazelwood"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#Contraluz"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#AliHazelwood">
+        <lib:nombre>Ali Hazelwood</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:gYear">1989</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#Contraluz">
+        <lib:nombre>Contraluz</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </rdf:Description>
+
+        <!-- Libro 11 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#ElInstituto">
+        <lib:titulo>El Instituto</lib:titulo>
+        <lib:isbn>978-84-666-6679-7</lib:isbn>
+        <lib:resumen>Un grupo de niños con habilidades especiales son secuestrados y llevados a un instituto donde se realizan experimentos secretos.</lib:resumen>
+        <lib:categoria>Terror / Suspenso</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">624</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2019</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#StephenKing"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#PlazaJanés"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#StephenKing">
+        <lib:nombre>Stephen King</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1947-09-21</lib:fechaNac>
+        <lib:afiliacion>Escritor Independiente</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#PlazaJanés">
+        <lib:nombre>Plaza &amp; Janés</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </rdf:Description>
+
+    <!-- Libro 12 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#LosAsesinosDelEmperador">
+        <lib:titulo>Los asesinos del emperador</lib:titulo>
+        <lib:isbn>978-84-666-4745-1</lib:isbn>
+        <lib:resumen>Una épica novela sobre el ascenso de Vespasiano y los inicios del Imperio Romano tras la caída de Nerón.</lib:resumen>
+        <lib:categoria>Histórica</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">1232</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2011</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#SantiagoPosteguillo"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#Planeta"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#SantiagoPosteguillo">
+        <lib:nombre>Santiago Posteguillo</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1967-09-01</lib:fechaNac>
+        <lib:afiliacion>Universitat Jaume I</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#Planeta">
+        <lib:nombre>Editorial Planeta</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </rdf:Description>
+
+        <!-- Libro 13 -->
+    <rdf:Description rdf:about="http://example.org/biblioteca#CumbresBorrascosas">
+        <lib:titulo>Cumbres borrascosas</lib:titulo>
+        <lib:isbn>978-84-376-0493-0</lib:isbn>
+        <lib:resumen>Una historia intensa de amor y venganza entre Heathcliff y Catherine en los páramos de Yorkshire.</lib:resumen>
+        <lib:categoria>Novela romántica / Gótica</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">416</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">1847</lib:anioedicion>
+        <lib:autor rdf:resource="http://example.org/biblioteca#EmilyBronte"/>
+        <lib:editorial rdf:resource="http://example.org/biblioteca#AlianzaEditorial"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#EmilyBronte">
+        <lib:nombre>Emily Brontë</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1818-07-30</lib:fechaNac>
+        <lib:afiliacion>Escritora británica</lib:afiliacion>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/biblioteca#AlianzaEditorial">
+        <lib:nombre>Alianza Editorial</lib:nombre>
+        <lib:direccion>Madrid, España</lib:direccion>
+    </rdf:Description>
+</rdf:RDF>

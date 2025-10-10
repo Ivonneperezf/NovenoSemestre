@@ -1,0 +1,180 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rec="http://example.org/recetas#">
+
+  <!-- Receta 1 -->
+  <rdf:Description rdf:about="http://example.org/recetas#EnsaladaCesar">
+    <rec:nombre>Ensalada César</rec:nombre>
+    <rec:tipo>ensalada</rec:tipo>
+    <rec:dificultad>fácil</rec:dificultad>
+    <rec:tiempoPreparacion>15</rec:tiempoPreparacion>
+    <rec:porciones>2</rec:porciones>
+    <rec:categoria>Ensalada</rec:categoria>
+    <rec:origen>Internacional</rec:origen>
+    <rec:ingredientes rdf:parseType="Collection">
+      <rec:ingrediente>Lechuga romana (100 g)</rec:ingrediente>
+      <rec:ingrediente>Queso parmesano (50 g)</rec:ingrediente>
+      <rec:ingrediente>Croutons (50 g)</rec:ingrediente>
+      <rec:ingrediente>Aderezo César (30 ml)</rec:ingrediente>
+    </rec:ingredientes>
+    <rec:preparacion rdf:parseType="Collection">
+      <rec:paso>Lavar y cortar la lechuga.</rec:paso>
+      <rec:paso>Agregar croutons y queso parmesano.</rec:paso>
+      <rec:paso>Verter el aderezo y mezclar.</rec:paso>
+    </rec:preparacion>
+  </rdf:Description>
+
+  <!-- Receta 2 -->
+  <rdf:Description rdf:about="http://example.org/recetas#SpaghettiBolonesa">
+    <rec:nombre>Spaghetti a la Boloñesa</rec:nombre>
+    <rec:tipo>pasta</rec:tipo>
+    <rec:dificultad>media</rec:dificultad>
+    <rec:tiempoPreparacion>45</rec:tiempoPreparacion>
+    <rec:porciones>4</rec:porciones>
+    <rec:categoria>Pasta</rec:categoria>
+    <rec:origen>Italia</rec:origen>
+    <rec:ingredientes rdf:parseType="Collection">
+      <rec:ingrediente>Spaghetti (400 g)</rec:ingrediente>
+      <rec:ingrediente>Carne molida (300 g)</rec:ingrediente>
+      <rec:ingrediente>Salsa de tomate (200 ml)</rec:ingrediente>
+      <rec:ingrediente>Aceite de oliva (1 cucharadita)</rec:ingrediente>
+    </rec:ingredientes>
+    <rec:preparacion rdf:parseType="Collection">
+      <rec:paso>Cocer la pasta según instrucciones.</rec:paso>
+      <rec:paso>Dorar la carne con aceite y agregar salsa de tomate.</rec:paso>
+      <rec:paso>Mezclar la pasta con la salsa y servir.</rec:paso>
+    </rec:preparacion>
+  </rdf:Description>
+
+  <!-- Receta 3 -->
+  <rdf:Description rdf:about="http://example.org/recetas#TacosPollo">
+    <rec:nombre>Tacos de Pollo</rec:nombre>
+    <rec:tipo>comida rápida</rec:tipo>
+    <rec:dificultad>fácil</rec:dificultad>
+    <rec:tiempoPreparacion>25</rec:tiempoPreparacion>
+    <rec:porciones>3</rec:porciones>
+    <rec:categoria>Mexicana</rec:categoria>
+    <rec:origen>México</rec:origen>
+    <rec:ingredientes rdf:parseType="Collection">
+      <rec:ingrediente>Pechuga de pollo (300 g)</rec:ingrediente>
+      <rec:ingrediente>Tortillas (6 unidad)</rec:ingrediente>
+      <rec:ingrediente>Lechuga (50 g)</rec:ingrediente>
+      <rec:ingrediente>Queso rallado (50 g)</rec:ingrediente>
+    </rec:ingredientes>
+    <rec:preparacion rdf:parseType="Collection">
+      <rec:paso>Cocinar el pollo y cortarlo en tiras.</rec:paso>
+      <rec:paso>Calentar las tortillas.</rec:paso>
+      <rec:paso>Rellenar las tortillas con pollo, lechuga y queso.</rec:paso>
+    </rec:preparacion>
+  </rdf:Description>
+
+  <!-- Receta 4 -->
+  <rdf:Description rdf:about="http://example.org/recetas#SmoothiePlatanoFresa">
+    <rec:nombre>Smoothie de Plátano y Fresa</rec:nombre>
+    <rec:tipo>bebida</rec:tipo>
+    <rec:dificultad>fácil</rec:dificultad>
+    <rec:tiempoPreparacion>10</rec:tiempoPreparacion>
+    <rec:porciones>2</rec:porciones>
+    <rec:categoria>Bebida</rec:categoria>
+    <rec:origen>Internacional</rec:origen>
+    <rec:ingredientes rdf:parseType="Collection">
+      <rec:ingrediente>Plátano (1 unidad)</rec:ingrediente>
+      <rec:ingrediente>Fresas (150 g)</rec:ingrediente>
+      <rec:ingrediente>Leche (200 ml)</rec:ingrediente>
+    </rec:ingredientes>
+    <rec:preparacion rdf:parseType="Collection">
+      <rec:paso>Lavar y cortar las frutas.</rec:paso>
+      <rec:paso>Licuar las frutas con la leche hasta obtener mezcla homogénea.</rec:paso>
+      <rec:paso>Servir frío.</rec:paso>
+    </rec:preparacion>
+  </rdf:Description>
+
+  <!-- Receta 5 -->
+  <rdf:Description rdf:about="http://example.org/recetas#OmeletteQueso">
+    <rec:nombre>Omelette de Queso</rec:nombre>
+    <rec:tipo>desayuno</rec:tipo>
+    <rec:dificultad>fácil</rec:dificultad>
+    <rec:tiempoPreparacion>10</rec:tiempoPreparacion>
+    <rec:porciones>1</rec:porciones>
+    <rec:categoria>Desayuno</rec:categoria>
+    <rec:origen>Internacional</rec:origen>
+    <rec:ingredientes rdf:parseType="Collection">
+      <rec:ingrediente>Huevos (2 unidad)</rec:ingrediente>
+      <rec:ingrediente>Queso (50 g)</rec:ingrediente>
+      <rec:ingrediente>Aceite (1 cucharadita)</rec:ingrediente>
+    </rec:ingredientes>
+    <rec:preparacion rdf:parseType="Collection">
+      <rec:paso>Batir los huevos.</rec:paso>
+      <rec:paso>Calentar el aceite en sartén y verter los huevos.</rec:paso>
+      <rec:paso>Agregar el queso y doblar el omelette.</rec:paso>
+    </rec:preparacion>
+  </rdf:Description>
+
+  <!-- Receta 6 -->
+  <rdf:Description rdf:about="http://example.org/recetas#SopaVerduras">
+    <rec:nombre>Sopa de Verduras</rec:nombre>
+    <rec:tipo>sopa</rec:tipo>
+    <rec:dificultad>media</rec:dificultad>
+    <rec:tiempoPreparacion>40</rec:tiempoPreparacion>
+    <rec:porciones>4</rec:porciones>
+    <rec:categoria>Sopa</rec:categoria>
+    <rec:origen>Internacional</rec:origen>
+    <rec:ingredientes rdf:parseType="Collection">
+      <rec:ingrediente>Zanahorias (2 unidad)</rec:ingrediente>
+      <rec:ingrediente>Papas (2 unidad)</rec:ingrediente>
+      <rec:ingrediente>Cebolla (1 unidad)</rec:ingrediente>
+      <rec:ingrediente>Agua (1 litro)</rec:ingrediente>
+    </rec:ingredientes>
+    <rec:preparacion rdf:parseType="Collection">
+      <rec:paso>Pelar y cortar las verduras.</rec:paso>
+      <rec:paso>Hervir agua y añadir verduras.</rec:paso>
+      <rec:paso>Cocinar 30 minutos y servir caliente.</rec:paso>
+    </rec:preparacion>
+  </rdf:Description>
+
+  <!-- Receta 7 -->
+  <rdf:Description rdf:about="http://example.org/recetas#PizzaMargarita">
+    <rec:nombre>Pizza Margarita</rec:nombre>
+    <rec:tipo>comida rápida</rec:tipo>
+    <rec:dificultad>media</rec:dificultad>
+    <rec:tiempoPreparacion>50</rec:tiempoPreparacion>
+    <rec:porciones>4</rec:porciones>
+    <rec:categoria>Pizza</rec:categoria>
+    <rec:origen>Italia</rec:origen>
+    <rec:ingredientes rdf:parseType="Collection">
+      <rec:ingrediente>Masa para pizza (300 g)</rec:ingrediente>
+      <rec:ingrediente>Queso mozzarella (100 g)</rec:ingrediente>
+      <rec:ingrediente>Salsa de tomate (50 g)</rec:ingrediente>
+      <rec:ingrediente>Albahaca (5 hojas)</rec:ingrediente>
+    </rec:ingredientes>
+    <rec:preparacion rdf:parseType="Collection">
+      <rec:paso>Extender la masa y cubrir con salsa de tomate.</rec:paso>
+      <rec:paso>Agregar queso y hojas de albahaca.</rec:paso>
+      <rec:paso>Hornear 20 minutos a 200°C.</rec:paso>
+    </rec:preparacion>
+  </rdf:Description>
+
+  <!-- Receta 8 -->
+  <rdf:Description rdf:about="http://example.org/recetas#BrowniesChocolate">
+    <rec:nombre>Brownies de Chocolate</rec:nombre>
+    <rec:tipo>postre</rec:tipo>
+    <rec:dificultad>media</rec:dificultad>
+    <rec:tiempoPreparacion>35</rec:tiempoPreparacion>
+    <rec:porciones>8</rec:porciones>
+    <rec:categoria>Postre</rec:categoria>
+    <rec:origen>Internacional</rec:origen>
+    <rec:ingredientes rdf:parseType="Collection">
+      <rec:ingrediente>Chocolate (200 g)</rec:ingrediente>
+      <rec:ingrediente>Mantequilla (150 g)</rec:ingrediente>
+      <rec:ingrediente>Azúcar (150 g)</rec:ingrediente>
+      <rec:ingrediente>Huevos (3 unidad)</rec:ingrediente>
+      <rec:ingrediente>Harina (100 g)</rec:ingrediente>
+    </rec:ingredientes>
+    <rec:preparacion rdf:parseType="Collection">
+      <rec:paso>Derretir chocolate y mantequilla juntos.</rec:paso>
+      <rec:paso>Mezclar con azúcar y huevos.</rec:paso>
+      <rec:paso>Agregar harina y mezclar bien.</rec:paso>
+      <rec:paso>Hornear 25 minutos a 180°C.</rec:paso>
+    </rec:preparacion>
+  </rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:fam="http://example.org/familia#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <!-- Abuelos maternos -->
+    <rdf:Description rdf:about="http://example.org/familia#HumbertoFlores">
+        <fam:nombre>Humberto</fam:nombre>
+        <fam:apellido>Flores</fam:apellido>
+        <fam:genero>Masculino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">1945-05-10</fam:fechaNacimiento>
+        <fam:telefono>2481000001</fam:telefono>
+        <fam:correo>hflores@example.com</fam:correo>
+        <fam:direccion>
+            <rdf:Description>
+                <fam:calle>Calle Central 101</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </rdf:Description>
+        </fam:direccion>
+        <fam:ocupacion>Jubilado</fam:ocupacion>
+        <fam:estudios>Licenciatura en Contabilidad</fam:estudios>
+        <fam:nota>Padre de María Lucía</fam:nota>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/familia#GuillerminaUbaldo">
+        <fam:nombre>Guillermina</fam:nombre>
+        <fam:apellido>Ubaldo</fam:apellido>
+        <fam:genero>Femenino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">1947-11-22</fam:fechaNacimiento>
+        <fam:telefono>2481000002</fam:telefono>
+        <fam:correo>gubaldo@example.com</fam:correo>
+        <fam:direccion>
+            <rdf:Description>
+                <fam:calle>Calle Central 101</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </rdf:Description>
+        </fam:direccion>
+        <fam:ocupacion>Ama de casa</fam:ocupacion>
+        <fam:estudios>Secundaria completa</fam:estudios>
+        <fam:nota>Madre de María Lucía</fam:nota>
+    </rdf:Description>
+
+    <!-- Padres -->
+    <rdf:Description rdf:about="http://example.org/familia#MariaLuciaFloresUbaldo">
+        <fam:nombre>María Lucía</fam:nombre>
+        <fam:apellido>Flores Ubaldo</fam:apellido>
+        <fam:genero>Femenino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">1972-10-29</fam:fechaNacimiento>
+        <fam:telefono>2481800705</fam:telefono>
+        <fam:correo>mariafl@gmail.com</fam:correo>
+        <fam:padre rdf:resource="http://example.org/familia#HumbertoFlores"/>
+        <fam:madre rdf:resource="http://example.org/familia#GuillerminaUbaldo"/>
+        <fam:direccion>
+            <rdf:Description>
+                <fam:calle>Av. Reforma 123</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </rdf:Description>
+        </fam:direccion>
+        <fam:ocupacion>Comerciante</fam:ocupacion>
+        <fam:estudios>Licenciatura en Administración</fam:estudios>
+        <fam:nota>Madre de cuatro hijos</fam:nota>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/familia#YaelPerezMendez">
+        <fam:nombre>Yael</fam:nombre>
+        <fam:apellido>Pérez Mendéz</fam:apellido>
+        <fam:genero>Masculino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">1973-07-09</fam:fechaNacimiento>
+        <fam:telefono>2481800706</fam:telefono>
+        <fam:correo>yaelp@example.com</fam:correo>
+        <fam:direccion>
+            <rdf:Description>
+                <fam:calle>Av. Reforma 123</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </rdf:Description>
+        </fam:direccion>
+        <fam:ocupacion>Ingeniero</fam:ocupacion>
+        <fam:estudios>Ingeniería Electrónica</fam:estudios>
+        <fam:nota>Padre de cuatro hijos</fam:nota>
+    </rdf:Description>
+
+    <!-- Hijos -->
+    <rdf:Description rdf:about="http://example.org/familia#UrielPerezFlores">
+        <fam:nombre>Uriel</fam:nombre>
+        <fam:apellido>Pérez Flores</fam:apellido>
+        <fam:genero>Masculino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">1998-07-22</fam:fechaNacimiento>
+        <fam:telefono>2481814177</fam:telefono>
+        <fam:correo>urielperez@gmail.com</fam:correo>
+        <fam:padre rdf:resource="http://example.org/familia#YaelPerezMendez"/>
+        <fam:madre rdf:resource="http://example.org/familia#MariaLuciaFloresUbaldo"/>
+        <fam:direccion>
+            <rdf:Description>
+                <fam:calle>Calle Los Pinos 45</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </rdf:Description>
+        </fam:direccion>
+        <fam:ocupacion>Maestro en Ciencias de la Electrónica</fam:ocupacion>
+        <fam:estudios>Maestría en Electrónica</fam:estudios>
+        <fam:nota>Hijo mayor</fam:nota>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/familia#AldoPerezFlores">
+        <fam:nombre>Aldo</fam:nombre>
+        <fam:apellido>Pérez Flores</fam:apellido>
+        <fam:genero>Masculino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">2001-09-13</fam:fechaNacimiento>
+        <fam:telefono>2481335008</fam:telefono>
+        <fam:correo>aldolink123@gmail.com</fam:correo>
+        <fam:padre rdf:resource="http://example.org/familia#YaelPerezMendez"/>
+        <fam:madre rdf:resource="http://example.org/familia#MariaLuciaFloresUbaldo"/>
+        <fam:direccion>
+            <rdf:Description>
+                <fam:calle>Calle Los Pinos 45</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </rdf:Description>
+        </fam:direccion>
+        <fam:estudios>Estudiante de Ingeniería Química</fam:estudios>
+        <fam:nota>Segundo hijo</fam:nota>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/familia#IvonnePerezFlores">
+        <fam:nombre>Ivonne</fam:nombre>
+        <fam:apellido>Pérez Flores</fam:apellido>
+        <fam:genero>Femenino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">2003-04-02</fam:fechaNacimiento>
+        <fam:telefono>2482152153</fam:telefono>
+        <fam:correo>ivonneperezfl23@gmail.com</fam:correo>
+        <fam:padre rdf:resource="http://example.org/familia#YaelPerezMendez"/>
+        <fam:madre rdf:resource="http://example.org/familia#MariaLuciaFloresUbaldo"/>
+        <fam:direccion>
+            <rdf:Description>
+                <fam:calle>Calle Los Pinos 45</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </rdf:Description>
+        </fam:direccion>
+        <fam:estudios>Estudiante de Ingeniería en Ciencias de la Computación</fam:estudios>
+        <fam:nota>Gemela de Dayana</fam:nota>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/familia#DayanaPerezFlores">
+        <fam:nombre>Dayana</fam:nombre>
+        <fam:apellido>Pérez Flores</fam:apellido>
+        <fam:genero>Femenino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">2003-04-02</fam:fechaNacimiento>
+        <fam:telefono>2481683383</fam:telefono>
+        <fam:correo>dayanaprzfls@gmail.com</fam:correo>
+        <fam:padre rdf:resource="http://example.org/familia#YaelPerezMendez"/>
+        <fam:madre rdf:resource="http://example.org/familia#MariaLuciaFloresUbaldo"/>
+        <fam:direccion>
+            <rdf:Description>
+                <fam:calle>Calle Los Pinos 45</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </rdf:Description>
+        </fam:direccion>
+        <fam:estudios>Estudiante de Ingeniería en Ciencias de la Computación</fam:estudios>
+        <fam:nota>Gemela de Ivonne</fam:nota>
+    </rdf:Description>
+
+    <!-- Matrimonios -->
+    <rdf:Description rdf:about="http://example.org/familia#Matrimonio1">
+        <fam:fechaInicio rdf:datatype="xsd:date">1997-06-15</fam:fechaInicio>
+        <fam:conyuge1 rdf:resource="http://example.org/familia#MariaLuciaFloresUbaldo"/>
+        <fam:conyuge2 rdf:resource="http://example.org/familia#YaelPerezMendez"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/familia#Matrimonio2">
+        <fam:fechaInicio rdf:datatype="xsd:date">1962-11-10</fam:fechaInicio>
+        <fam:conyuge1 rdf:resource="http://example.org/familia#HumbertoFlores"/>
+        <fam:conyuge2 rdf:resource="http://example.org/familia#GuillerminaUbaldo"/>
+    </rdf:Description>
+
+</rdf:RDF>

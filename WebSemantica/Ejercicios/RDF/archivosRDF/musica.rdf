@@ -1,0 +1,193 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:mus="http://example.org/musica#">
+
+  <!-- Canción 1 -->
+  <rdf:Description rdf:about="http://example.org/musica#dime">
+    <mus:nombre>dime</mus:nombre>
+    <mus:duracion>3:55</mus:duracion>
+    <mus:genero>folk</mus:genero>
+    <mus:album>ultrasodade</mus:album>
+    <mus:anioLanzamiento>2025</mus:anioLanzamiento>
+    <mus:interpretes rdf:parseType="Collection">
+      <mus:interprete rdf:resource="http://example.org/musica#KevinKaarl"/>
+    </mus:interpretes>
+    <mus:compositores rdf:parseType="Collection">
+      <mus:compositor rdf:resource="http://example.org/musica#KevinEduardoHernandezCarlos"/>
+    </mus:compositores>
+    <mus:letristas rdf:parseType="Collection">
+      <mus:letrista rdf:resource="http://example.org/musica#KevinEduardoHernandezCarlos"/>
+    </mus:letristas>
+  </rdf:Description>
+
+  <!-- Canción 2 -->
+  <rdf:Description rdf:about="http://example.org/musica#Pelicula2020">
+    <mus:nombre>Pelicula</mus:nombre>
+    <mus:duracion>3:35</mus:duracion>
+    <mus:genero>rock</mus:genero>
+    <mus:album>memoria futuro</mus:album>
+    <mus:anioLanzamiento>2020</mus:anioLanzamiento>
+    <mus:interpretes rdf:parseType="Collection">
+      <mus:interprete rdf:resource="http://example.org/musica#Siddharta"/>
+    </mus:interpretes>
+    <mus:compositores rdf:parseType="Collection">
+      <mus:compositor rdf:resource="http://example.org/musica#RulVelazquez"/>
+    </mus:compositores>
+    <mus:letristas rdf:parseType="Collection">
+      <mus:letrista rdf:resource="http://example.org/musica#Siddharta"/>
+    </mus:letristas>
+  </rdf:Description>
+
+  <!-- Canción 3 -->
+  <rdf:Description rdf:about="http://example.org/musica#SiEnTuMenteEstuve">
+    <mus:nombre>Si en tu mente estuve</mus:nombre>
+    <mus:duracion>3:11</mus:duracion>
+    <mus:genero>rock</mus:genero>
+    <mus:album>los alpes</mus:album>
+    <mus:anioLanzamiento>2020</mus:anioLanzamiento>
+    <mus:interpretes rdf:parseType="Collection">
+      <mus:interprete rdf:resource="http://example.org/musica#Nsqk"/>
+    </mus:interpretes>
+    <mus:compositores rdf:parseType="Collection">
+      <mus:compositor rdf:resource="http://example.org/musica#Nsqk"/>
+    </mus:compositores>
+    <mus:letristas rdf:parseType="Collection">
+      <mus:letrista rdf:resource="http://example.org/musica#RodrigoTorresDeLaGarza"/>
+    </mus:letristas>
+  </rdf:Description>
+
+  <!-- Canción 4 -->
+  <rdf:Description rdf:about="http://example.org/musica#Flaco">
+    <mus:nombre>Flaco</mus:nombre>
+    <mus:duracion>4:16</mus:duracion>
+    <mus:genero>rock</mus:genero>
+    <mus:album>la trenza</mus:album>
+    <mus:anioLanzamiento>2018</mus:anioLanzamiento>
+    <mus:interpretes rdf:parseType="Collection">
+      <mus:interprete rdf:resource="http://example.org/musica#MonLaferte"/>
+    </mus:interpretes>
+    <mus:compositores rdf:parseType="Collection">
+      <mus:compositor rdf:resource="http://example.org/musica#MonLaferte"/>
+    </mus:compositores>
+    <mus:letristas rdf:parseType="Collection">
+      <mus:letrista rdf:resource="http://example.org/musica#MonLaferte"/>
+    </mus:letristas>
+  </rdf:Description>
+
+  <!-- Canción 5 -->
+  <rdf:Description rdf:about="http://example.org/musica#Pelicula2018">
+    <mus:nombre>Pelicula</mus:nombre>
+    <mus:duracion>4:56</mus:duracion>
+    <mus:genero>rap alternativo</mus:genero>
+    <mus:album>Pelicula</mus:album>
+    <mus:anioLanzamiento>2018</mus:anioLanzamiento>
+    <mus:interpretes rdf:parseType="Collection">
+      <mus:interprete rdf:resource="http://example.org/musica#Sabino"/>
+    </mus:interpretes>
+    <mus:compositores rdf:parseType="Collection">
+      <mus:compositor rdf:resource="http://example.org/musica#PabloCastanedaAmutio"/>
+      <mus:compositor rdf:resource="http://example.org/musica#DanielSalazarGarcia"/>
+    </mus:compositores>
+    <mus:letristas rdf:parseType="Collection">
+      <mus:letrista rdf:resource="http://example.org/musica#PabloCastanedaAmutio"/>
+      <mus:letrista rdf:resource="http://example.org/musica#DanielSalazarGarcia"/>
+    </mus:letristas>
+  </rdf:Description>
+
+  <!-- Canción 6 -->
+  <rdf:Description rdf:about="http://example.org/musica#Dopamina">
+    <mus:nombre>Dopamina</mus:nombre>
+    <mus:duracion>3:16</mus:duracion>
+    <mus:genero>pop</mus:genero>
+    <mus:album>Belinda</mus:album>
+    <mus:anioLanzamiento>2009</mus:anioLanzamiento>
+    <mus:interpretes rdf:parseType="Collection">
+      <mus:interprete rdf:resource="http://example.org/musica#Belinda"/>
+    </mus:interpretes>
+    <mus:compositores rdf:parseType="Collection">
+      <mus:compositor rdf:resource="http://example.org/musica#Belinda"/>
+      <mus:compositor rdf:resource="http://example.org/musica#JorgenRingqvist"/>
+      <mus:compositor rdf:resource="http://example.org/musica#DBarkman"/>
+    </mus:compositores>
+    <mus:letristas rdf:parseType="Collection">
+      <mus:letrista rdf:resource="http://example.org/musica#Belinda"/>
+    </mus:letristas>
+  </rdf:Description>
+
+  <!-- Canción 7 -->
+  <rdf:Description rdf:about="http://example.org/musica#MiFiesta">
+    <mus:nombre>Mi fiesta</mus:nombre>
+    <mus:duracion>3:12</mus:duracion>
+    <mus:genero>rock alternativo</mus:genero>
+    <mus:album>ep</mus:album>
+    <mus:anioLanzamiento>2020</mus:anioLanzamiento>
+    <mus:interpretes rdf:parseType="Collection">
+      <mus:interprete rdf:resource="http://example.org/musica#BandalosChinos"/>
+    </mus:interpretes>
+    <mus:compositores rdf:parseType="Collection">
+      <mus:compositor rdf:resource="http://example.org/musica#GregorioDegano"/>
+      <mus:compositor rdf:resource="http://example.org/musica#TomasVerduga"/>
+    </mus:compositores>
+    <mus:letristas rdf:parseType="Collection">
+      <mus:letrista rdf:resource="http://example.org/musica#GregorioDegano"/>
+    </mus:letristas>
+  </rdf:Description>
+
+  <!-- Canción 8 -->
+  <rdf:Description rdf:about="http://example.org/musica#Tangerine">
+    <mus:nombre>Tangerine</mus:nombre>
+    <mus:duracion>3:21</mus:duracion>
+    <mus:genero>pop</mus:genero>
+    <mus:album>Damiano David</mus:album>
+    <mus:anioLanzamiento>2025</mus:anioLanzamiento>
+    <mus:interpretes rdf:parseType="Collection">
+      <mus:interprete rdf:resource="http://example.org/musica#DamianoDavid"/>
+    </mus:interpretes>
+    <mus:compositores rdf:parseType="Collection">
+      <mus:compositor rdf:resource="http://example.org/musica#DamianoDavid"/>
+      <mus:compositor rdf:resource="http://example.org/musica#AmyAllen"/>
+    </mus:compositores>
+    <mus:letristas rdf:parseType="Collection">
+      <mus:letrista rdf:resource="http://example.org/musica#DamianoDavid"/>
+      <mus:letrista rdf:resource="http://example.org/musica#AmyAllen"/>
+    </mus:letristas>
+  </rdf:Description>
+
+  <!-- Canción 9 -->
+  <rdf:Description rdf:about="http://example.org/musica#EsVerdad">
+    <mus:nombre>Es verdad</mus:nombre>
+    <mus:duracion>2:41</mus:duracion>
+    <mus:genero>Bolero</mus:genero>
+    <mus:album>Boleros</mus:album>
+    <mus:anioLanzamiento>2024</mus:anioLanzamiento>
+    <mus:interpretes rdf:parseType="Collection">
+      <mus:interprete rdf:resource="http://example.org/musica#DanielMeEstasMatando"/>
+    </mus:interpretes>
+    <mus:compositores rdf:parseType="Collection">
+      <mus:compositor rdf:resource="http://example.org/musica#DanielZepeda"/>
+    </mus:compositores>
+    <mus:letristas rdf:parseType="Collection">
+      <mus:letrista rdf:resource="http://example.org/musica#DanielZepeda"/>
+    </mus:letristas>
+  </rdf:Description>
+
+  <!-- Canción 10 -->
+  <rdf:Description rdf:about="http://example.org/musica#Kintsugi">
+    <mus:nombre>Kintsugi</mus:nombre>
+    <mus:duracion>3:57</mus:duracion>
+    <mus:genero>rock</mus:genero>
+    <mus:album>Kintsugi</mus:album>
+    <mus:anioLanzamiento>2024</mus:anioLanzamiento>
+    <mus:interpretes rdf:parseType="Collection">
+      <mus:interprete rdf:resource="http://example.org/musica#Humbe"/>
+    </mus:interpretes>
+    <mus:compositores rdf:parseType="Collection">
+      <mus:compositor rdf:resource="http://example.org/musica#HumbertoRodriguezTerrazas"/>
+      <mus:compositor rdf:resource="http://example.org/musica#NicollasDeLaEspriella"/>
+    </mus:compositores>
+    <mus:letristas rdf:parseType="Collection">
+      <mus:letrista rdf:resource="http://example.org/musica#HumbertoRodriguezTerrazas"/>
+      <mus:letrista rdf:resource="http://example.org/musica#NicollasDeLaEspriella"/>
+    </mus:letristas>
+  </rdf:Description>
+
+</rdf:RDF>

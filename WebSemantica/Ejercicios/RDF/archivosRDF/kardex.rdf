@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:kardex="http://example.org/buap#">
+
+  <!-- Definición de clases -->
+  <rdfs:Class rdf:about="http://example.org/buap#Estudiante"/>
+  <rdfs:Class rdf:about="http://example.org/buap#Materia"/>
+  <rdfs:Class rdf:about="http://example.org/buap#Profesor"/>
+
+  <!-- Alumno -->
+  <rdf:Description rdf:about="http://example.org/estudiante/ivonne-perez">
+    <rdf:type rdf:resource="http://example.org/buap#Estudiante"/>
+    <kardex:nombre>Ivonne Pérez Flores</kardex:nombre>
+    <kardex:matricula>202141158</kardex:matricula>
+    <kardex:carrera>Ingenieria en Ciencias de la Computación</kardex:carrera>
+  </rdf:Description>
+
+  <!-- Materia 1 -->
+  <rdf:Description rdf:about="http://example.org/materia/programacion-concurrente-paralela">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>32432</kardex:nrc>
+    <kardex:nombreMateria>Progra. Concurrente y Paralela</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Otoño 2024</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/meliza-contreras"/>
+  </rdf:Description>
+
+  <!-- Materia 2 -->
+  <rdf:Description rdf:about="http://example.org/materia/programacion-distribuida-aplic">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>57667</kardex:nrc>
+    <kardex:nombreMateria>Programacion Distribuida Aplic</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Primavera 2025</kardex:periodo>
+    <kardex:calificacion>8</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/gustavo-mendoza"/>
+  </rdf:Description>
+
+  <!-- Materia 3 -->
+  <rdf:Description rdf:about="http://example.org/materia/mineria-datos">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>16166</kardex:nrc>
+    <kardex:nombreMateria>Mineria de Datos</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Primavera 2024</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/luis-yael-mendez"/>
+  </rdf:Description>
+
+  <!-- Materia 4 -->
+  <rdf:Description rdf:about="http://example.org/materia/teoria-control">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>49212</kardex:nrc>
+    <kardex:nombreMateria>Teoria de Control</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Primavera 2025</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/lilia-mantilla"/>
+  </rdf:Description>
+
+  <!-- Materia 5 -->
+  <rdf:Description rdf:about="http://example.org/materia/desarrollo-aplicaciones-web">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>16137</kardex:nrc>
+    <kardex:nombreMateria>Desarrollo de Aplicaciones Web</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Otoño 2024</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/juan-carlos-conde"/>
+  </rdf:Description>
+
+  <!-- Materia 6 -->
+  <rdf:Description rdf:about="http://example.org/materia/tec-inteligencia-artificial">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>49238</kardex:nrc>
+    <kardex:nombreMateria>Tec. de Inteligencia Artificial</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Primavera 2025</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/luis-castillo"/>
+  </rdf:Description>
+
+  <!-- Materia 7 -->
+  <rdf:Description rdf:about="http://example.org/materia/redes-inalambricas">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>16244</kardex:nrc>
+    <kardex:nombreMateria>Redes Inalambricas</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Otoño 2024</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/arlem-castillo"/>
+  </rdf:Description>
+
+  <!-- Materia 8 -->
+  <rdf:Description rdf:about="http://example.org/materia/administracion-redes">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>49442</kardex:nrc>
+    <kardex:nombreMateria>Administracion de Redes</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Primavera 2025</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/ana-zenteno"/>
+  </rdf:Description>
+
+  <!-- Materia 9 -->
+  <rdf:Description rdf:about="http://example.org/materia/arquitectura-computadoras">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>18306</kardex:nrc>
+    <kardex:nombreMateria>Arquitectura de Computadoras</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Primavera 2024S</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/lilia-mantilla"/>
+  </rdf:Description>
+
+  <!-- Materia 10 -->
+  <rdf:Description rdf:about="http://example.org/materia/maquinas-aprendizaje">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>60010</kardex:nrc>
+    <kardex:nombreMateria>Maquinas de Aprendizaje</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Primavera 2025</kardex:periodo>
+    <kardex:calificacion>9</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/abraham-sanchez"/>
+  </rdf:Description>
+
+  <!-- Materia 11 -->
+  <rdf:Description rdf:about="http://example.org/materia/desarrollo-aplicaciones-moviles">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>49999</kardex:nrc>
+    <kardex:nombreMateria>Dllo. de Aplicaciones Moviles</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Primavera 2025</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/arlem-castillo"/>
+  </rdf:Description>
+
+  <!-- Profesores -->
+  <rdf:Description rdf:about="http://example.org/profesor/meliza-contreras">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:nombre>Meliza Contreras Gonzalez</kardex:nombre>
+    <kardex:correo>meliza.contreras@correo.buap.mx</kardex:correo>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/profesor/gustavo-mendoza">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:nombre>Gustavo Emilio Mendoza Olguín</kardex:nombre>
+    <kardex:correo>gustavo.mendoza@buap.mx</kardex:correo>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/profesor/luis-yael-mendez">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:nombre>Luis Yael Méndez Sánchez</kardex:nombre>
+    <kardex:correo>luis.mendezsanchez@correo.buap.mx</kardex:correo>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/profesor/lilia-mantilla">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:nombre>Lilia Mantilla Narváez</kardex:nombre>
+    <kardex:correo>lilia.mantilla@buap.mx</kardex:correo>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/profesor/juan-carlos-conde">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:nombre>Juan Carlos Conde Ramírez</kardex:nombre>
+    <kardex:correo>carlos.conder@correo.buap.mx</kardex:correo>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/profesor/luis-castillo">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:nombre>Luis Rene Marcial Castillo</kardex:nombre>
+    <kardex:correo>luis.castillo@buap.mx</kardex:correo>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/profesor/arlem-castillo">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:nombre>Arlem Aleida Castillo Ávila</kardex:nombre>
+    <kardex:correo>	arlem.castillo@correo.buap.mx</kardex:correo>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/profesor/ana-zenteno">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:nombre>Ana Claudia Zenteno Vázquez</kardex:nombre>
+    <kardex:correo>ana.zenteno@buap.mx</kardex:correo>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/profesor/abraham-sanchez">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:nombre>Abraham Sánchez López</kardex:nombre>
+    <kardex:correo>abraham.sanchez@correo.buap.mx</kardex:correo>
+  </rdf:Description>
+
+</rdf:RDF>

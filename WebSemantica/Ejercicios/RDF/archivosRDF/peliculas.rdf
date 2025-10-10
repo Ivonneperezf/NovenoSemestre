@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:pel="http://example.org/peliculas#">
+
+    <!-- Película 1 -->
+    <rdf:Description rdf:about="http://example.org/peliculas#MisionImposibleSentenciaFinal">
+        <pel:titulo>Misión Imposible: Sentencia final</pel:titulo>
+        <pel:fechaEstreno>2025-05-23</pel:fechaEstreno>
+        <pel:director rdf:resource="http://example.org/peliculas#ChristopherMcQuarrie"/>
+        <pel:generos rdf:parseType="Collection">
+            <pel:genero>Acción</pel:genero>
+            <pel:genero>Espionaje</pel:genero>
+        </pel:generos>
+        <pel:reparto rdf:parseType="Collection">
+            <pel:actor rdf:resource="http://example.org/peliculas#TomCruise"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#VingRhames"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#SimonPegg"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#VanessaKirby"/>
+        </pel:reparto>
+        <pel:resumen>Octava entrega de la saga, con Ethan Hunt enfrentándose a una peligrosa misión final.</pel:resumen>
+        <pel:distribuidora>Paramount Pictures</pel:distribuidora>
+        <pel:paisOrigen>Estados Unidos</pel:paisOrigen>
+    </rdf:Description>
+
+    <!-- Película 2 -->
+    <rdf:Description rdf:about="http://example.org/peliculas#CaptainAmericaBraveNewWorld">
+        <pel:titulo>Captain America: Brave New World</pel:titulo>
+        <pel:fechaEstreno>2025-02-14</pel:fechaEstreno>
+        <pel:director rdf:resource="http://example.org/peliculas#JuliusOnah"/>
+        <pel:generos rdf:parseType="Collection">
+            <pel:genero>Acción</pel:genero>
+            <pel:genero>Aventura</pel:genero>
+            <pel:genero>Ciencia ficción</pel:genero>
+        </pel:generos>
+        <pel:reparto rdf:parseType="Collection">
+            <pel:actor rdf:resource="http://example.org/peliculas#AnthonyMackie"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#HarrisonFord"/>
+        </pel:reparto>
+        <pel:resumen>Se presenta al nuevo Capitán América en el universo cinematográfico de Marvel.</pel:resumen>
+        <pel:distribuidora>Walt Disney Studios Motion Pictures</pel:distribuidora>
+        <pel:paisOrigen>Estados Unidos</pel:paisOrigen>
+    </rdf:Description>
+
+    <!-- Película 3 -->
+    <rdf:Description rdf:about="http://example.org/peliculas#Mickey17">
+        <pel:titulo>Mickey 17</pel:titulo>
+        <pel:fechaEstreno>2025-03-07</pel:fechaEstreno>
+        <pel:director rdf:resource="http://example.org/peliculas#BongJoonHo"/>
+        <pel:generos rdf:parseType="Collection">
+            <pel:genero>Ciencia ficción</pel:genero>
+            <pel:genero>Comedia negra</pel:genero>
+        </pel:generos>
+        <pel:reparto rdf:parseType="Collection">
+            <pel:actor rdf:resource="http://example.org/peliculas#RobertPattinson"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#NaomiAckie"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#StevenYeun"/>
+        </pel:reparto>
+        <pel:resumen>Un clon desechable en una colonia espacial renace cada vez que muere.</pel:resumen>
+        <pel:distribuidora>Warner Bros. Pictures</pel:distribuidora>
+        <pel:paisOrigen>Estados Unidos</pel:paisOrigen>
+    </rdf:Description>
+
+    <!-- Película 4 -->
+    <rdf:Description rdf:about="http://example.org/peliculas#TheGorge">
+        <pel:titulo>The Gorge</pel:titulo>
+        <pel:fechaEstreno>2025-02-14</pel:fechaEstreno>
+        <pel:director rdf:resource="http://example.org/peliculas#ScottDerrickson"/>
+        <pel:generos rdf:parseType="Collection">
+            <pel:genero>Ciencia ficción</pel:genero>
+            <pel:genero>Romance</pel:genero>
+            <pel:genero>Acción</pel:genero>
+            <pel:genero>Horror</pel:genero>
+        </pel:generos>
+        <pel:reparto rdf:parseType="Collection">
+            <pel:actor rdf:resource="http://example.org/peliculas#MilesTeller"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#AnyaTaylorJoy"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#SigourneyWeaver"/>
+        </pel:reparto>
+        <pel:resumen>Dos francotiradores deben custodiar un cañón sin saber qué se oculta dentro.</pel:resumen>
+        <pel:distribuidora>Skydance Media</pel:distribuidora>
+        <pel:paisOrigen>Estados Unidos</pel:paisOrigen>
+    </rdf:Description>
+
+    <!-- Película 5 -->
+    <rdf:Description rdf:about="http://example.org/peliculas#Companion">
+        <pel:titulo>Companion</pel:titulo>
+        <pel:fechaEstreno>2025-01-31</pel:fechaEstreno>
+        <pel:director rdf:resource="http://example.org/peliculas#DrewHancock"/>
+        <pel:generos rdf:parseType="Collection">
+            <pel:genero>Ciencia ficción</pel:genero>
+            <pel:genero>Thriller</pel:genero>
+        </pel:generos>
+        <pel:reparto rdf:parseType="Collection">
+            <pel:actor rdf:resource="http://example.org/peliculas#SophieThatcher"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#JackQuaid"/>
+        </pel:reparto>
+        <pel:resumen>Un fin de semana en una cabaña se vuelve caótico tras la revelación de un invitado robot.</pel:resumen>
+        <pel:distribuidora>New Line Cinema</pel:distribuidora>
+        <pel:paisOrigen>Estados Unidos</pel:paisOrigen>
+    </rdf:Description>
+
+    <!-- Película 6 -->
+    <rdf:Description rdf:about="http://example.org/peliculas#ShiverMeTimbers">
+        <pel:titulo>Shiver Me Timbers</pel:titulo>
+        <pel:fechaEstreno>2025-04-01</pel:fechaEstreno>
+        <pel:director rdf:resource="http://example.org/peliculas#PaulStephenMann"/>
+        <pel:generos rdf:parseType="Collection">
+            <pel:genero>Horror</pel:genero>
+            <pel:genero>Comedia splatter</pel:genero>
+        </pel:generos>
+        <pel:reparto rdf:parseType="Collection">
+            <pel:actor rdf:resource="http://example.org/peliculas#MurdoAdams"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#AmyMackie"/>
+        </pel:reparto>
+        <pel:resumen>Una versión horrorífica de Popeye en tono grotesco y cómico.</pel:resumen>
+        <pel:distribuidora>Independiente</pel:distribuidora>
+        <pel:paisOrigen>Reino Unido</pel:paisOrigen>
+    </rdf:Description>
+
+    <!-- Película 7 -->
+    <rdf:Description rdf:about="http://example.org/peliculas#TheAstronaut">
+        <pel:titulo>The Astronaut</pel:titulo>
+        <pel:fechaEstreno>2025-Primavera</pel:fechaEstreno>
+        <pel:director rdf:resource="http://example.org/peliculas#JessVarley"/>
+        <pel:generos rdf:parseType="Collection">
+            <pel:genero>Ciencia ficción</pel:genero>
+            <pel:genero>Thriller</pel:genero>
+        </pel:generos>
+        <pel:reparto rdf:parseType="Collection">
+            <pel:actor rdf:resource="http://example.org/peliculas#KateMara"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#LaurenceFishburne"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#GabrielLuna"/>
+        </pel:reparto>
+        <pel:resumen>Una astronauta regresa en circunstancias extrañas y vive sucesos inquietantes durante su cuarentena.</pel:resumen>
+        <pel:distribuidora>XYZ Films</pel:distribuidora>
+        <pel:paisOrigen>Estados Unidos</pel:paisOrigen>
+    </rdf:Description>
+
+    <!-- Película 8 -->
+    <rdf:Description rdf:about="http://example.org/peliculas#TheMonkey">
+        <pel:titulo>The Monkey</pel:titulo>
+        <pel:fechaEstreno>2025-02-21</pel:fechaEstreno>
+        <pel:director rdf:resource="http://example.org/peliculas#OsgoodPerkins"/>
+        <pel:generos rdf:parseType="Collection">
+            <pel:genero>Terror</pel:genero>
+        </pel:generos>
+        <pel:reparto rdf:parseType="Collection">
+            <pel:actor rdf:resource="http://example.org/peliculas#TheoJames"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#TatianaMaslany"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#ElijahWood"/>
+        </pel:reparto>
+        <pel:resumen>Basada en cuento de Stephen King: un mono de juguete trae muertes horribles.</pel:resumen>
+        <pel:distribuidora>Universal Pictures</pel:distribuidora>
+        <pel:paisOrigen>Estados Unidos</pel:paisOrigen>
+    </rdf:Description>
+
+    <!-- Película 9 -->
+    <rdf:Description rdf:about="http://example.org/peliculas#MinecraftTheMovie">
+        <pel:titulo>Minecraft: The Movie</pel:titulo>
+        <pel:fechaEstreno>2025-04-04</pel:fechaEstreno>
+        <pel:director rdf:resource="http://example.org/peliculas#JaredHess"/>
+        <pel:generos rdf:parseType="Collection">
+            <pel:genero>Fantasía</pel:genero>
+            <pel:genero>Familia</pel:genero>
+            <pel:genero>Aventura</pel:genero>
+        </pel:generos>
+        <pel:reparto rdf:parseType="Collection">
+            <pel:actor rdf:resource="http://example.org/peliculas#JackBlack"/>
+            <pel:actor rdf:resource="http://example.org/peliculas#JasonMomoa"/>
+        </pel:reparto>
+        <pel:resumen>Adaptación de acción real del popular videojuego, con tono divertido y aventurero.</pel:resumen>
+        <pel:distribuidora>Warner Bros. Pictures</pel:distribuidora>
+        <pel:paisOrigen>Estados Unidos</pel:paisOrigen>
+    </rdf:Description>
+
+    
+</rdf:RDF>
