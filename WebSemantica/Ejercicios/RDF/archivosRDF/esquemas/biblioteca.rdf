@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:bib="http://example.org/ontologia/biblioteca#"
+    xml:base="http://example.org/ontologia/biblioteca#">
+
+  <!-- CLASES ######################################### -->
+  <rdfs:Class rdf:about="#RecursoBibliografico">
+    <rdfs:label>Recurso Bibliográfico</rdfs:label>
+    <rdfs:comment>Representa cualquier material disponible en la biblioteca</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="#Libro">
+    <rdfs:subClassOf rdf:resource="#RecursoBibliografico"/>
+    <rdfs:label>Libro</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="#Revista">
+    <rdfs:subClassOf rdf:resource="#RecursoBibliografico"/>
+    <rdfs:label>Revista</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="#Autor">
+    <rdfs:label>Autor</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="#Editorial">
+    <rdfs:label>Editorial</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="#GeneroLiterario">
+    <rdfs:label>Género Literario</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="#Usuario">
+    <rdfs:label>Usuario</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="#Prestamo">
+    <rdfs:label>Préstamo</rdfs:label>
+  </rdfs:Class>
+
+  <!--  PROPIEDADES ENTRE CLASES ########################################## -->
+  <rdf:Property rdf:about="#escritoPor">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="#Autor"/>
+    <rdfs:label>escrito por</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="#publicadoPor">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="#Editorial"/>
+    <rdfs:label>publicado por</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="#perteneceAGenero">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="#GeneroLiterario"/>
+    <rdfs:label>pertenece a género</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="#realizadoPor">
+    <rdfs:domain rdf:resource="#Prestamo"/>
+    <rdfs:range rdf:resource="#Usuario"/>
+    <rdfs:label>realizado por</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="#incluyeLibro">
+    <rdfs:domain rdf:resource="#Prestamo"/>
+    <rdfs:range rdf:resource="#Libro"/>
+    <rdfs:label>incluye libro</rdfs:label>
+  </rdf:Property>
+
+  <!-- PROPIEDADES DE DATOS ############################################## -->
+  <rdf:Property rdf:about="#titulo">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>título</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="#anio">
+    <rdfs:domain rdf:resource="#RecursoBibliografico"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+    <rdfs:label>año</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="#nombrePersona">
+    <rdfs:domain rdf:resource="#Autor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>nombre</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="#nombreEditorial">
+    <rdfs:domain rdf:resource="#Editorial"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>nombre editorial</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="#fechaPrestamo">
+    <rdfs:domain rdf:resource="#Prestamo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label>fecha de préstamo</rdfs:label>
+  </rdf:Property>
+
+  <!-- INSTANCIAS ############################################################# -->
+  <bib:Autor rdf:about="#IsabelAllende">
+    <bib:nombrePersona>Isabel Allende</bib:nombrePersona>
+  </bib:Autor>
+
+  <bib:Editorial rdf:about="#PlazaJanés">
+    <bib:nombreEditorial>Plaza y Janés</bib:nombreEditorial>
+  </bib:Editorial>
+
+  <bib:GeneroLiterario rdf:about="#RealismoMagico">
+    <rdfs:label>Realismo Mágico</rdfs:label>
+  </bib:GeneroLiterario>
+
+  <bib:Libro rdf:about="#LaCasaDeLosEspiritus">
+    <bib:titulo>La casa de los espíritus</bib:titulo>
+    <bib:anio rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1982</bib:anio>
+    <bib:escritoPor rdf:resource="#IsabelAllende"/>
+    <bib:publicadoPor rdf:resource="#PlazaJanés"/>
+    <bib:perteneceAGenero rdf:resource="#RealismoMagico"/>
+  </bib:Libro>
+
+  <bib:Usuario rdf:about="#MariaPerez">
+    <rdfs:label>María Pérez</rdfs:label>
+  </bib:Usuario>
+
+  <bib:Prestamo rdf:about="#Prestamo001">
+    <bib:realizadoPor rdf:resource="#MariaPerez"/>
+    <bib:incluyeLibro rdf:resource="#LaCasaDeLosEspiritus"/>
+    <bib:fechaPrestamo rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-01</bib:fechaPrestamo>
+  </bib:Prestamo>
+</rdf:RDF>
