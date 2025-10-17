@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:mus="http://example.org/musica#">
 
@@ -9,13 +10,13 @@
     <mus:album>ultrasodade</mus:album>
     <mus:anioLanzamiento>2025</mus:anioLanzamiento>
     <mus:interpretes rdf:parseType="Collection">
-      <mus:interprete rdf:resource="http://example.org/musica#KevinKaarl"/>
+      <rdf:Description rdf:about="http://example.org/musica#KevinKaarl"/>
     </mus:interpretes>
     <mus:compositores rdf:parseType="Collection">
-      <mus:compositor rdf:resource="http://example.org/musica#KevinEduardoHernandezCarlos"/>
+      <rdf:Description rdf:about="http://example.org/musica#KevinEduardoHernandezCarlos"/>
     </mus:compositores>
     <mus:letristas rdf:parseType="Collection">
-      <mus:letrista rdf:resource="http://example.org/musica#KevinEduardoHernandezCarlos"/>
+      <rdf:Description rdf:about="http://example.org/musica#KevinEduardoHernandezCarlos"/>
     </mus:letristas>
   </rdf:Description>
 
@@ -27,13 +28,13 @@
     <mus:album>memoria futuro</mus:album>
     <mus:anioLanzamiento>2020</mus:anioLanzamiento>
     <mus:interpretes rdf:parseType="Collection">
-      <mus:interprete rdf:resource="http://example.org/musica#Siddharta"/>
+      <rdf:Description rdf:about="http://example.org/musica#Siddharta"/>
     </mus:interpretes>
     <mus:compositores rdf:parseType="Collection">
-      <mus:compositor rdf:resource="http://example.org/musica#RulVelazquez"/>
+      <rdf:Description rdf:about="http://example.org/musica#RulVelazquez"/>
     </mus:compositores>
     <mus:letristas rdf:parseType="Collection">
-      <mus:letrista rdf:resource="http://example.org/musica#Siddharta"/>
+      <rdf:Description rdf:about="http://example.org/musica#Siddharta"/>
     </mus:letristas>
   </rdf:Description>
 
@@ -45,13 +46,13 @@
     <mus:album>los alpes</mus:album>
     <mus:anioLanzamiento>2020</mus:anioLanzamiento>
     <mus:interpretes rdf:parseType="Collection">
-      <mus:interprete rdf:resource="http://example.org/musica#Nsqk"/>
+      <rdf:Description rdf:about="http://example.org/musica#Nsqk"/>
     </mus:interpretes>
     <mus:compositores rdf:parseType="Collection">
-      <mus:compositor rdf:resource="http://example.org/musica#Nsqk"/>
+      <rdf:Description rdf:about="http://example.org/musica#Nsqk"/>
     </mus:compositores>
     <mus:letristas rdf:parseType="Collection">
-      <mus:letrista rdf:resource="http://example.org/musica#RodrigoTorresDeLaGarza"/>
+      <rdf:Description rdf:about="http://example.org/musica#RodrigoTorresDeLaGarza"/>
     </mus:letristas>
   </rdf:Description>
 
@@ -63,13 +64,13 @@
     <mus:album>la trenza</mus:album>
     <mus:anioLanzamiento>2018</mus:anioLanzamiento>
     <mus:interpretes rdf:parseType="Collection">
-      <mus:interprete rdf:resource="http://example.org/musica#MonLaferte"/>
+      <rdf:Description rdf:about="http://example.org/musica#MonLaferte"/>
     </mus:interpretes>
     <mus:compositores rdf:parseType="Collection">
-      <mus:compositor rdf:resource="http://example.org/musica#MonLaferte"/>
+      <rdf:Description rdf:about="http://example.org/musica#MonLaferte"/>
     </mus:compositores>
     <mus:letristas rdf:parseType="Collection">
-      <mus:letrista rdf:resource="http://example.org/musica#MonLaferte"/>
+      <rdf:Description rdf:about="http://example.org/musica#MonLaferte"/>
     </mus:letristas>
   </rdf:Description>
 
@@ -81,15 +82,15 @@
     <mus:album>Pelicula</mus:album>
     <mus:anioLanzamiento>2018</mus:anioLanzamiento>
     <mus:interpretes rdf:parseType="Collection">
-      <mus:interprete rdf:resource="http://example.org/musica#Sabino"/>
+      <rdf:Description rdf:about="http://example.org/musica#Sabino"/>
     </mus:interpretes>
     <mus:compositores rdf:parseType="Collection">
-      <mus:compositor rdf:resource="http://example.org/musica#PabloCastanedaAmutio"/>
-      <mus:compositor rdf:resource="http://example.org/musica#DanielSalazarGarcia"/>
+      <rdf:Description rdf:about="http://example.org/musica#PabloCastanedaAmutio"/>
+      <rdf:Description rdf:about="http://example.org/musica#DanielSalazarGarcia"/>
     </mus:compositores>
     <mus:letristas rdf:parseType="Collection">
-      <mus:letrista rdf:resource="http://example.org/musica#PabloCastanedaAmutio"/>
-      <mus:letrista rdf:resource="http://example.org/musica#DanielSalazarGarcia"/>
+      <rdf:Description rdf:about="http://example.org/musica#PabloCastanedaAmutio"/>
+      <rdf:Description rdf:about="http://example.org/musica#DanielSalazarGarcia"/>
     </mus:letristas>
   </rdf:Description>
 
@@ -101,15 +102,15 @@
     <mus:album>Belinda</mus:album>
     <mus:anioLanzamiento>2009</mus:anioLanzamiento>
     <mus:interpretes rdf:parseType="Collection">
-      <mus:interprete rdf:resource="http://example.org/musica#Belinda"/>
+      <rdf:Description rdf:about="http://example.org/musica#Belinda"/>
     </mus:interpretes>
     <mus:compositores rdf:parseType="Collection">
-      <mus:compositor rdf:resource="http://example.org/musica#Belinda"/>
-      <mus:compositor rdf:resource="http://example.org/musica#JorgenRingqvist"/>
-      <mus:compositor rdf:resource="http://example.org/musica#DBarkman"/>
+      <rdf:Description rdf:about="http://example.org/musica#Belinda"/>
+      <rdf:Description rdf:about="http://example.org/musica#JorgenRingqvist"/>
+      <rdf:Description rdf:about="http://example.org/musica#DBarkman"/>
     </mus:compositores>
     <mus:letristas rdf:parseType="Collection">
-      <mus:letrista rdf:resource="http://example.org/musica#Belinda"/>
+      <rdf:Description rdf:about="http://example.org/musica#Belinda"/>
     </mus:letristas>
   </rdf:Description>
 
@@ -121,14 +122,14 @@
     <mus:album>ep</mus:album>
     <mus:anioLanzamiento>2020</mus:anioLanzamiento>
     <mus:interpretes rdf:parseType="Collection">
-      <mus:interprete rdf:resource="http://example.org/musica#BandalosChinos"/>
+      <rdf:Description rdf:about="http://example.org/musica#BandalosChinos"/>
     </mus:interpretes>
     <mus:compositores rdf:parseType="Collection">
-      <mus:compositor rdf:resource="http://example.org/musica#GregorioDegano"/>
-      <mus:compositor rdf:resource="http://example.org/musica#TomasVerduga"/>
+      <rdf:Description rdf:about="http://example.org/musica#GregorioDegano"/>
+      <rdf:Description rdf:about="http://example.org/musica#TomasVerduga"/>
     </mus:compositores>
     <mus:letristas rdf:parseType="Collection">
-      <mus:letrista rdf:resource="http://example.org/musica#GregorioDegano"/>
+      <rdf:Description rdf:about="http://example.org/musica#GregorioDegano"/>
     </mus:letristas>
   </rdf:Description>
 
@@ -140,15 +141,15 @@
     <mus:album>Damiano David</mus:album>
     <mus:anioLanzamiento>2025</mus:anioLanzamiento>
     <mus:interpretes rdf:parseType="Collection">
-      <mus:interprete rdf:resource="http://example.org/musica#DamianoDavid"/>
+      <rdf:Description rdf:about="http://example.org/musica#DamianoDavid"/>
     </mus:interpretes>
     <mus:compositores rdf:parseType="Collection">
-      <mus:compositor rdf:resource="http://example.org/musica#DamianoDavid"/>
-      <mus:compositor rdf:resource="http://example.org/musica#AmyAllen"/>
+      <rdf:Description rdf:about="http://example.org/musica#DamianoDavid"/>
+      <rdf:Description rdf:about="http://example.org/musica#AmyAllen"/>
     </mus:compositores>
     <mus:letristas rdf:parseType="Collection">
-      <mus:letrista rdf:resource="http://example.org/musica#DamianoDavid"/>
-      <mus:letrista rdf:resource="http://example.org/musica#AmyAllen"/>
+      <rdf:Description rdf:about="http://example.org/musica#DamianoDavid"/>
+      <rdf:Description rdf:about="http://example.org/musica#AmyAllen"/>
     </mus:letristas>
   </rdf:Description>
 
@@ -160,13 +161,13 @@
     <mus:album>Boleros</mus:album>
     <mus:anioLanzamiento>2024</mus:anioLanzamiento>
     <mus:interpretes rdf:parseType="Collection">
-      <mus:interprete rdf:resource="http://example.org/musica#DanielMeEstasMatando"/>
+      <rdf:Description rdf:about="http://example.org/musica#DanielMeEstasMatando"/>
     </mus:interpretes>
     <mus:compositores rdf:parseType="Collection">
-      <mus:compositor rdf:resource="http://example.org/musica#DanielZepeda"/>
+      <rdf:Description rdf:about="http://example.org/musica#DanielZepeda"/>
     </mus:compositores>
     <mus:letristas rdf:parseType="Collection">
-      <mus:letrista rdf:resource="http://example.org/musica#DanielZepeda"/>
+      <rdf:Description rdf:about="http://example.org/musica#DanielZepeda"/>
     </mus:letristas>
   </rdf:Description>
 
@@ -178,15 +179,15 @@
     <mus:album>Kintsugi</mus:album>
     <mus:anioLanzamiento>2024</mus:anioLanzamiento>
     <mus:interpretes rdf:parseType="Collection">
-      <mus:interprete rdf:resource="http://example.org/musica#Humbe"/>
+      <rdf:Description rdf:about="http://example.org/musica#Humbe"/>
     </mus:interpretes>
     <mus:compositores rdf:parseType="Collection">
-      <mus:compositor rdf:resource="http://example.org/musica#HumbertoRodriguezTerrazas"/>
-      <mus:compositor rdf:resource="http://example.org/musica#NicollasDeLaEspriella"/>
+      <rdf:Description rdf:about="http://example.org/musica#HumbertoRodriguezTerrazas"/>
+      <rdf:Description rdf:about="http://example.org/musica#NicollasDeLaEspriella"/>
     </mus:compositores>
     <mus:letristas rdf:parseType="Collection">
-      <mus:letrista rdf:resource="http://example.org/musica#HumbertoRodriguezTerrazas"/>
-      <mus:letrista rdf:resource="http://example.org/musica#NicollasDeLaEspriella"/>
+      <rdf:Description rdf:about="http://example.org/musica#HumbertoRodriguezTerrazas"/>
+      <rdf:Description rdf:about="http://example.org/musica#NicollasDeLaEspriella"/>
     </mus:letristas>
   </rdf:Description>
 
