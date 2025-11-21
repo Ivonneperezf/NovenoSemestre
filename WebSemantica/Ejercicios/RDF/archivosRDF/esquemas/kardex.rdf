@@ -4,16 +4,12 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:kardex="http://example.org/buap#">
 
-  <!-- ========================= -->
-  <!--   Definición de clases    -->
-  <!-- ========================= -->
+  <!-- ========================= Definición de clases ========================= -->
   <rdfs:Class rdf:about="http://example.org/buap#Estudiante"/>
   <rdfs:Class rdf:about="http://example.org/buap#Materia"/>
   <rdfs:Class rdf:about="http://example.org/buap#Profesor"/>
 
-  <!-- ========================= -->
-  <!--      Propiedades RDFS     -->
-  <!-- ========================= -->
+  <!-- ==================== Propiedades RDFS ========================= -->
 
   <!-- Datos del estudiante -->
   <rdf:Property rdf:about="http://example.org/buap#nombre">
@@ -71,9 +67,7 @@
     <rdfs:range  rdf:resource="rdfs:Literal"/>
   </rdf:Property>
 
-  <!-- ===================================================================================== -->
-  <!--                                   INSTANCIAS                                           -->
-  <!-- ===================================================================================== -->
+  <!-- ======================= INSTANCIAS ====================================== -->
 
   <!-- Estudiante -->
   <rdf:Description rdf:about="http://example.org/estudiante/ivonne-perez">
@@ -115,9 +109,6 @@
     <kardex:calificacion>10</kardex:calificacion>
     <kardex:impartidaPor rdf:resource="http://example.org/profesor/luis-yael-mendez"/>
   </rdf:Description>
-
-  <!-- Materias restantes (4–11, sin cambios) -->
-  <!-- TODO: Todo tu bloque se mantiene igual; no lo modifico para no alterar tu dataset -->
 
   <!-- Profesores -->
   <rdf:Description rdf:about="http://example.org/profesor/meliza-contreras">

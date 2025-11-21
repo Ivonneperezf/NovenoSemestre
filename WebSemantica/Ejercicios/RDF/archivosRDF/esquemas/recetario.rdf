@@ -4,17 +4,13 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:rec="http://example.org/recetas#">
 
-  <!-- ============================
-       DECLARACIÓN DE CLASES
-       ============================ -->
+  <!-- ============================ DECLARACIÓN DE CLASES ============================ -->
 
   <rdfs:Class rdf:about="http://example.org/recetas#Receta"/>
   <rdfs:Class rdf:about="http://example.org/recetas#Ingrediente"/>
   <rdfs:Class rdf:about="http://example.org/recetas#Paso"/>
 
-  <!-- ============================
-       PROPIEDADES
-       ============================ -->
+  <!-- ============================ PROPIEDADES ============================ -->
 
   <rdf:Property rdf:about="http://example.org/recetas#nombre">
     <rdfs:domain rdf:resource="http://example.org/recetas#Receta"/>
@@ -71,14 +67,7 @@
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
   </rdf:Property>
 
-  <!-- ============================================================
-       INSTANCIAS RDFS GENERADAS A PARTIR DE TU RDF ORIGINAL
-       ============================================================ -->
-
-
-  <!-- ================================
-       Receta 1: Ensalada César
-       ================================ -->
+  <!-- Receta 1 -->
   <rec:Receta rdf:about="http://example.org/recetas#EnsaladaCesar">
     <rec:nombre>Ensalada César</rec:nombre>
     <rec:tipo>ensalada</rec:tipo>
@@ -124,9 +113,7 @@
   </rec:Receta>
 
 
-  <!-- ================================
-       Receta 2: Spaghetti Boloñesa
-       ================================ -->
+  <!-- Receta 2 -->
   <rec:Receta rdf:about="http://example.org/recetas#SpaghettiBolonesa">
     <rec:nombre>Spaghetti a la Boloñesa</rec:nombre>
     <rec:tipo>pasta</rec:tipo>

@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:cg="http://www.semanticweb.org/dayan/ontologies/2025/10/clinico-genomica#">
+
+    <!-- ==================== CLASES ==================== -->
+    <!-- clases del dominio -->
+    <rdfs:Class rdf:about="cg:Disease"/>
+    <rdfs:Class rdf:about="cg:FamilyHistory"/>
+    <rdfs:Class rdf:about="cg:Gene"/>
+    <rdfs:Class rdf:about="cg:LaboratoryTestOrder"/>
+    
+    <!-- Subclase de StructuredTestResult -->
+    <rdfs:Class rdf:about="cg:MolecularDiagnosticTestResult">
+        <rdfs:subClassOf rdf:resource="cg:StructuredTestResult"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="cg:Mutation"/>
+    <rdfs:Class rdf:about="cg:Panel"/>
+
+    <!-- Patient es subclase de Person -->
+    <rdfs:Class rdf:about="cg:Patient">
+        <rdfs:subClassOf rdf:resource="cg:Person"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="cg:Person"/>
+
+    <!-- Relative es subclase de Person -->
+    <rdfs:Class rdf:about="cg:Relative">
+        <rdfs:subClassOf rdf:resource="cg:Person"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="cg:StructuredTestResult"/>
+    <rdfs:Class rdf:about="cg:Test"/>
+    <rdfs:Class rdf:about="cg:USAddress"/>
+
+    <!-- ==================== PROPIEDADES DE OBJETO ==================== -->
+    <rdf:Property rdf:about="cg:associatedRelative">
+        <rdfs:domain rdf:resource="cg:FamilyHistory"/>
+        <rdfs:range rdf:resource="cg:Relative"/>
+        <rdfs:comment>Indica el familiar registrado en la historia médica familiar.</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="cg:associatedResult">
+        <rdfs:domain rdf:resource="cg:Test"/>
+        <rdfs:range rdf:resource="cg:StructuredTestResult"/>
+        <rdfs:comment>Indica el resultado asociado a un test clínico.</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="cg:hasAddress">
+        <rdfs:domain rdf:resource="cg:Person"/>
+        <rdfs:range rdf:resource="cg:USAddress"/>
+        <rdfs:comment>Indica la dirección asociada a una persona.</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="cg:hasFamilyHistory">
+        <rdfs:domain rdf:resource="cg:Patient"/>
+        <rdfs:range rdf:resource="cg:FamilyHistory"/>
+        <rdfs:comment>Indica la historia familiar de un paciente.</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="cg:hasGene">
+        <rdfs:domain rdf:resource="cg:Patient"/>
+        <rdfs:range rdf:resource="cg:Gene"/>
+        <rdfs:comment>Indica genes relevantes del paciente.</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="cg:hasMolecularDiagnosticTestResult">
+        <rdfs:domain rdf:resource="cg:Patient"/>
+        <rdfs:range rdf:resource="cg:MolecularDiagnosticTestResult"/>
+        <rdfs:comment>Indica resultados moleculares del paciente.</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="cg:hasMutation">
+        <rdfs:domain rdf:resource="cg:Patient"/>
+        <rdfs:range rdf:resource="cg:Mutation"/>
+        <rdfs:comment>Indica mutaciones presentes en el paciente.</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="cg:hasPatient">
+        <rdfs:domain rdf:resource="cg:StructuredTestResult"/>
+        <rdfs:range rdf:resource="cg:Patient"/>
+        <rdfs:comment>Indica el paciente asociado al resultado.</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="cg:hasStructuredTestResult">
+        <rdfs:domain rdf:resource="cg:Patient"/>
+        <rdfs:range rdf:resource="cg:StructuredTestResult"/>
+        <rdfs:comment>Indica resultados estructurados del paciente.</rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="cg:identifiesMutation">
+        <rdfs:domain rdf:resource="cg:MolecularDiagnosticTestResult"/>
+        <rdfs:range rdf:resource="cg:Mutation"/>
+        <rdfs:comment>Indica la mutación identificada.</rdfs:comment>
+    </rdf:Property>
+
+    <!-- Enfermedad que indica el test -->
+    <rdf:Property rdf:about="cg:indicatesDisease">
+        <rdfs:domain rdf:resource="cg:MolecularDiagnosticTestResult"/>
+        <rdfs:range rdf:resource="cg:Disease"/>
+        <rdfs:comment>Indica la enfermedad diagnosticada.</rdfs:comment>
+    </rdf:Property>
+
+    <!-- Gen en el cual ocurre la mutación -->
+    <rdf:Property rdf:about="cg:isMutationOf">
+        <rdfs:domain rdf:resource="cg:Mutation"/>
+        <rdfs:range rdf:resource="cg:Gene"/>
+        <rdfs:comment>Indica el gen afectado.</rdfs:comment>
+    </rdf:Property>
+
+    <!-- Relación familiar entre paciente y familiar -->
+    <rdf:Property rdf:about="cg:isRelatedTo">
+        <rdfs:domain rdf:resource="cg:Patient"/>
+        <rdfs:range rdf:resource="cg:Relative"/>
+        <rdfs:comment>Indica la relación familiar con el paciente.</rdfs:comment>
+    </rdf:Property>
+
+    <!-- Dirección del pagador -->
+    <rdf:Property rdf:about="cg:payorAddress">
+        <rdfs:domain rdf:resource="cg:LaboratoryTestOrder"/>
+        <rdfs:range rdf:resource="cg:USAddress"/>
+        <rdfs:comment>Indica la dirección del pagador.</rdfs:comment>
+    </rdf:Property>
+
+    <!-- Dirección del destinatario -->
+    <rdf:Property rdf:about="cg:recipientAddress">
+        <rdfs:domain rdf:resource="cg:LaboratoryTestOrder"/>
+        <rdfs:range rdf:resource="cg:USAddress"/>
+        <rdfs:comment>Indica la dirección del destinatario.</rdfs:comment>
+    </rdf:Property>
+
+    <!-- Enfermedades que padece el paciente -->
+    <rdf:Property rdf:about="cg:suffersFrom">
+        <rdfs:domain rdf:resource="cg:Patient"/>
+        <rdfs:range rdf:resource="cg:Disease"/>
+        <rdfs:comment>Indica enfermedades del paciente.</rdfs:comment>
+    </rdf:Property>
+
+    <!-- Tests que forman un panel -->
+    <rdf:Property rdf:about="cg:test">
+        <rdfs:domain rdf:resource="cg:Panel"/>
+        <rdfs:range rdf:resource="cg:Test"/>
+        <rdfs:comment>Indica tests dentro de un panel.</rdfs:comment>
+    </rdf:Property>
+
+    <!-- Panel incluido en una orden -->
+    <rdf:Property rdf:about="cg:testPanel">
+        <rdfs:domain rdf:resource="cg:LaboratoryTestOrder"/>
+        <rdfs:range rdf:resource="cg:Panel"/>
+        <rdfs:comment>Indica el panel pedido en la orden.</rdfs:comment>
+    </rdf:Property>
+
+</rdf:RDF>

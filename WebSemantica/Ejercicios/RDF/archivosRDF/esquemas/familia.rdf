@@ -27,7 +27,6 @@
 
     <!-- ==================== PROPIEDADES DE PERSONA ==================== -->
     
-    <!-- Propiedad: nombre -->
     <rdf:Property rdf:about="http://example.org/familia#nombre">
         <rdfs:label xml:lang="es">nombre</rdfs:label>
         <rdfs:comment xml:lang="es">Nombre de pila de la persona</rdfs:comment>
@@ -35,7 +34,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: apellido -->
     <rdf:Property rdf:about="http://example.org/familia#apellido">
         <rdfs:label xml:lang="es">apellido</rdfs:label>
         <rdfs:comment xml:lang="es">Apellido(s) de la persona</rdfs:comment>
@@ -43,7 +41,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: genero -->
     <rdf:Property rdf:about="http://example.org/familia#genero">
         <rdfs:label xml:lang="es">género</rdfs:label>
         <rdfs:comment xml:lang="es">Género de la persona</rdfs:comment>
@@ -51,7 +48,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: fechaNacimiento -->
     <rdf:Property rdf:about="http://example.org/familia#fechaNacimiento">
         <rdfs:label xml:lang="es">fecha de nacimiento</rdfs:label>
         <rdfs:comment xml:lang="es">Fecha de nacimiento de la persona</rdfs:comment>
@@ -59,7 +55,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
     </rdf:Property>
 
-    <!-- Propiedad: telefono -->
     <rdf:Property rdf:about="http://example.org/familia#telefono">
         <rdfs:label xml:lang="es">teléfono</rdfs:label>
         <rdfs:comment xml:lang="es">Número telefónico de la persona</rdfs:comment>
@@ -67,7 +62,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: correo -->
     <rdf:Property rdf:about="http://example.org/familia#correo">
         <rdfs:label xml:lang="es">correo electrónico</rdfs:label>
         <rdfs:comment xml:lang="es">Dirección de correo electrónico de la persona</rdfs:comment>
@@ -75,7 +69,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: direccion (relación) -->
     <rdf:Property rdf:about="http://example.org/familia#direccion">
         <rdfs:label xml:lang="es">dirección</rdfs:label>
         <rdfs:comment xml:lang="es">Dirección postal de la persona</rdfs:comment>
@@ -83,7 +76,6 @@
         <rdfs:range rdf:resource="http://example.org/familia#Direccion"/>
     </rdf:Property>
 
-    <!-- Propiedad: ocupacion -->
     <rdf:Property rdf:about="http://example.org/familia#ocupacion">
         <rdfs:label xml:lang="es">ocupación</rdfs:label>
         <rdfs:comment xml:lang="es">Ocupación laboral de la persona</rdfs:comment>
@@ -91,7 +83,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: estudios -->
     <rdf:Property rdf:about="http://example.org/familia#estudios">
         <rdfs:label xml:lang="es">estudios</rdfs:label>
         <rdfs:comment xml:lang="es">Nivel de estudios o grado académico de la persona</rdfs:comment>
@@ -99,7 +90,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: nota -->
     <rdf:Property rdf:about="http://example.org/familia#nota">
         <rdfs:label xml:lang="es">nota</rdfs:label>
         <rdfs:comment xml:lang="es">Nota o comentario adicional sobre la persona</rdfs:comment>
@@ -107,7 +97,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: padre (relación) -->
     <rdf:Property rdf:about="http://example.org/familia#padre">
         <rdfs:label xml:lang="es">padre</rdfs:label>
         <rdfs:comment xml:lang="es">Relación de filiación paterna</rdfs:comment>
@@ -115,7 +104,6 @@
         <rdfs:range rdf:resource="http://example.org/familia#Persona"/>
     </rdf:Property>
 
-    <!-- Propiedad: madre (relación) -->
     <rdf:Property rdf:about="http://example.org/familia#madre">
         <rdfs:label xml:lang="es">madre</rdfs:label>
         <rdfs:comment xml:lang="es">Relación de filiación materna</rdfs:comment>
@@ -125,7 +113,6 @@
 
     <!-- ==================== PROPIEDADES DE DIRECCION ==================== -->
     
-    <!-- Propiedad: calle -->
     <rdf:Property rdf:about="http://example.org/familia#calle">
         <rdfs:label xml:lang="es">calle</rdfs:label>
         <rdfs:comment xml:lang="es">Nombre de la calle y número</rdfs:comment>
@@ -133,7 +120,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: ciudad -->
     <rdf:Property rdf:about="http://example.org/familia#ciudad">
         <rdfs:label xml:lang="es">ciudad</rdfs:label>
         <rdfs:comment xml:lang="es">Ciudad de la dirección</rdfs:comment>
@@ -141,7 +127,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: pais -->
     <rdf:Property rdf:about="http://example.org/familia#pais">
         <rdfs:label xml:lang="es">país</rdfs:label>
         <rdfs:comment xml:lang="es">País de la dirección</rdfs:comment>
@@ -151,7 +136,6 @@
 
     <!-- ==================== PROPIEDADES DE MATRIMONIO ==================== -->
     
-    <!-- Propiedad: fechaInicio -->
     <rdf:Property rdf:about="http://example.org/familia#fechaInicio">
         <rdfs:label xml:lang="es">fecha de inicio</rdfs:label>
         <rdfs:comment xml:lang="es">Fecha en que se celebró el matrimonio</rdfs:comment>
@@ -159,7 +143,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
     </rdf:Property>
 
-    <!-- Propiedad: estaUnidoA (relación) -->
     <rdf:Property rdf:about="http://example.org/familia#estaUnidoA">
         <rdfs:label xml:lang="es">está unido a</rdfs:label>
         <rdfs:comment xml:lang="es">Relaciona el matrimonio con uno de los cónyuges</rdfs:comment>
@@ -167,7 +150,7 @@
         <rdfs:range rdf:resource="http://example.org/familia#Persona"/>
     </rdf:Property>
 
-    <!-- ==================== INSTANCIAS - ABUELOS ==================== -->
+    <!-- ==================== ABUELOS ==================== -->
 
     <fam:Persona rdf:about="http://example.org/familia#HumbertoFlores">
         <fam:nombre>Humberto</fam:nombre>
@@ -207,7 +190,7 @@
         <fam:nota>Madre de María Lucía</fam:nota>
     </fam:Persona>
 
-    <!-- ==================== INSTANCIAS - PADRES ==================== -->
+    <!-- ==================== PADRES ==================== -->
 
     <fam:Persona rdf:about="http://example.org/familia#MariaLuciaFloresUbaldo">
         <fam:nombre>María Lucía</fam:nombre>
@@ -249,7 +232,7 @@
         <fam:nota>Padre de cuatro hijos</fam:nota>
     </fam:Persona>
 
-    <!-- ==================== INSTANCIAS - HIJOS ==================== -->
+    <!-- ==================== HIJOS ==================== -->
 
     <fam:Persona rdf:about="http://example.org/familia#UrielPerezFlores">
         <fam:nombre>Uriel</fam:nombre>
@@ -332,7 +315,7 @@
         <fam:nota>Gemela de Ivonne</fam:nota>
     </fam:Persona>
 
-    <!-- ==================== INSTANCIAS - MATRIMONIOS ==================== -->
+    <!-- ==================== MATRIMONIOS ==================== -->
 
     <fam:Matrimonio rdf:about="http://example.org/familia#Matrimonio1">
         <fam:fechaInicio rdf:datatype="xsd:date">1997-06-15</fam:fechaInicio>

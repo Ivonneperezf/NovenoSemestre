@@ -9,7 +9,7 @@
   <rdfs:Class rdf:about="http://example.org/musica#Persona"/>
   <rdfs:Class rdf:about="http://example.org/musica#Album"/>
 
-  <!-- ======== PROPIEDADES (CON NOMBRES INTUITIVOS) ======== -->
+  <!-- ======== PROPIEDADES ======== -->
   <rdf:Property rdf:about="http://example.org/musica#tieneNombre">
     <rdfs:domain rdf:resource="http://example.org/musica#Cancion"/>
     <rdfs:range rdf:resource="rdfs:Literal"/>
@@ -50,7 +50,7 @@
     <rdfs:range rdf:resource="http://example.org/musica#Persona"/>
   </rdf:Property>
 
-  <!-- ======== ÁLBUMES COMO RECURSOS ======== -->
+  <!-- ======== ALBUMES  ======== -->
   <rdf:Description rdf:about="http://example.org/musica#ultrasodade">
     <rdf:type rdf:resource="http://example.org/musica#Album"/>
   </rdf:Description>
@@ -96,7 +96,6 @@
     <rdf:type rdf:resource="http://example.org/musica#Persona"/>
   </rdf:Description>
 
-  <!-- (El resto de personas se asume igual que arriba, solo declaradas como Persona) -->
 
   <!-- ======== CANCIONES ======== -->
 

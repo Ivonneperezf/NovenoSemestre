@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:webapp="http://example.org/webapp#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <!-- ==================== CLASES PRINCIPALES ==================== -->
+
+    <rdfs:Class rdf:about="http://example.org/webapp#AplicacionWeb"/>
+    <rdfs:Class rdf:about="http://example.org/webapp#LenguajeProgramacion"/>
+    <rdfs:Class rdf:about="http://example.org/webapp#Framework"/>
+    <rdfs:Class rdf:about="http://example.org/webapp#BaseDatos"/>
+    <rdfs:Class rdf:about="http://example.org/webapp#Servidor"/>
+
+    <!-- ==================== SUBCLASES ==================== -->
+
+    <!-- Aplicaciones -->
+    <rdfs:Class rdf:about="http://example.org/webapp#AplicacionProductividad">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#AplicacionWeb"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://example.org/webapp#AplicacionBlog">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#AplicacionWeb"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://example.org/webapp#AplicacionEcommerce">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#AplicacionWeb"/>
+    </rdfs:Class>
+
+    <!-- Lenguajes -->
+    <rdfs:Class rdf:about="http://example.org/webapp#LenguajeFrontend">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#LenguajeProgramacion"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://example.org/webapp#LenguajeBackend">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#LenguajeProgramacion"/>
+    </rdfs:Class>
+
+    <!-- Frameworks -->
+    <rdfs:Class rdf:about="http://example.org/webapp#FrameworkFrontend">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#Framework"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://example.org/webapp#FrameworkBackend">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#Framework"/>
+    </rdfs:Class>
+
+    <!-- Bases de datos -->
+    <rdfs:Class rdf:about="http://example.org/webapp#BaseDatosSQL">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#BaseDatos"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://example.org/webapp#BaseDatosNoSQL">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#BaseDatos"/>
+    </rdfs:Class>
+
+    <!-- Servidores -->
+    <rdfs:Class rdf:about="http://example.org/webapp#ServidorWeb">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#Servidor"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://example.org/webapp#ServidorCloud">
+        <rdfs:subClassOf rdf:resource="http://example.org/webapp#Servidor"/>
+    </rdfs:Class>
+
+    <!-- ==================== PROPIEDADES ==================== -->
+
+    <rdf:Property rdf:about="http://example.org/webapp#nombreApp">
+        <rdfs:label>nombre de aplicacion</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/webapp#AplicacionWeb"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/webapp#descripcion">
+        <rdfs:label>descripción</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/webapp#AplicacionWeb"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/webapp#desarrolladaEnLenguaje">
+        <rdfs:label>desarrollada en lenguaje</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/webapp#AplicacionWeb"/>
+        <rdfs:range rdf:resource="http://example.org/webapp#LenguajeProgramacion"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/webapp#desarrolladaConFramework">
+        <rdfs:label>desarrollada con framework</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/webapp#AplicacionWeb"/>
+        <rdfs:range rdf:resource="http://example.org/webapp#Framework"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/webapp#almacenaDatosEn">
+        <rdfs:label>almacena datos en</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/webapp#AplicacionWeb"/>
+        <rdfs:range rdf:resource="http://example.org/webapp#BaseDatos"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/webapp#seEjecutaEnServidor">
+        <rdfs:label>se ejecuta en servidor</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/webapp#AplicacionWeb"/>
+        <rdfs:range rdf:resource="http://example.org/webapp#Servidor"/>
+    </rdf:Property>
+
+    <!-- ==================== INSTANCIAS ==================== -->
+
+    <!-- Lenguajes -->
+    <webapp:LenguajeFrontend rdf:about="http://example.org/webapp/lenguaje/javascript">
+        <rdfs:label>JavaScript</rdfs:label>
+    </webapp:LenguajeFrontend>
+
+    <webapp:LenguajeBackend rdf:about="http://example.org/webapp/lenguaje/python">
+        <rdfs:label>Python</rdfs:label>
+    </webapp:LenguajeBackend>
+
+    <webapp:LenguajeBackend rdf:about="http://example.org/webapp/lenguaje/php">
+        <rdfs:label>PHP</rdfs:label>
+    </webapp:LenguajeBackend>
+
+    <webapp:LenguajeBackend rdf:about="http://example.org/webapp/lenguaje/ruby">
+        <rdfs:label>Ruby</rdfs:label>
+    </webapp:LenguajeBackend>
+
+    <!-- Frameworks -->
+    <webapp:FrameworkFrontend rdf:about="http://example.org/webapp/framework/react">
+        <rdfs:label>React</rdfs:label>
+    </webapp:FrameworkFrontend>
+
+    <webapp:FrameworkBackend rdf:about="http://example.org/webapp/framework/django">
+        <rdfs:label>Django</rdfs:label>
+    </webapp:FrameworkBackend>
+
+    <webapp:FrameworkBackend rdf:about="http://example.org/webapp/framework/laravel">
+        <rdfs:label>Laravel</rdfs:label>
+    </webapp:FrameworkBackend>
+
+    <webapp:FrameworkFrontend rdf:about="http://example.org/webapp/framework/vue">
+        <rdfs:label>Vue</rdfs:label>
+    </webapp:FrameworkFrontend>
+
+    <!-- Bases de datos -->
+    <webapp:BaseDatosSQL rdf:about="http://example.org/webapp/bd/mysql">
+        <rdfs:label>MySQL</rdfs:label>
+    </webapp:BaseDatosSQL>
+
+    <webapp:BaseDatosNoSQL rdf:about="http://example.org/webapp/bd/mongodb">
+        <rdfs:label>MongoDB</rdfs:label>
+    </webapp:BaseDatosNoSQL>
+
+    <webapp:BaseDatosSQL rdf:about="http://example.org/webapp/bd/postgresql">
+        <rdfs:label>PostgreSQL</rdfs:label>
+    </webapp:BaseDatosSQL>
+
+    <!-- Servidores -->
+    <webapp:ServidorCloud rdf:about="http://example.org/webapp/servidor/aws">
+        <rdfs:label>AWS</rdfs:label>
+    </webapp:ServidorCloud>
+
+    <webapp:ServidorWeb rdf:about="http://example.org/webapp/servidor/nginx">
+        <rdfs:label>Nginx</rdfs:label>
+    </webapp:ServidorWeb>
+
+    <webapp:ServidorWeb rdf:about="http://example.org/webapp/servidor/apache">
+        <rdfs:label>Apache</rdfs:label>
+    </webapp:ServidorWeb>
+
+    <!-- Aplicaciones -->
+
+    <webapp:AplicacionProductividad rdf:about="http://example.org/webapp/app/gestor-tareas">
+        <webapp:nombreApp>Gestor de Tareas</webapp:nombreApp>
+        <webapp:descripcion>Aplicación para organizar tareas</webapp:descripcion>
+        <webapp:desarrolladaEnLenguaje rdf:resource="http://example.org/webapp/lenguaje/javascript"/>
+        <webapp:desarrolladaConFramework rdf:resource="http://example.org/webapp/framework/react"/>
+        <webapp:almacenaDatosEn rdf:resource="http://example.org/webapp/bd/mongodb"/>
+        <webapp:seEjecutaEnServidor rdf:resource="http://example.org/webapp/servidor/aws"/>
+    </webapp:AplicacionProductividad>
+
+    <webapp:AplicacionBlog rdf:about="http://example.org/webapp/app/blogplus">
+        <webapp:nombreApp>BlogPlus</webapp:nombreApp>
+        <webapp:descripcion>Plataforma simple para blogs</webapp:descripcion>
+        <webapp:desarrolladaEnLenguaje rdf:resource="http://example.org/webapp/lenguaje/php"/>
+        <webapp:desarrolladaConFramework rdf:resource="http://example.org/webapp/framework/laravel"/>
+        <webapp:almacenaDatosEn rdf:resource="http://example.org/webapp/bd/mysql"/>
+        <webapp:seEjecutaEnServidor rdf:resource="http://example.org/webapp/servidor/apache"/>
+    </webapp:AplicacionBlog>
+
+    <webapp:AplicacionEcommerce rdf:about="http://example.org/webapp/app/tienda-lite">
+        <webapp:nombreApp>Tienda Lite</webapp:nombreApp>
+        <webapp:descripcion>Tienda online basica</webapp:descripcion>
+        <webapp:desarrolladaEnLenguaje rdf:resource="http://example.org/webapp/lenguaje/python"/>
+        <webapp:desarrolladaConFramework rdf:resource="http://example.org/webapp/framework/django"/>
+        <webapp:almacenaDatosEn rdf:resource="http://example.org/webapp/bd/postgresql"/>
+        <webapp:seEjecutaEnServidor rdf:resource="http://example.org/webapp/servidor/nginx"/>
+    </webapp:AplicacionEcommerce>
+
+</rdf:RDF>

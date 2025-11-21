@@ -6,9 +6,7 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xml:base="http://example.org/ontologia/geografia#">
 
-  <!-- ============================
-       CLASES
-  ===============================-->
+  <!-- ==================== CLASES ==================== -->
   <rdfs:Class rdf:about="#Region"/>
   <rdfs:Class rdf:about="#Nacion">
     <rdfs:subClassOf rdf:resource="#Region"/>
@@ -25,9 +23,7 @@
   <rdfs:Class rdf:about="#LimiteNatural"/>
   <rdfs:Class rdf:about="#Clima"/>
 
-  <!-- ============================
-       PROPIEDADES DE OBJETO
-  ===============================-->
+  <!-- ==================== PROPIEDADES DE OBJETO ==================== -->
   <rdf:Property rdf:about="#formaParteDe">
     <rdfs:domain rdf:resource="#Region"/>
     <rdfs:range rdf:resource="#Region"/>
@@ -48,9 +44,7 @@
     <rdfs:range rdf:resource="#Clima"/>
   </rdf:Property>
 
-  <!-- ============================
-       PROPIEDADES DE DATOS
-  ===============================-->
+  <!-- ==================== PROPIEDADES DE DATOS ==================== -->
   <rdf:Property rdf:about="#nombreOficial">
     <rdfs:domain rdf:resource="#Region"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -71,10 +65,7 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
   </rdf:Property>
 
-
-  <!-- ============================
-       INSTANCIAS
-  ===============================-->
+  <!-- ==================== INSTANCIAS ==================== -->
 
   <!-- Nación -->
   <geo:Nacion rdf:about="#Chile">

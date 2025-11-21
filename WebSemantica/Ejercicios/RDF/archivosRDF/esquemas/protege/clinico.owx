@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ivonn/ontologies/2025/10/clinico-genomica"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ivonn/ontologies/2025/10/clinico-genomica">
+    <Prefix name="" IRI="http://www.semanticweb.org/ivonn/ontologies/2025/10/clinico-genomica/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Disease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FamilyHistory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gene"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LaboratoryTestOrder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MolecularDiagnosticTestResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mutation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Panel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StructuredTestResult"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Test"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#USAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#associatedRelative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#associatedResult"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFamilyHistory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGene"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMolecularDiagnosticTestResult"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMutation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPatient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStructuredTestResult"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#identifiesMutation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#indicatesDisease"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMutationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#payorAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recipientAddress"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#suffersFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#test"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#testPanel"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#MolecularDiagnosticTestResult"/>
+        <Class IRI="#StructuredTestResult"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Relative"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#associatedRelative"/>
+        <Class IRI="#FamilyHistory"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#associatedResult"/>
+        <Class IRI="#Test"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAddress"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasFamilyHistory"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGene"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMolecularDiagnosticTestResult"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMutation"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPatient"/>
+        <Class IRI="#StructuredTestResult"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStructuredTestResult"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#identifiesMutation"/>
+        <Class IRI="#MolecularDiagnosticTestResult"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#indicatesDisease"/>
+        <Class IRI="#MolecularDiagnosticTestResult"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMutationOf"/>
+        <Class IRI="#Mutation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRelatedTo"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#payorAddress"/>
+        <Class IRI="#LaboratoryTestOrder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recipientAddress"/>
+        <Class IRI="#LaboratoryTestOrder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#suffersFrom"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#test"/>
+        <Class IRI="#Panel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#testPanel"/>
+        <Class IRI="#LaboratoryTestOrder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associatedRelative"/>
+        <Class IRI="#Relative"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#associatedResult"/>
+        <Class IRI="#StructuredTestResult"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAddress"/>
+        <Class IRI="#USAddress"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasFamilyHistory"/>
+        <Class IRI="#FamilyHistory"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGene"/>
+        <Class IRI="#Gene"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMolecularDiagnosticTestResult"/>
+        <Class IRI="#MolecularDiagnosticTestResult"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMutation"/>
+        <Class IRI="#Mutation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPatient"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStructuredTestResult"/>
+        <Class IRI="#StructuredTestResult"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#identifiesMutation"/>
+        <Class IRI="#Mutation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#indicatesDisease"/>
+        <Class IRI="#Disease"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isMutationOf"/>
+        <Class IRI="#Gene"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRelatedTo"/>
+        <Class IRI="#Relative"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#payorAddress"/>
+        <Class IRI="#USAddress"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recipientAddress"/>
+        <Class IRI="#USAddress"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#suffersFrom"/>
+        <Class IRI="#Disease"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#test"/>
+        <Class IRI="#Test"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#testPanel"/>
+        <Class IRI="#Panel"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#associatedRelative</IRI>
+        <Literal>Relación que indica el familiar al que corresponde una historia médica familiar registrada.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#associatedResult</IRI>
+        <Literal>Relación que indica el resultado estructurado asociado a un test clínico específico.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAddress</IRI>
+        <Literal>Relación que indica la dirección asociada a una persona, ya sea paciente, familiar o profesional.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasFamilyHistory</IRI>
+        <Literal>Relación que indica la historia médica familiar asociada a un paciente, incluyendo condiciones hereditarias y vínculos genéticos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGene</IRI>
+        <Literal>Relación que indica los genes presentes en el genoma de un paciente, relevantes para análisis clínico o diagnóstico molecular.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMolecularDiagnosticTestResult</IRI>
+        <Literal>Relación que indica los resultados de pruebas moleculares asociados a un paciente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMutation</IRI>
+        <Literal>Relación que indica las mutaciones genéticas presentes en un paciente, relevantes para su perfil clínico o diagnóstico molecular.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPatient</IRI>
+        <Literal>Relación que indica el paciente al que pertenece un resultado estructurado de prueba.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasStructuredTestResult</IRI>
+        <Literal>Relación que indica los resultados estructurados de pruebas clínicas asociados a un paciente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#identifiesMutation</IRI>
+        <Literal>Relación que indica la mutación genética identificada por un resultado de prueba molecular.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#indicatesDisease</IRI>
+        <Literal>Relación que indica la enfermedad sugerida o confirmada por un resultado de prueba molecular.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isMutationOf</IRI>
+        <Literal>Relación que indica el gen en el cual ocurre una mutación específica.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isRelatedTo</IRI>
+        <Literal>Relación que indica el vínculo familiar entre un paciente y una persona clasificada como su familiar.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#payorAddress</IRI>
+        <Literal>Relación que indica la dirección del pagador asociada a una orden de laboratorio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#recipientAddress</IRI>
+        <Literal>Relación que indica la dirección del destinatario asociada a una orden de laboratorio.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#suffersFrom</IRI>
+        <Literal>Relación que indica las enfermedades que padece un paciente.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#test</IRI>
+        <Literal>Relación que indica los tests que forman parte de un panel clínico.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#testPanel</IRI>
+        <Literal>Relación que indica qué panel de pruebas está incluido en una orden de laboratorio.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

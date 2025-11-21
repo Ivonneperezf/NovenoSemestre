@@ -5,18 +5,14 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:pel="http://example.org/peliculas#">
 
-    <!-- ========================== -->
-    <!--   DEFINICIÓN DE CLASES     -->
-    <!-- ========================== -->
+    <!-- ========================== CLASES ========================== -->
 
     <rdfs:Class rdf:about="http://example.org/peliculas#Pelicula"/>
     <rdfs:Class rdf:about="http://example.org/peliculas#Persona"/>
     <rdfs:Class rdf:about="http://example.org/peliculas#Actor"/>
     <rdfs:Class rdf:about="http://example.org/peliculas#Director"/>
 
-    <!-- ========================== -->
-    <!--  DEFINICIÓN DE PROPIEDADES -->
-    <!-- ========================== -->
+    <!-- ========================== DEFINICIÓN DE PROPIEDADES ========================== -->
 
     <rdf:Property rdf:about="http://example.org/peliculas#tieneTitulo">
         <rdfs:domain rdf:resource="http://example.org/peliculas#Pelicula"/>
@@ -59,9 +55,7 @@
     </rdf:Property>
 
 
-    <!-- ========================== -->
-    <!-- INSTANCIAS DE DIRECTORES   -->
-    <!-- ========================== -->
+    <!-- ========================== INSTANCIAS DE DIRECTORES ========================== -->
 
     <rdf:Description rdf:about="http://example.org/peliculas#ChristopherMcQuarrie">
         <rdf:type rdf:resource="http://example.org/peliculas#Director"/>
@@ -100,9 +94,7 @@
     </rdf:Description>
 
 
-    <!-- ========================== -->
-    <!-- INSTANCIAS DE ACTORES      -->
-    <!-- ========================== -->
+    <!-- ========================== INSTANCIAS DE ACTORES ========================== -->
 
     <!-- Agrego todos como instancias de Actor -->
     <rdf:Description rdf:about="http://example.org/peliculas#TomCruise"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
@@ -139,9 +131,7 @@
     <rdf:Description rdf:about="http://example.org/peliculas#JasonMomoa"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
 
 
-    <!-- ========================== -->
-    <!--     PELÍCULAS (RDFS)      -->
-    <!-- ========================== -->
+    <!-- ========================== PELÍCULAS ========================== -->
 
     <!-- Película 1 -->
     <rdf:Description rdf:about="http://example.org/peliculas#MisionImposibleSentenciaFinal">

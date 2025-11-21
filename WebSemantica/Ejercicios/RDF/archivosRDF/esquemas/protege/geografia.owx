@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/dayan/ontologies/2025/10/geografia"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/dayan/ontologies/2025/10/geografia">
+    <Prefix name="" IRI="http://www.semanticweb.org/dayan/ontologies/2025/10/geografia/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+
+    <!-- ==================== DECLARACIÓN DE CLASES ==================== -->
+    <Declaration><Class IRI="#EntidadGeografica"/></Declaration>
+    <Declaration><Class IRI="#Continente"/></Declaration>
+    <Declaration><Class IRI="#Pais"/></Declaration>
+    <Declaration><Class IRI="#Estado"/></Declaration>
+    <Declaration><Class IRI="#Ciudad"/></Declaration>
+    <Declaration><Class IRI="#Capital"/></Declaration>
+    <Declaration><Class IRI="#Frontera"/></Declaration>
+    <Declaration><Class IRI="#CuerpoDeAgua"/></Declaration>
+
+    <!-- ==================== DECLARACIÓN DE PROPIEDADES ==================== -->
+    <Declaration><ObjectProperty IRI="#perteneceAContinente"/></Declaration>
+    <Declaration><ObjectProperty IRI="#tieneCapital"/></Declaration>
+    <Declaration><ObjectProperty IRI="#incluyeEstado"/></Declaration>
+    <Declaration><ObjectProperty IRI="#incluyeCiudad"/></Declaration>
+    <Declaration><ObjectProperty IRI="#limitaCon"/></Declaration>
+    <Declaration><ObjectProperty IRI="#tieneFrontera"/></Declaration>
+    <Declaration><ObjectProperty IRI="#cercanoACuerpoDeAgua"/></Declaration>
+
+    <Declaration><DataProperty IRI="#nombre"/></Declaration>
+    <Declaration><DataProperty IRI="#poblacion"/></Declaration>
+    <Declaration><DataProperty IRI="#area"/></Declaration>
+    <Declaration><DataProperty IRI="#moneda"/></Declaration>
+    <Declaration><DataProperty IRI="#idiomaOficial"/></Declaration>
+
+    <!-- ==================== JERARQUÍA DE CLASES ==================== -->
+    <SubClassOf><Class IRI="#Continente"/><Class IRI="#EntidadGeografica"/></SubClassOf>
+    <SubClassOf><Class IRI="#Pais"/><Class IRI="#EntidadGeografica"/></SubClassOf>
+    <SubClassOf><Class IRI="#Estado"/><Class IRI="#EntidadGeografica"/></SubClassOf>
+    <SubClassOf><Class IRI="#Ciudad"/><Class IRI="#EntidadGeografica"/></SubClassOf>
+    <SubClassOf><Class IRI="#Capital"/><Class IRI="#Ciudad"/></SubClassOf>
+    <SubClassOf><Class IRI="#Frontera"/><Class IRI="#EntidadGeografica"/></SubClassOf>
+    <SubClassOf><Class IRI="#CuerpoDeAgua"/><Class IRI="#EntidadGeografica"/></SubClassOf>
+
+    <!-- ==================== DOMINIO Y RANGO DE OBJETOS ==================== -->
+    <ObjectPropertyDomain><ObjectProperty IRI="#perteneceAContinente"/><Class IRI="#Pais"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty IRI="#perteneceAContinente"/><Class IRI="#Continente"/></ObjectPropertyRange>
+
+    <ObjectPropertyDomain><ObjectProperty IRI="#tieneCapital"/><Class IRI="#Pais"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty IRI="#tieneCapital"/><Class IRI="#Capital"/></ObjectPropertyRange>
+
+    <ObjectPropertyDomain><ObjectProperty IRI="#incluyeEstado"/><Class IRI="#Pais"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty IRI="#incluyeEstado"/><Class IRI="#Estado"/></ObjectPropertyRange>
+
+    <ObjectPropertyDomain><ObjectProperty IRI="#incluyeCiudad"/><Class IRI="#Estado"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty IRI="#incluyeCiudad"/><Class IRI="#Ciudad"/></ObjectPropertyRange>
+
+    <ObjectPropertyDomain><ObjectProperty IRI="#limitaCon"/><Class IRI="#Pais"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty IRI="#limitaCon"/><Class IRI="#Pais"/></ObjectPropertyRange>
+
+    <ObjectPropertyDomain><ObjectProperty IRI="#tieneFrontera"/><Class IRI="#Pais"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty IRI="#tieneFrontera"/><Class IRI="#Frontera"/></ObjectPropertyRange>
+
+    <ObjectPropertyDomain><ObjectProperty IRI="#cercanoACuerpoDeAgua"/><Class IRI="#Ciudad"/></ObjectPropertyDomain>
+    <ObjectPropertyRange><ObjectProperty IRI="#cercanoACuerpoDeAgua"/><Class IRI="#CuerpoDeAgua"/></ObjectPropertyRange>
+
+    <!-- ==================== DOMINIO Y RANGO DE DATOS ==================== -->
+    <DataPropertyDomain><DataProperty IRI="#nombre"/><Class IRI="#EntidadGeografica"/></DataPropertyDomain>
+    <DataPropertyRange><DataProperty IRI="#nombre"/><Datatype IRI="http://www.w3.org/2001/XMLSchema#string"/></DataPropertyRange>
+
+    <DataPropertyDomain><DataProperty IRI="#poblacion"/><Class IRI="#EntidadGeografica"/></DataPropertyDomain>
+    <DataPropertyRange><DataProperty IRI="#poblacion"/><Datatype IRI="http://www.w3.org/2001/XMLSchema#integer"/></DataPropertyRange>
+
+    <DataPropertyDomain><DataProperty IRI="#area"/><Class IRI="#EntidadGeografica"/></DataPropertyDomain>
+    <DataPropertyRange><DataProperty IRI="#area"/><Datatype IRI="http://www.w3.org/2001/XMLSchema#float"/></DataPropertyRange>
+
+    <DataPropertyDomain><DataProperty IRI="#moneda"/><Class IRI="#Pais"/></DataPropertyDomain>
+    <DataPropertyRange><DataProperty IRI="#moneda"/><Datatype IRI="http://www.w3.org/2001/XMLSchema#string"/></DataPropertyRange>
+
+    <DataPropertyDomain><DataProperty IRI="#idiomaOficial"/><Class IRI="#Pais"/></DataPropertyDomain>
+    <DataPropertyRange><DataProperty IRI="#idiomaOficial"/><Datatype IRI="http://www.w3.org/2001/XMLSchema#string"/></DataPropertyRange>
+
+    <!-- ==================== INSTANCIAS ==================== -->
+
+    <!-- Continente -->
+    <Declaration><NamedIndividual IRI="#America"/></Declaration>
+    <ClassAssertion><Class IRI="#Continente"/><NamedIndividual IRI="#America"/></ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#America"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">América</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#area"/>
+        <NamedIndividual IRI="#America"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">42330000</Literal>
+    </DataPropertyAssertion>
+
+    <!-- País México -->
+    <Declaration><NamedIndividual IRI="#Mexico"/></Declaration>
+    <ClassAssertion><Class IRI="#Pais"/><NamedIndividual IRI="#Mexico"/></ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Mexico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">México</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moneda"/>
+        <NamedIndividual IRI="#Mexico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Peso mexicano</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idiomaOficial"/>
+        <NamedIndividual IRI="#Mexico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Español</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#poblacion"/>
+        <NamedIndividual IRI="#Mexico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">129000000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#area"/>
+        <NamedIndividual IRI="#Mexico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1964000</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#perteneceAContinente"/>
+        <NamedIndividual IRI="#Mexico"/>
+        <NamedIndividual IRI="#America"/>
+    </ObjectPropertyAssertion>
+
+    <!-- País Estados Unidos -->
+    <Declaration><NamedIndividual IRI="#EstadosUnidos"/></Declaration>
+    <ClassAssertion><Class IRI="#Pais"/><NamedIndividual IRI="#EstadosUnidos"/></ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#EstadosUnidos"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Estados Unidos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idiomaOficial"/>
+        <NamedIndividual IRI="#EstadosUnidos"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Inglés</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moneda"/>
+        <NamedIndividual IRI="#EstadosUnidos"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Dólar estadounidense</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#perteneceAContinente"/>
+        <NamedIndividual IRI="#EstadosUnidos"/>
+        <NamedIndividual IRI="#America"/>
+    </ObjectPropertyAssertion>
+
+    <!-- País Guatemala -->
+    <Declaration><NamedIndividual IRI="#Guatemala"/></Declaration>
+    <ClassAssertion><Class IRI="#Pais"/><NamedIndividual IRI="#Guatemala"/></ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Guatemala"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Guatemala</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idiomaOficial"/>
+        <NamedIndividual IRI="#Guatemala"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Español</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moneda"/>
+        <NamedIndividual IRI="#Guatemala"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quetzal</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#perteneceAContinente"/>
+        <NamedIndividual IRI="#Guatemala"/>
+        <NamedIndividual IRI="#America"/>
+    </ObjectPropertyAssertion>
+
+    <!-- Estado Sonora -->
+    <Declaration><NamedIndividual IRI="#Sonora"/></Declaration>
+    <ClassAssertion><Class IRI="#Estado"/><NamedIndividual IRI="#Sonora"/></ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Sonora"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sonora</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#poblacion"/>
+        <NamedIndividual IRI="#Sonora"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3000000</Literal>
+    </DataPropertyAssertion>
+
+    <!-- Ciudad Hermosillo -->
+    <Declaration><NamedIndividual IRI="#Hermosillo"/></Declaration>
+    <ClassAssertion><Class IRI="#Ciudad"/><NamedIndividual IRI="#Hermosillo"/></ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Hermosillo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hermosillo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#poblacion"/>
+        <NamedIndividual IRI="#Hermosillo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">900000</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#incluyeCiudad"/>
+        <NamedIndividual IRI="#Sonora"/>
+        <NamedIndividual IRI="#Hermosillo"/>
+    </ObjectPropertyAssertion>
+
+    <!-- Capital Ciudad de México -->
+    <Declaration><NamedIndividual IRI="#CiudadDeMexico"/></Declaration>
+    <ClassAssertion><Class IRI="#Capital"/><NamedIndividual IRI="#CiudadDeMexico"/></ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#CiudadDeMexico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ciudad de México</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#poblacion"/>
+        <NamedIndividual IRI="#CiudadDeMexico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9200000</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneCapital"/>
+        <NamedIndividual IRI="#Mexico"/>
+        <NamedIndividual IRI="#CiudadDeMexico"/>
+    </ObjectPropertyAssertion>
+
+    <!-- Cuerpo de agua Océano Pacífico -->
+    <Declaration><NamedIndividual IRI="#OceanoPacifico"/></Declaration>
+    <ClassAssertion><Class IRI="#CuerpoDeAgua"/><NamedIndividual IRI="#OceanoPacifico"/></ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#OceanoPacifico"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Océano Pacífico</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cercanoACuerpoDeAgua"/>
+        <NamedIndividual IRI="#Hermosillo"/>
+        <NamedIndividual IRI="#OceanoPacifico"/>
+    </ObjectPropertyAssertion>
+
+    <!-- Relación Estado-País y fronteras -->
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#incluyeEstado"/>
+        <NamedIndividual IRI="#Mexico"/>
+        <NamedIndividual IRI="#Sonora"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Mexico"/>
+        <NamedIndividual IRI="#EstadosUnidos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#limitaCon"/>
+        <NamedIndividual IRI="#Mexico"/>
+        <NamedIndividual IRI="#Guatemala"/>
+    </ObjectPropertyAssertion>
+
+</Ontology>

@@ -1,0 +1,51 @@
+AGENDA----------------------------------------------------
+
+# Obtener contactos con nombre y apellido
+PREFIX agd: <http://example.org/agenda#>
+
+SELECT ?contacto ?nombre ?apellido
+WHERE {
+  ?contacto a agd:Contacto ;
+            agd:nombre ?nombre ;
+            agd:apellido ?apellido .
+}
+
+
+#BIBLIOTECA---------------------------------------------------------
+# Obtener los autores y sus fechas de nacimiento
+PREFIX lib: <http://example.org/biblioteca#>
+
+SELECT ?nombre ?fechaNac
+WHERE {
+  ?autor a lib:Autor ;
+         lib:nombre ?nombre ;
+         lib:fechaNac ?fechaNac .
+}
+
+# RECETAS------------------------------------------------------
+# Listar los ingredientes de la Ensalada Cesar
+SELECT ?ingrediente
+WHERE {
+  ?receta <http://example.org/recetas#nombre> "Ensalada César" .
+  ?receta <http://example.org/recetas#incluyeIngrediente> ?ing .
+  ?ing <http://example.org/recetas#descripcionIngrediente> ?ingrediente .
+}
+
+
+# Mostrar los pasos de Spaghetti a la Boloñesa
+SELECT ?paso
+WHERE {
+  ?receta <http://example.org/recetas#nombre> "Spaghetti a la Boloñesa" .
+  ?receta <http://example.org/recetas#tienePaso> ?p .
+  ?p <http://example.org/recetas#descripcionPaso> ?paso .
+}
+
+
+# CANCIONES------------------------------------------------------
+# Listar todas las canciones junto con su duracion y genero
+SELECT ?nombre ?duracion ?genero
+WHERE {
+  ?cancion <http://example.org/musica#tieneNombre> ?nombre .
+  ?cancion <http://example.org/musica#tieneDuracion> ?duracion .
+  ?cancion <http://example.org/musica#tieneGenero> ?genero .
+}

@@ -27,7 +27,6 @@
 
     <!-- ==================== PROPIEDADES DE LIBRO ==================== -->
     
-    <!-- Propiedad: titulo -->
     <rdf:Property rdf:about="http://example.org/biblioteca#titulo">
         <rdfs:label xml:lang="es">título</rdfs:label>
         <rdfs:comment xml:lang="es">El título del libro</rdfs:comment>
@@ -35,7 +34,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: isbn -->
     <rdf:Property rdf:about="http://example.org/biblioteca#isbn">
         <rdfs:label xml:lang="es">ISBN</rdfs:label>
         <rdfs:comment xml:lang="es">Número estándar internacional de libro</rdfs:comment>
@@ -43,7 +41,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: resumen -->
     <rdf:Property rdf:about="http://example.org/biblioteca#resumen">
         <rdfs:label xml:lang="es">resumen</rdfs:label>
         <rdfs:comment xml:lang="es">Breve descripción del contenido del libro</rdfs:comment>
@@ -51,7 +48,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: categoria -->
     <rdf:Property rdf:about="http://example.org/biblioteca#categoria">
         <rdfs:label xml:lang="es">categoría</rdfs:label>
         <rdfs:comment xml:lang="es">Género o categoría literaria del libro</rdfs:comment>
@@ -59,7 +55,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- Propiedad: paginas -->
     <rdf:Property rdf:about="http://example.org/biblioteca#paginas">
         <rdfs:label xml:lang="es">páginas</rdfs:label>
         <rdfs:comment xml:lang="es">Número de páginas del libro</rdfs:comment>
@@ -67,7 +62,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </rdf:Property>
 
-    <!-- Propiedad: edicion -->
     <rdf:Property rdf:about="http://example.org/biblioteca#edicion">
         <rdfs:label xml:lang="es">edición</rdfs:label>
         <rdfs:comment xml:lang="es">Número de edición del libro</rdfs:comment>
@@ -75,7 +69,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </rdf:Property>
 
-    <!-- Propiedad: anioedicion -->
     <rdf:Property rdf:about="http://example.org/biblioteca#anioedicion">
         <rdfs:label xml:lang="es">año de edición</rdfs:label>
         <rdfs:comment xml:lang="es">Año en que se publicó la edición</rdfs:comment>
@@ -83,7 +76,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
     </rdf:Property>
 
-    <!-- Propiedad: tieneAutor (relación) -->
     <rdf:Property rdf:about="http://example.org/biblioteca#tieneAutor">
         <rdfs:label xml:lang="es">tiene autor</rdfs:label>
         <rdfs:comment xml:lang="es">Relaciona un libro con su autor</rdfs:comment>
@@ -91,7 +83,6 @@
         <rdfs:range rdf:resource="http://example.org/biblioteca#Autor"/>
     </rdf:Property>
 
-    <!-- Propiedad: publicadoPor (relación) -->
     <rdf:Property rdf:about="http://example.org/biblioteca#publicadoPor">
         <rdfs:label xml:lang="es">publicado por</rdfs:label>
         <rdfs:comment xml:lang="es">Relaciona un libro con la editorial que lo publicó</rdfs:comment>
@@ -136,7 +127,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <!-- ==================== INSTANCIAS - LIBROS ==================== -->
+    <!-- ==================== LIBROS ==================== -->
 
     <!-- Libro 1 -->
     <lib:Libro rdf:about="http://example.org/biblioteca#LosSieteMaridosDeEvelynHugo">
@@ -307,7 +298,7 @@
         <lib:publicadoPor rdf:resource="http://example.org/biblioteca#AlianzaEditorial"/>
     </lib:Libro>
 
-    <!-- ==================== INSTANCIAS - AUTORES ==================== -->
+    <!-- ==================== AUTORES ==================== -->
 
     <lib:Autor rdf:about="http://example.org/biblioteca#TaylorJenkinsReid">
         <lib:nombre>Taylor Jenkins Reid</lib:nombre>
@@ -381,7 +372,7 @@
         <lib:afiliacion>Escritora británica</lib:afiliacion>
     </lib:Autor>
 
-    <!-- ==================== INSTANCIAS - EDITORIALES ==================== -->
+    <!-- ==================== EDITORIALES ==================== -->
 
     <lib:Editorial rdf:about="http://example.org/biblioteca#UmbrielEditores">
         <lib:nombre>Umbriel Editores</lib:nombre>
