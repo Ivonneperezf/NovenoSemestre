@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:fam="http://example.org/familia#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <!-- ==================== CLASES ==================== -->
+    
+    <!-- Clase Persona -->
+    <rdfs:Class rdf:about="http://example.org/familia#Persona">
+        <rdfs:label xml:lang="es">Persona</rdfs:label>
+        <rdfs:comment xml:lang="es">Representa un miembro de la familia</rdfs:comment>
+    </rdfs:Class>
+
+    <!-- Clase Direccion -->
+    <rdfs:Class rdf:about="http://example.org/familia#Direccion">
+        <rdfs:label xml:lang="es">Dirección</rdfs:label>
+        <rdfs:comment xml:lang="es">Representa una dirección postal</rdfs:comment>
+    </rdfs:Class>
+
+    <!-- Clase Matrimonio -->
+    <rdfs:Class rdf:about="http://example.org/familia#Matrimonio">
+        <rdfs:label xml:lang="es">Matrimonio</rdfs:label>
+        <rdfs:comment xml:lang="es">Representa una unión matrimonial entre dos personas</rdfs:comment>
+    </rdfs:Class>
+
+    <!-- ==================== PROPIEDADES DE PERSONA ==================== -->
+    
+    <!-- Propiedad: nombre -->
+    <rdf:Property rdf:about="http://example.org/familia#nombre">
+        <rdfs:label xml:lang="es">nombre</rdfs:label>
+        <rdfs:comment xml:lang="es">Nombre de pila de la persona</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- Propiedad: apellido -->
+    <rdf:Property rdf:about="http://example.org/familia#apellido">
+        <rdfs:label xml:lang="es">apellido</rdfs:label>
+        <rdfs:comment xml:lang="es">Apellido(s) de la persona</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- Propiedad: genero -->
+    <rdf:Property rdf:about="http://example.org/familia#genero">
+        <rdfs:label xml:lang="es">género</rdfs:label>
+        <rdfs:comment xml:lang="es">Género de la persona</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- Propiedad: fechaNacimiento -->
+    <rdf:Property rdf:about="http://example.org/familia#fechaNacimiento">
+        <rdfs:label xml:lang="es">fecha de nacimiento</rdfs:label>
+        <rdfs:comment xml:lang="es">Fecha de nacimiento de la persona</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </rdf:Property>
+
+    <!-- Propiedad: telefono -->
+    <rdf:Property rdf:about="http://example.org/familia#telefono">
+        <rdfs:label xml:lang="es">teléfono</rdfs:label>
+        <rdfs:comment xml:lang="es">Número telefónico de la persona</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- Propiedad: correo -->
+    <rdf:Property rdf:about="http://example.org/familia#correo">
+        <rdfs:label xml:lang="es">correo electrónico</rdfs:label>
+        <rdfs:comment xml:lang="es">Dirección de correo electrónico de la persona</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- Propiedad: direccion (relación) -->
+    <rdf:Property rdf:about="http://example.org/familia#direccion">
+        <rdfs:label xml:lang="es">dirección</rdfs:label>
+        <rdfs:comment xml:lang="es">Dirección postal de la persona</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://example.org/familia#Direccion"/>
+    </rdf:Property>
+
+    <!-- Propiedad: ocupacion -->
+    <rdf:Property rdf:about="http://example.org/familia#ocupacion">
+        <rdfs:label xml:lang="es">ocupación</rdfs:label>
+        <rdfs:comment xml:lang="es">Ocupación laboral de la persona</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- Propiedad: estudios -->
+    <rdf:Property rdf:about="http://example.org/familia#estudios">
+        <rdfs:label xml:lang="es">estudios</rdfs:label>
+        <rdfs:comment xml:lang="es">Nivel de estudios o grado académico de la persona</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- Propiedad: nota -->
+    <rdf:Property rdf:about="http://example.org/familia#nota">
+        <rdfs:label xml:lang="es">nota</rdfs:label>
+        <rdfs:comment xml:lang="es">Nota o comentario adicional sobre la persona</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- Propiedad: padre (relación) -->
+    <rdf:Property rdf:about="http://example.org/familia#padre">
+        <rdfs:label xml:lang="es">padre</rdfs:label>
+        <rdfs:comment xml:lang="es">Relación de filiación paterna</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://example.org/familia#Persona"/>
+    </rdf:Property>
+
+    <!-- Propiedad: madre (relación) -->
+    <rdf:Property rdf:about="http://example.org/familia#madre">
+        <rdfs:label xml:lang="es">madre</rdfs:label>
+        <rdfs:comment xml:lang="es">Relación de filiación materna</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Persona"/>
+        <rdfs:range rdf:resource="http://example.org/familia#Persona"/>
+    </rdf:Property>
+
+    <!-- ==================== PROPIEDADES DE DIRECCION ==================== -->
+    
+    <!-- Propiedad: calle -->
+    <rdf:Property rdf:about="http://example.org/familia#calle">
+        <rdfs:label xml:lang="es">calle</rdfs:label>
+        <rdfs:comment xml:lang="es">Nombre de la calle y número</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Direccion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- Propiedad: ciudad -->
+    <rdf:Property rdf:about="http://example.org/familia#ciudad">
+        <rdfs:label xml:lang="es">ciudad</rdfs:label>
+        <rdfs:comment xml:lang="es">Ciudad de la dirección</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Direccion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- Propiedad: pais -->
+    <rdf:Property rdf:about="http://example.org/familia#pais">
+        <rdfs:label xml:lang="es">país</rdfs:label>
+        <rdfs:comment xml:lang="es">País de la dirección</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Direccion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+
+    <!-- ==================== PROPIEDADES DE MATRIMONIO ==================== -->
+    
+    <!-- Propiedad: fechaInicio -->
+    <rdf:Property rdf:about="http://example.org/familia#fechaInicio">
+        <rdfs:label xml:lang="es">fecha de inicio</rdfs:label>
+        <rdfs:comment xml:lang="es">Fecha en que se celebró el matrimonio</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Matrimonio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </rdf:Property>
+
+    <!-- Propiedad: estaUnidoA (relación) -->
+    <rdf:Property rdf:about="http://example.org/familia#estaUnidoA">
+        <rdfs:label xml:lang="es">está unido a</rdfs:label>
+        <rdfs:comment xml:lang="es">Relaciona el matrimonio con uno de los cónyuges</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/familia#Matrimonio"/>
+        <rdfs:range rdf:resource="http://example.org/familia#Persona"/>
+    </rdf:Property>
+
+    <!-- ==================== INSTANCIAS - ABUELOS ==================== -->
+
+    <fam:Persona rdf:about="http://example.org/familia#HumbertoFlores">
+        <fam:nombre>Humberto</fam:nombre>
+        <fam:apellido>Flores</fam:apellido>
+        <fam:genero>Masculino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">1945-05-10</fam:fechaNacimiento>
+        <fam:telefono>2481000001</fam:telefono>
+        <fam:correo>hflores@example.com</fam:correo>
+        <fam:residenEn>
+            <fam:Direccion>
+                <fam:calle>Calle Central 101</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </fam:Direccion>
+        </fam:residenEn>
+        <fam:ocupacion>Jubilado</fam:ocupacion>
+        <fam:estudios>Licenciatura en Contabilidad</fam:estudios>
+        <fam:nota>Padre de María Lucía</fam:nota>
+    </fam:Persona>
+
+    <fam:Persona rdf:about="http://example.org/familia#GuillerminaUbaldo">
+        <fam:nombre>Guillermina</fam:nombre>
+        <fam:apellido>Ubaldo</fam:apellido>
+        <fam:genero>Femenino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">1947-11-22</fam:fechaNacimiento>
+        <fam:telefono>2481000002</fam:telefono>
+        <fam:correo>gubaldo@example.com</fam:correo>
+        <fam:residenEn>
+            <fam:Direccion>
+                <fam:calle>Calle Central 101</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </fam:Direccion>
+        </fam:residenEn>
+        <fam:ocupacion>Ama de casa</fam:ocupacion>
+        <fam:estudios>Secundaria completa</fam:estudios>
+        <fam:nota>Madre de María Lucía</fam:nota>
+    </fam:Persona>
+
+    <!-- ==================== INSTANCIAS - PADRES ==================== -->
+
+    <fam:Persona rdf:about="http://example.org/familia#MariaLuciaFloresUbaldo">
+        <fam:nombre>María Lucía</fam:nombre>
+        <fam:apellido>Flores Ubaldo</fam:apellido>
+        <fam:genero>Femenino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">1972-10-29</fam:fechaNacimiento>
+        <fam:telefono>2481800705</fam:telefono>
+        <fam:correo>mariafl@gmail.com</fam:correo>
+        <fam:tienePadre rdf:resource="http://example.org/familia#HumbertoFlores"/>
+        <fam:tieneMadre rdf:resource="http://example.org/familia#GuillerminaUbaldo"/>
+        <fam:residenEn>
+            <fam:Direccion>
+                <fam:calle>Av. Reforma 123</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </fam:Direccion>
+        </fam:residenEn>
+        <fam:ocupacion>Comerciante</fam:ocupacion>
+        <fam:estudios>Licenciatura en Administración</fam:estudios>
+        <fam:nota>Madre de cuatro hijos</fam:nota>
+    </fam:Persona>
+
+    <fam:Persona rdf:about="http://example.org/familia#YaelPerezMendez">
+        <fam:nombre>Yael</fam:nombre>
+        <fam:apellido>Pérez Mendéz</fam:apellido>
+        <fam:genero>Masculino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">1973-07-09</fam:fechaNacimiento>
+        <fam:telefono>2481800706</fam:telefono>
+        <fam:correo>yaelp@example.com</fam:correo>
+        <fam:residenEn>
+            <fam:Direccion>
+                <fam:calle>Av. Reforma 123</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </fam:Direccion>
+        </fam:residenEn>
+        <fam:ocupacion>Ingeniero</fam:ocupacion>
+        <fam:estudios>Ingeniería Electrónica</fam:estudios>
+        <fam:nota>Padre de cuatro hijos</fam:nota>
+    </fam:Persona>
+
+    <!-- ==================== INSTANCIAS - HIJOS ==================== -->
+
+    <fam:Persona rdf:about="http://example.org/familia#UrielPerezFlores">
+        <fam:nombre>Uriel</fam:nombre>
+        <fam:apellido>Pérez Flores</fam:apellido>
+        <fam:genero>Masculino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">1998-07-22</fam:fechaNacimiento>
+        <fam:telefono>2481814177</fam:telefono>
+        <fam:correo>urielperez@gmail.com</fam:correo>
+        <fam:tienePadre rdf:resource="http://example.org/familia#YaelPerezMendez"/>
+        <fam:tieneMadre rdf:resource="http://example.org/familia#MariaLuciaFloresUbaldo"/>
+        <fam:residenEn>
+            <fam:Direccion>
+                <fam:calle>Calle Los Pinos 45</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </fam:Direccion>
+        </fam:residenEn>
+        <fam:ocupacion>Maestro en Ciencias de la Electrónica</fam:ocupacion>
+        <fam:estudios>Maestría en Electrónica</fam:estudios>
+        <fam:nota>Hijo mayor</fam:nota>
+    </fam:Persona>
+
+    <fam:Persona rdf:about="http://example.org/familia#AldoPerezFlores">
+        <fam:nombre>Aldo</fam:nombre>
+        <fam:apellido>Pérez Flores</fam:apellido>
+        <fam:genero>Masculino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">2001-09-13</fam:fechaNacimiento>
+        <fam:telefono>2481335008</fam:telefono>
+        <fam:correo>aldolink123@gmail.com</fam:correo>
+        <fam:tienePadre rdf:resource="http://example.org/familia#YaelPerezMendez"/>
+        <fam:tieneMadre rdf:resource="http://example.org/familia#MariaLuciaFloresUbaldo"/>
+        <fam:residenEn>
+            <fam:Direccion>
+                <fam:calle>Calle Los Pinos 45</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </fam:Direccion>
+        </fam:residenEn>
+        <fam:estudios>Estudiante de Ingeniería Química</fam:estudios>
+        <fam:nota>Segundo hijo</fam:nota>
+    </fam:Persona>
+
+    <fam:Persona rdf:about="http://example.org/familia#IvonnePerezFlores">
+        <fam:nombre>Ivonne</fam:nombre>
+        <fam:apellido>Pérez Flores</fam:apellido>
+        <fam:genero>Femenino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">2003-04-02</fam:fechaNacimiento>
+        <fam:telefono>2482152153</fam:telefono>
+        <fam:correo>ivonneperezfl23@gmail.com</fam:correo>
+        <fam:tienePadre rdf:resource="http://example.org/familia#YaelPerezMendez"/>
+        <fam:tieneMadre rdf:resource="http://example.org/familia#MariaLuciaFloresUbaldo"/>
+        <fam:residenEn>
+            <fam:Direccion>
+                <fam:calle>Calle Los Pinos 45</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </fam:Direccion>
+        </fam:residenEn>
+        <fam:estudios>Estudiante de Ingeniería en Ciencias de la Computación</fam:estudios>
+        <fam:nota>Gemela de Dayana</fam:nota>
+    </fam:Persona>
+
+    <fam:Persona rdf:about="http://example.org/familia#DayanaPerezFlores">
+        <fam:nombre>Dayana</fam:nombre>
+        <fam:apellido>Pérez Flores</fam:apellido>
+        <fam:genero>Femenino</fam:genero>
+        <fam:fechaNacimiento rdf:datatype="xsd:date">2003-04-02</fam:fechaNacimiento>
+        <fam:telefono>2481683383</fam:telefono>
+        <fam:correo>dayanaprzfls@gmail.com</fam:correo>
+        <fam:tienePadre rdf:resource="http://example.org/familia#YaelPerezMendez"/>
+        <fam:tieneMadre rdf:resource="http://example.org/familia#MariaLuciaFloresUbaldo"/>
+        <fam:residenEn>
+            <fam:Direccion>
+                <fam:calle>Calle Los Pinos 45</fam:calle>
+                <fam:ciudad>Puebla</fam:ciudad>
+                <fam:pais>México</fam:pais>
+            </fam:Direccion>
+        </fam:residenEn>
+        <fam:estudios>Estudiante de Ingeniería en Ciencias de la Computación</fam:estudios>
+        <fam:nota>Gemela de Ivonne</fam:nota>
+    </fam:Persona>
+
+    <!-- ==================== INSTANCIAS - MATRIMONIOS ==================== -->
+
+    <fam:Matrimonio rdf:about="http://example.org/familia#Matrimonio1">
+        <fam:fechaInicio rdf:datatype="xsd:date">1997-06-15</fam:fechaInicio>
+        <fam:estaUnidoA rdf:resource="http://example.org/familia#MariaLuciaFloresUbaldo"/>
+        <fam:estaUnidoA rdf:resource="http://example.org/familia#YaelPerezMendez"/>
+    </fam:Matrimonio>
+
+    <fam:Matrimonio rdf:about="http://example.org/familia#Matrimonio2">
+        <fam:fechaInicio rdf:datatype="xsd:date">1962-11-10</fam:fechaInicio>
+        <fam:estaUnidoA rdf:resource="http://example.org/familia#HumbertoFlores"/>
+        <fam:estaUnidoA rdf:resource="http://example.org/familia#GuillerminaUbaldo"/>
+    </fam:Matrimonio>
+
+</rdf:RDF>

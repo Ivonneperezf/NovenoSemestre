@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:mus="http://example.org/musica#">
+
+  <!-- ======== CLASES ======== -->
+  <rdfs:Class rdf:about="http://example.org/musica#Cancion"/>
+  <rdfs:Class rdf:about="http://example.org/musica#Persona"/>
+  <rdfs:Class rdf:about="http://example.org/musica#Album"/>
+
+  <!-- ======== PROPIEDADES (CON NOMBRES INTUITIVOS) ======== -->
+  <rdf:Property rdf:about="http://example.org/musica#tieneNombre">
+    <rdfs:domain rdf:resource="http://example.org/musica#Cancion"/>
+    <rdfs:range rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/musica#tieneDuracion">
+    <rdfs:domain rdf:resource="http://example.org/musica#Cancion"/>
+    <rdfs:range rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/musica#tieneGenero">
+    <rdfs:domain rdf:resource="http://example.org/musica#Cancion"/>
+    <rdfs:range rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/musica#perteneceAAlbum">
+    <rdfs:domain rdf:resource="http://example.org/musica#Cancion"/>
+    <rdfs:range rdf:resource="http://example.org/musica#Album"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/musica#anioDeLanzamiento">
+    <rdfs:domain rdf:resource="http://example.org/musica#Cancion"/>
+    <rdfs:range rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/musica#esInterpretadaPor">
+    <rdfs:domain rdf:resource="http://example.org/musica#Cancion"/>
+    <rdfs:range rdf:resource="http://example.org/musica#Persona"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/musica#esCompuestaPor">
+    <rdfs:domain rdf:resource="http://example.org/musica#Cancion"/>
+    <rdfs:range rdf:resource="http://example.org/musica#Persona"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/musica#tieneLetraDe">
+    <rdfs:domain rdf:resource="http://example.org/musica#Cancion"/>
+    <rdfs:range rdf:resource="http://example.org/musica#Persona"/>
+  </rdf:Property>
+
+  <!-- ======== ÁLBUMES COMO RECURSOS ======== -->
+  <rdf:Description rdf:about="http://example.org/musica#ultrasodade">
+    <rdf:type rdf:resource="http://example.org/musica#Album"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/musica#memoriaFuturo">
+    <rdf:type rdf:resource="http://example.org/musica#Album"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/musica#losAlpes">
+    <rdf:type rdf:resource="http://example.org/musica#Album"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/musica#laTrenza">
+    <rdf:type rdf:resource="http://example.org/musica#Album"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/musica#BelindaAlbum">
+    <rdf:type rdf:resource="http://example.org/musica#Album"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/musica#ep">
+    <rdf:type rdf:resource="http://example.org/musica#Album"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/musica#DamianoDavidAlbum">
+    <rdf:type rdf:resource="http://example.org/musica#Album"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/musica#Boleros">
+    <rdf:type rdf:resource="http://example.org/musica#Album"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/musica#KintsugiAlbum">
+    <rdf:type rdf:resource="http://example.org/musica#Album"/>
+  </rdf:Description>
+
+  <!-- ======== PERSONAS ======== -->
+  <rdf:Description rdf:about="http://example.org/musica#KevinKaarl">
+    <rdf:type rdf:resource="http://example.org/musica#Persona"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/musica#KevinEduardoHernandezCarlos">
+    <rdf:type rdf:resource="http://example.org/musica#Persona"/>
+  </rdf:Description>
+
+  <!-- (El resto de personas se asume igual que arriba, solo declaradas como Persona) -->
+
+  <!-- ======== CANCIONES ======== -->
+
+  <!-- 1: Dime -->
+  <rdf:Description rdf:about="http://example.org/musica#dime">
+    <rdf:type rdf:resource="http://example.org/musica#Cancion"/>
+    <mus:tieneNombre>dime</mus:tieneNombre>
+    <mus:tieneDuracion>3:55</mus:tieneDuracion>
+    <mus:tieneGenero>folk</mus:tieneGenero>
+    <mus:perteneceAAlbum rdf:resource="http://example.org/musica#ultrasodade"/>
+    <mus:anioDeLanzamiento>2025</mus:anioDeLanzamiento>
+
+    <mus:esInterpretadaPor rdf:resource="http://example.org/musica#KevinKaarl"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#KevinEduardoHernandezCarlos"/>
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#KevinEduardoHernandezCarlos"/>
+  </rdf:Description>
+
+  <!-- 2: Pelicula 2020 -->
+  <rdf:Description rdf:about="http://example.org/musica#Pelicula2020">
+    <rdf:type rdf:resource="http://example.org/musica#Cancion"/>
+    <mus:tieneNombre>Pelicula</mus:tieneNombre>
+    <mus:tieneDuracion>3:35</mus:tieneDuracion>
+    <mus:tieneGenero>rock</mus:tieneGenero>
+    <mus:perteneceAAlbum rdf:resource="http://example.org/musica#memoriaFuturo"/>
+    <mus:anioDeLanzamiento>2020</mus:anioDeLanzamiento>
+
+    <mus:esInterpretadaPor rdf:resource="http://example.org/musica#Siddharta"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#RulVelazquez"/>
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#Siddharta"/>
+  </rdf:Description>
+
+  <!-- 3: Si en tu mente estuve -->
+  <rdf:Description rdf:about="http://example.org/musica#SiEnTuMenteEstuve">
+    <rdf:type rdf:resource="http://example.org/musica#Cancion"/>
+    <mus:tieneNombre>Si en tu mente estuve</mus:tieneNombre>
+    <mus:tieneDuracion>3:11</mus:tieneDuracion>
+    <mus:tieneGenero>rock</mus:tieneGenero>
+    <mus:perteneceAAlbum rdf:resource="http://example.org/musica#losAlpes"/>
+    <mus:anioDeLanzamiento>2020</mus:anioDeLanzamiento>
+
+    <mus:esInterpretadaPor rdf:resource="http://example.org/musica#Nsqk"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#Nsqk"/>
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#RodrigoTorresDeLaGarza"/>
+  </rdf:Description>
+
+  <!-- 4: Flaco -->
+  <rdf:Description rdf:about="http://example.org/musica#Flaco">
+    <rdf:type rdf:resource="http://example.org/musica#Cancion"/>
+    <mus:tieneNombre>Flaco</mus:tieneNombre>
+    <mus:tieneDuracion>4:16</mus:tieneDuracion>
+    <mus:tieneGenero>rock</mus:tieneGenero>
+    <mus:perteneceAAlbum rdf:resource="http://example.org/musica#laTrenza"/>
+    <mus:anioDeLanzamiento>2018</mus:anioDeLanzamiento>
+
+    <mus:esInterpretadaPor rdf:resource="http://example.org/musica#MonLaferte"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#MonLaferte"/>
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#MonLaferte"/>
+  </rdf:Description>
+
+  <!-- 5: Pelicula 2018 -->
+  <rdf:Description rdf:about="http://example.org/musica#Pelicula2018">
+    <rdf:type rdf:resource="http://example.org/musica#Cancion"/>
+    <mus:tieneNombre>Pelicula</mus:tieneNombre>
+    <mus:tieneDuracion>4:56</mus:tieneDuracion>
+    <mus:tieneGenero>rap alternativo</mus:tieneGenero>
+    <mus:perteneceAAlbum rdf:resource="http://example.org/musica#PeliculaAlbum"/>
+    <mus:anioDeLanzamiento>2018</mus:anioDeLanzamiento>
+
+    <mus:esInterpretadaPor rdf:resource="http://example.org/musica#Sabino"/>
+
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#PabloCastanedaAmutio"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#DanielSalazarGarcia"/>
+
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#PabloCastanedaAmutio"/>
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#DanielSalazarGarcia"/>
+  </rdf:Description>
+
+  <!-- 6: Dopamina -->
+  <rdf:Description rdf:about="http://example.org/musica#Dopamina">
+    <rdf:type rdf:resource="http://example.org/musica#Cancion"/>
+    <mus:tieneNombre>Dopamina</mus:tieneNombre>
+    <mus:tieneDuracion>3:16</mus:tieneDuracion>
+    <mus:tieneGenero>pop</mus:tieneGenero>
+    <mus:perteneceAAlbum rdf:resource="http://example.org/musica#BelindaAlbum"/>
+    <mus:anioDeLanzamiento>2009</mus:anioDeLanzamiento>
+
+    <mus:esInterpretadaPor rdf:resource="http://example.org/musica#Belinda"/>
+
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#Belinda"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#JorgenRingqvist"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#DBarkman"/>
+
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#Belinda"/>
+  </rdf:Description>
+
+  <!-- 7: Mi fiesta -->
+  <rdf:Description rdf:about="http://example.org/musica#MiFiesta">
+    <rdf:type rdf:resource="http://example.org/musica#Cancion"/>
+    <mus:tieneNombre>Mi fiesta</mus:tieneNombre>
+    <mus:tieneDuracion>3:12</mus:tieneDuracion>
+    <mus:tieneGenero>rock alternativo</mus:tieneGenero>
+    <mus:perteneceAAlbum rdf:resource="http://example.org/musica#ep"/>
+    <mus:anioDeLanzamiento>2020</mus:anioDeLanzamiento>
+
+    <mus:esInterpretadaPor rdf:resource="http://example.org/musica#BandalosChinos"/>
+
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#GregorioDegano"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#TomasVerduga"/>
+
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#GregorioDegano"/>
+  </rdf:Description>
+
+  <!-- 8: Tangerine -->
+  <rdf:Description rdf:about="http://example.org/musica#Tangerine">
+    <rdf:type rdf:resource="http://example.org/musica#Cancion"/>
+    <mus:tieneNombre>Tangerine</mus:tieneNombre>
+    <mus:tieneDuracion>3:21</mus:tieneDuracion>
+    <mus:tieneGenero>pop</mus:tieneGenero>
+    <mus:perteneceAAlbum rdf:resource="http://example.org/musica#DamianoDavidAlbum"/>
+    <mus:anioDeLanzamiento>2025</mus:anioDeLanzamiento>
+
+    <mus:esInterpretadaPor rdf:resource="http://example.org/musica#DamianoDavid"/>
+
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#DamianoDavid"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#AmyAllen"/>
+
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#DamianoDavid"/>
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#AmyAllen"/>
+  </rdf:Description>
+
+  <!-- 9: Es verdad -->
+  <rdf:Description rdf:about="http://example.org/musica#EsVerdad">
+    <rdf:type rdf:resource="http://example.org/musica#Cancion"/>
+    <mus:tieneNombre>Es verdad</mus:tieneNombre>
+    <mus:tieneDuracion>2:41</mus:tieneDuracion>
+    <mus:tieneGenero>bolero</mus:tieneGenero>
+    <mus:perteneceAAlbum rdf:resource="http://example.org/musica#Boleros"/>
+    <mus:anioDeLanzamiento>2024</mus:anioDeLanzamiento>
+
+    <mus:esInterpretadaPor rdf:resource="http://example.org/musica#DanielMeEstasMatando"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#DanielZepeda"/>
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#DanielZepeda"/>
+  </rdf:Description>
+
+  <!-- 10: Kintsugi -->
+  <rdf:Description rdf:about="http://example.org/musica#Kintsugi">
+    <rdf:type rdf:resource="http://example.org/musica#Cancion"/>
+    <mus:tieneNombre>Kintsugi</mus:tieneNombre>
+    <mus:tieneDuracion>3:57</mus:tieneDuracion>
+    <mus:tieneGenero>rock</mus:tieneGenero>
+    <mus:perteneceAAlbum rdf:resource="http://example.org/musica#KintsugiAlbum"/>
+    <mus:anioDeLanzamiento>2024</mus:anioDeLanzamiento>
+
+    <mus:esInterpretadaPor rdf:resource="http://example.org/musica#Humbe"/>
+
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#HumbertoRodriguezTerrazas"/>
+    <mus:esCompuestaPor rdf:resource="http://example.org/musica#NicollasDeLaEspriella"/>
+
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#HumbertoRodriguezTerrazas"/>
+    <mus:tieneLetraDe rdf:resource="http://example.org/musica#NicollasDeLaEspriella"/>
+  </rdf:Description>
+
+</rdf:RDF>

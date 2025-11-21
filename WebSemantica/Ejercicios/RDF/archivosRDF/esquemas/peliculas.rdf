@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:pel="http://example.org/peliculas#">
+
+    <!-- ========================== -->
+    <!--   DEFINICIÓN DE CLASES     -->
+    <!-- ========================== -->
+
+    <rdfs:Class rdf:about="http://example.org/peliculas#Pelicula"/>
+    <rdfs:Class rdf:about="http://example.org/peliculas#Persona"/>
+    <rdfs:Class rdf:about="http://example.org/peliculas#Actor"/>
+    <rdfs:Class rdf:about="http://example.org/peliculas#Director"/>
+
+    <!-- ========================== -->
+    <!--  DEFINICIÓN DE PROPIEDADES -->
+    <!-- ========================== -->
+
+    <rdf:Property rdf:about="http://example.org/peliculas#tieneTitulo">
+        <rdfs:domain rdf:resource="http://example.org/peliculas#Pelicula"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/peliculas#tieneFechaEstreno">
+        <rdfs:domain rdf:resource="http://example.org/peliculas#Pelicula"/>
+        <rdfs:range rdf:resource="xsd:date"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/peliculas#esDirigidaPor">
+        <rdfs:domain rdf:resource="http://example.org/peliculas#Pelicula"/>
+        <rdfs:range rdf:resource="http://example.org/peliculas#Director"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/peliculas#tieneGenero">
+        <rdfs:domain rdf:resource="http://example.org/peliculas#Pelicula"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/peliculas#tieneActor">
+        <rdfs:domain rdf:resource="http://example.org/peliculas#Pelicula"/>
+        <rdfs:range rdf:resource="http://example.org/peliculas#Actor"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/peliculas#tieneResumen">
+        <rdfs:domain rdf:resource="http://example.org/peliculas#Pelicula"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/peliculas#tieneDistribuidora">
+        <rdfs:domain rdf:resource="http://example.org/peliculas#Pelicula"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://example.org/peliculas#tienePaisOrigen">
+        <rdfs:domain rdf:resource="http://example.org/peliculas#Pelicula"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </rdf:Property>
+
+
+    <!-- ========================== -->
+    <!-- INSTANCIAS DE DIRECTORES   -->
+    <!-- ========================== -->
+
+    <rdf:Description rdf:about="http://example.org/peliculas#ChristopherMcQuarrie">
+        <rdf:type rdf:resource="http://example.org/peliculas#Director"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#JuliusOnah">
+        <rdf:type rdf:resource="http://example.org/peliculas#Director"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#BongJoonHo">
+        <rdf:type rdf:resource="http://example.org/peliculas#Director"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#ScottDerrickson">
+        <rdf:type rdf:resource="http://example.org/peliculas#Director"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#DrewHancock">
+        <rdf:type rdf:resource="http://example.org/peliculas#Director"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#PaulStephenMann">
+        <rdf:type rdf:resource="http://example.org/peliculas#Director"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#JessVarley">
+        <rdf:type rdf:resource="http://example.org/peliculas#Director"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#OsgoodPerkins">
+        <rdf:type rdf:resource="http://example.org/peliculas#Director"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#JaredHess">
+        <rdf:type rdf:resource="http://example.org/peliculas#Director"/>
+    </rdf:Description>
+
+
+    <!-- ========================== -->
+    <!-- INSTANCIAS DE ACTORES      -->
+    <!-- ========================== -->
+
+    <!-- Agrego todos como instancias de Actor -->
+    <rdf:Description rdf:about="http://example.org/peliculas#TomCruise"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#VingRhames"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#SimonPegg"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#VanessaKirby"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#AnthonyMackie"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#HarrisonFord"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#RobertPattinson"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#NaomiAckie"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#StevenYeun"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#MilesTeller"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#AnyaTaylorJoy"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#SigourneyWeaver"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#SophieThatcher"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#JackQuaid"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#MurdoAdams"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#AmyMackie"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#KateMara"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#LaurenceFishburne"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#GabrielLuna"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#TheoJames"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#TatianaMaslany"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#ElijahWood"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+
+    <rdf:Description rdf:about="http://example.org/peliculas#JackBlack"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+    <rdf:Description rdf:about="http://example.org/peliculas#JasonMomoa"><rdf:type rdf:resource="pel:Actor"/></rdf:Description>
+
+
+    <!-- ========================== -->
+    <!--     PELÍCULAS (RDFS)      -->
+    <!-- ========================== -->
+
+    <!-- Película 1 -->
+    <rdf:Description rdf:about="http://example.org/peliculas#MisionImposibleSentenciaFinal">
+        <rdf:type rdf:resource="pel:Pelicula"/>
+        <pel:tieneTitulo>Misión Imposible: Sentencia final</pel:tieneTitulo>
+        <pel:tieneFechaEstreno rdf:datatype="xsd:date">2025-05-23</pel:tieneFechaEstreno>
+        <pel:esDirigidaPor rdf:resource="pel:ChristopherMcQuarrie"/>
+
+        <pel:tieneGenero>Acción</pel:tieneGenero>
+        <pel:tieneGenero>Espionaje</pel:tieneGenero>
+
+        <pel:tieneActor rdf:resource="pel:TomCruise"/>
+        <pel:tieneActor rdf:resource="pel:VingRhames"/>
+        <pel:tieneActor rdf:resource="pel:SimonPegg"/>
+        <pel:tieneActor rdf:resource="pel:VanessaKirby"/>
+
+        <pel:tieneResumen>Octava entrega de la saga, con Ethan Hunt enfrentándose a una peligrosa misión final.</pel:tieneResumen>
+        <pel:tieneDistribuidora>Paramount Pictures</pel:tieneDistribuidora>
+        <pel:tienePaisOrigen>Estados Unidos</pel:tienePaisOrigen>
+    </rdf:Description>
+
+    <!-- Película 2 -->
+    <rdf:Description rdf:about="pel:CaptainAmericaBraveNewWorld">
+        <rdf:type rdf:resource="pel:Pelicula"/>
+        <pel:tieneTitulo>Captain America: Brave New World</pel:tieneTitulo>
+        <pel:tieneFechaEstreno rdf:datatype="xsd:date">2025-02-14</pel:tieneFechaEstreno>
+        <pel:esDirigidaPor rdf:resource="pel:JuliusOnah"/>
+
+        <pel:tieneGenero>Acción</pel:tieneGenero>
+        <pel:tieneGenero>Aventura</pel:tieneGenero>
+        <pel:tieneGenero>Ciencia ficción</pel:tieneGenero>
+
+        <pel:tieneActor rdf:resource="pel:AnthonyMackie"/>
+        <pel:tieneActor rdf:resource="pel:HarrisonFord"/>
+
+        <pel:tieneResumen>Se presenta al nuevo Capitán América en el universo cinematográfico de Marvel.</pel:tieneResumen>
+        <pel:tieneDistribuidora>Walt Disney Studios Motion Pictures</pel:tieneDistribuidora>
+        <pel:tienePaisOrigen>Estados Unidos</pel:tienePaisOrigen>
+    </rdf:Description>
+
+    <!-- Película 3 -->
+    <rdf:Description rdf:about="pel:Mickey17">
+        <rdf:type rdf:resource="pel:Pelicula"/>
+        <pel:tieneTitulo>Mickey 17</pel:tieneTitulo>
+        <pel:tieneFechaEstreno rdf:datatype="xsd:date">2025-03-07</pel:tieneFechaEstreno>
+        <pel:esDirigidaPor rdf:resource="pel:BongJoonHo"/>
+
+        <pel:tieneGenero>Ciencia ficción</pel:tieneGenero>
+        <pel:tieneGenero>Comedia negra</pel:tieneGenero>
+
+        <pel:tieneActor rdf:resource="pel:RobertPattinson"/>
+        <pel:tieneActor rdf:resource="pel:NaomiAckie"/>
+        <pel:tieneActor rdf:resource="pel:StevenYeun"/>
+
+        <pel:tieneResumen>Un clon desechable en una colonia espacial renace cada vez que muere.</pel:tieneResumen>
+        <pel:tieneDistribuidora>Warner Bros. Pictures</pel:tieneDistribuidora>
+        <pel:tienePaisOrigen>Estados Unidos</pel:tienePaisOrigen>
+    </rdf:Description>
+
+    <!-- Película 4 -->
+    <rdf:Description rdf:about="pel:TheGorge">
+        <rdf:type rdf:resource="pel:Pelicula"/>
+        <pel:tieneTitulo>The Gorge</pel:tieneTitulo>
+        <pel:tieneFechaEstreno rdf:datatype="xsd:date">2025-02-14</pel:tieneFechaEstreno>
+        <pel:esDirigidaPor rdf:resource="pel:ScottDerrickson"/>
+
+        <pel:tieneGenero>Ciencia ficción</pel:tieneGenero>
+        <pel:tieneGenero>Romance</pel:tieneGenero>
+        <pel:tieneGenero>Acción</pel:tieneGenero>
+        <pel:tieneGenero>Horror</pel:tieneGenero>
+
+        <pel:tieneActor rdf:resource="pel:MilesTeller"/>
+        <pel:tieneActor rdf:resource="pel:AnyaTaylorJoy"/>
+        <pel:tieneActor rdf:resource="pel:SigourneyWeaver"/>
+
+        <pel:tieneResumen>Dos francotiradores deben custodiar un cañón sin saber qué se oculta dentro.</pel:tieneResumen>
+        <pel:tieneDistribuidora>Skydance Media</pel:tieneDistribuidora>
+        <pel:tienePaisOrigen>Estados Unidos</pel:tienePaisOrigen>
+    </rdf:Description>
+
+    <!-- Película 5 -->
+    <rdf:Description rdf:about="pel:Companion">
+        <rdf:type rdf:resource="pel:Pelicula"/>
+        <pel:tieneTitulo>Companion</pel:tieneTitulo>
+        <pel:tieneFechaEstreno rdf:datatype="xsd:date">2025-01-31</pel:tieneFechaEstreno>
+        <pel:esDirigidaPor rdf:resource="pel:DrewHancock"/>
+
+        <pel:tieneGenero>Ciencia ficción</pel:tieneGenero>
+        <pel:tieneGenero>Thriller</pel:tieneGenero>
+
+        <pel:tieneActor rdf:resource="pel:SophieThatcher"/>
+        <pel:tieneActor rdf:resource="pel:JackQuaid"/>
+
+        <pel:tieneResumen>Un fin de semana en una cabaña se vuelve caótico tras la revelación de un invitado robot.</pel:tieneResumen>
+        <pel:tieneDistribuidora>New Line Cinema</pel:tieneDistribuidora>
+        <pel:tienePaisOrigen>Estados Unidos</pel:tienePaisOrigen>
+    </rdf:Description>
+
+    <!-- Película 6 -->
+    <rdf:Description rdf:about="pel:ShiverMeTimbers">
+        <rdf:type rdf:resource="pel:Pelicula"/>
+        <pel:tieneTitulo>Shiver Me Timbers</pel:tieneTitulo>
+        <pel:tieneFechaEstreno rdf:datatype="xsd:date">2025-04-01</pel:tieneFechaEstreno>
+        <pel:esDirigidaPor rdf:resource="pel:PaulStephenMann"/>
+
+        <pel:tieneGenero>Horror</pel:tieneGenero>
+        <pel:tieneGenero>Comedia splatter</pel:tieneGenero>
+
+        <pel:tieneActor rdf:resource="pel:MurdoAdams"/>
+        <pel:tieneActor rdf:resource="pel:AmyMackie"/>
+
+        <pel:tieneResumen>Una versión horrorífica de Popeye en tono grotesco y cómico.</pel:tieneResumen>
+        <pel:tieneDistribuidora>Independiente</pel:tieneDistribuidora>
+        <pel:tienePaisOrigen>Reino Unido</pel:tienePaisOrigen>
+    </rdf:Description>
+
+    <!-- Película 7 -->
+    <rdf:Description rdf:about="pel:TheAstronaut">
+        <rdf:type rdf:resource="pel:Pelicula"/>
+        <pel:tieneTitulo>The Astronaut</pel:tieneTitulo>
+        <pel:tieneFechaEstreno>2025-Primavera</pel:tieneFechaEstreno>
+        <pel:esDirigidaPor rdf:resource="pel:JessVarley"/>
+
+        <pel:tieneGenero>Ciencia ficción</pel:tieneGenero>
+        <pel:tieneGenero>Thriller</pel:tieneGenero>
+
+        <pel:tieneActor rdf:resource="pel:KateMara"/>
+        <pel:tieneActor rdf:resource="pel:LaurenceFishburne"/>
+        <pel:tieneActor rdf:resource="pel:GabrielLuna"/>
+
+        <pel:tieneResumen>Una astronauta regresa en circunstancias extrañas y vive sucesos inquietantes durante su cuarentena.</pel:tieneResumen>
+        <pel:tieneDistribuidora>XYZ Films</pel:tieneDistribuidora>
+        <pel:tienePaisOrigen>Estados Unidos</pel:tienePaisOrigen>
+    </rdf:Description>
+
+    <!-- Película 8 -->
+    <rdf:Description rdf:about="pel:TheMonkey">
+        <rdf:type rdf:resource="pel:Pelicula"/>
+        <pel:tieneTitulo>The Monkey</pel:tieneTitulo>
+        <pel:tieneFechaEstreno rdf:datatype="xsd:date">2025-02-21</pel:tieneFechaEstreno>
+        <pel:esDirigidaPor rdf:resource="pel:OsgoodPerkins"/>
+
+        <pel:tieneGenero>Terror</pel:tieneGenero>
+
+        <pel:tieneActor rdf:resource="pel:TheoJames"/>
+        <pel:tieneActor rdf:resource="pel:TatianaMaslany"/>
+        <pel:tieneActor rdf:resource="pel:ElijahWood"/>
+
+        <pel:tieneResumen>Basada en cuento de Stephen King: un mono de juguete trae muertes horribles.</pel:tieneResumen>
+        <pel:tieneDistribuidora>Universal Pictures</pel:tieneDistribuidora>
+        <pel:tienePaisOrigen>Estados Unidos</pel:tienePaisOrigen>
+    </rdf:Description>
+
+    <!-- Película 9 -->
+    <rdf:Description rdf:about="pel:MinecraftTheMovie">
+        <rdf:type rdf:resource="pel:Pelicula"/>
+        <pel:tieneTitulo>Minecraft: The Movie</pel:tieneTitulo>
+        <pel:tieneFechaEstreno rdf:datatype="xsd:date">2025-04-04</pel:tieneFechaEstreno>
+        <pel:esDirigidaPor rdf:resource="pel:JaredHess"/>
+
+        <pel:tieneGenero>Fantasía</pel:tieneGenero>
+        <pel:tieneGenero>Familia</pel:tieneGenero>
+        <pel:tieneGenero>Aventura</pel:tieneGenero>
+
+        <pel:tieneActor rdf:resource="pel:JackBlack"/>
+        <pel:tieneActor rdf:resource="pel:JasonMomoa"/>
+
+        <pel:tieneResumen>Adaptación de acción real del popular videojuego, con tono divertido y aventurero.</pel:tieneResumen>
+        <pel:tieneDistribuidora>Warner Bros. Pictures</pel:tieneDistribuidora>
+        <pel:tienePaisOrigen>Estados Unidos</pel:tienePaisOrigen>
+    </rdf:Description>
+
+</rdf:RDF>

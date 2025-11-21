@@ -1,136 +1,441 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF 
+<rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:bib="http://example.org/ontologia/biblioteca#"
-    xml:base="http://example.org/ontologia/biblioteca#">
+    xmlns:lib="http://example.org/biblioteca#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 
-  <!-- CLASES ######################################### -->
-  <rdfs:Class rdf:about="#RecursoBibliografico">
-    <rdfs:label>Recurso Bibliográfico</rdfs:label>
-    <rdfs:comment>Representa cualquier material disponible en la biblioteca</rdfs:comment>
-  </rdfs:Class>
+    <!-- ==================== CLASES ==================== -->
+    
+    <!-- Clase Libro -->
+    <rdfs:Class rdf:about="http://example.org/biblioteca#Libro">
+        <rdfs:label xml:lang="es">Libro</rdfs:label>
+        <rdfs:comment xml:lang="es">Representa un libro en la biblioteca</rdfs:comment>
+    </rdfs:Class>
 
-  <rdfs:Class rdf:about="#Libro">
-    <rdfs:subClassOf rdf:resource="#RecursoBibliografico"/>
-    <rdfs:label>Libro</rdfs:label>
-  </rdfs:Class>
+    <!-- Clase Autor -->
+    <rdfs:Class rdf:about="http://example.org/biblioteca#Autor">
+        <rdfs:label xml:lang="es">Autor</rdfs:label>
+        <rdfs:comment xml:lang="es">Representa un autor de libros</rdfs:comment>
+    </rdfs:Class>
 
-  <rdfs:Class rdf:about="#Revista">
-    <rdfs:subClassOf rdf:resource="#RecursoBibliografico"/>
-    <rdfs:label>Revista</rdfs:label>
-  </rdfs:Class>
+    <!-- Clase Editorial -->
+    <rdfs:Class rdf:about="http://example.org/biblioteca#Editorial">
+        <rdfs:label xml:lang="es">Editorial</rdfs:label>
+        <rdfs:comment xml:lang="es">Representa una casa editorial</rdfs:comment>
+    </rdfs:Class>
 
-  <rdfs:Class rdf:about="#Autor">
-    <rdfs:label>Autor</rdfs:label>
-  </rdfs:Class>
+    <!-- ==================== PROPIEDADES DE LIBRO ==================== -->
+    
+    <!-- Propiedad: titulo -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#titulo">
+        <rdfs:label xml:lang="es">título</rdfs:label>
+        <rdfs:comment xml:lang="es">El título del libro</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
 
-  <rdfs:Class rdf:about="#Editorial">
-    <rdfs:label>Editorial</rdfs:label>
-  </rdfs:Class>
+    <!-- Propiedad: isbn -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#isbn">
+        <rdfs:label xml:lang="es">ISBN</rdfs:label>
+        <rdfs:comment xml:lang="es">Número estándar internacional de libro</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
 
-  <rdfs:Class rdf:about="#GeneroLiterario">
-    <rdfs:label>Género Literario</rdfs:label>
-  </rdfs:Class>
+    <!-- Propiedad: resumen -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#resumen">
+        <rdfs:label xml:lang="es">resumen</rdfs:label>
+        <rdfs:comment xml:lang="es">Breve descripción del contenido del libro</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
 
-  <rdfs:Class rdf:about="#Usuario">
-    <rdfs:label>Usuario</rdfs:label>
-  </rdfs:Class>
+    <!-- Propiedad: categoria -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#categoria">
+        <rdfs:label xml:lang="es">categoría</rdfs:label>
+        <rdfs:comment xml:lang="es">Género o categoría literaria del libro</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
 
-  <rdfs:Class rdf:about="#Prestamo">
-    <rdfs:label>Préstamo</rdfs:label>
-  </rdfs:Class>
+    <!-- Propiedad: paginas -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#paginas">
+        <rdfs:label xml:lang="es">páginas</rdfs:label>
+        <rdfs:comment xml:lang="es">Número de páginas del libro</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
 
-  <!--  PROPIEDADES ENTRE CLASES ########################################## -->
-  <rdf:Property rdf:about="#escritoPor">
-    <rdfs:domain rdf:resource="#Libro"/>
-    <rdfs:range rdf:resource="#Autor"/>
-    <rdfs:label>escrito por</rdfs:label>
-  </rdf:Property>
+    <!-- Propiedad: edicion -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#edicion">
+        <rdfs:label xml:lang="es">edición</rdfs:label>
+        <rdfs:comment xml:lang="es">Número de edición del libro</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
 
-  <rdf:Property rdf:about="#publicadoPor">
-    <rdfs:domain rdf:resource="#Libro"/>
-    <rdfs:range rdf:resource="#Editorial"/>
-    <rdfs:label>publicado por</rdfs:label>
-  </rdf:Property>
+    <!-- Propiedad: anioedicion -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#anioedicion">
+        <rdfs:label xml:lang="es">año de edición</rdfs:label>
+        <rdfs:comment xml:lang="es">Año en que se publicó la edición</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+    </rdf:Property>
 
-  <rdf:Property rdf:about="#perteneceAGenero">
-    <rdfs:domain rdf:resource="#Libro"/>
-    <rdfs:range rdf:resource="#GeneroLiterario"/>
-    <rdfs:label>pertenece a género</rdfs:label>
-  </rdf:Property>
+    <!-- Propiedad: tieneAutor (relación) -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#tieneAutor">
+        <rdfs:label xml:lang="es">tiene autor</rdfs:label>
+        <rdfs:comment xml:lang="es">Relaciona un libro con su autor</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Libro"/>
+        <rdfs:range rdf:resource="http://example.org/biblioteca#Autor"/>
+    </rdf:Property>
 
-  <rdf:Property rdf:about="#realizadoPor">
-    <rdfs:domain rdf:resource="#Prestamo"/>
-    <rdfs:range rdf:resource="#Usuario"/>
-    <rdfs:label>realizado por</rdfs:label>
-  </rdf:Property>
+    <!-- Propiedad: publicadoPor (relación) -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#publicadoPor">
+        <rdfs:label xml:lang="es">publicado por</rdfs:label>
+        <rdfs:comment xml:lang="es">Relaciona un libro con la editorial que lo publicó</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Libro"/>
+        <rdfs:range rdf:resource="http://example.org/biblioteca#Editorial"/>
+    </rdf:Property>
 
-  <rdf:Property rdf:about="#incluyeLibro">
-    <rdfs:domain rdf:resource="#Prestamo"/>
-    <rdfs:range rdf:resource="#Libro"/>
-    <rdfs:label>incluye libro</rdfs:label>
-  </rdf:Property>
+    <!-- ==================== PROPIEDADES DE AUTOR ==================== -->
+    
+    <!-- Propiedad: nombre -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#nombre">
+        <rdfs:label xml:lang="es">nombre</rdfs:label>
+        <rdfs:comment xml:lang="es">Nombre completo del autor o editorial</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Autor"/>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Editorial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
 
-  <!-- PROPIEDADES DE DATOS ############################################## -->
-  <rdf:Property rdf:about="#titulo">
-    <rdfs:domain rdf:resource="#Libro"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label>título</rdfs:label>
-  </rdf:Property>
+    <!-- Propiedad: fechaNac -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#fechaNac">
+        <rdfs:label xml:lang="es">fecha de nacimiento</rdfs:label>
+        <rdfs:comment xml:lang="es">Fecha de nacimiento del autor</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Autor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </rdf:Property>
 
-  <rdf:Property rdf:about="#anio">
-    <rdfs:domain rdf:resource="#RecursoBibliografico"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
-    <rdfs:label>año</rdfs:label>
-  </rdf:Property>
+    <!-- Propiedad: afiliacion -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#afiliacion">
+        <rdfs:label xml:lang="es">afiliación</rdfs:label>
+        <rdfs:comment xml:lang="es">Institución o afiliación del autor</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Autor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
 
-  <rdf:Property rdf:about="#nombrePersona">
-    <rdfs:domain rdf:resource="#Autor"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label>nombre</rdfs:label>
-  </rdf:Property>
+    <!-- ==================== PROPIEDADES DE EDITORIAL ==================== -->
+    
+    <!-- Propiedad: direccion -->
+    <rdf:Property rdf:about="http://example.org/biblioteca#direccion">
+        <rdfs:label xml:lang="es">dirección</rdfs:label>
+        <rdfs:comment xml:lang="es">Ubicación geográfica de la editorial</rdfs:comment>
+        <rdfs:domain rdf:resource="http://example.org/biblioteca#Editorial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
 
-  <rdf:Property rdf:about="#nombreEditorial">
-    <rdfs:domain rdf:resource="#Editorial"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label>nombre editorial</rdfs:label>
-  </rdf:Property>
+    <!-- ==================== INSTANCIAS - LIBROS ==================== -->
 
-  <rdf:Property rdf:about="#fechaPrestamo">
-    <rdfs:domain rdf:resource="#Prestamo"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <rdfs:label>fecha de préstamo</rdfs:label>
-  </rdf:Property>
+    <!-- Libro 1 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#LosSieteMaridosDeEvelynHugo">
+        <lib:titulo>Los siete maridos de Evelyn Hugo</lib:titulo>
+        <lib:isbn>9788419030733</lib:isbn>
+        <lib:resumen>Una legendaria actriz de Hollywood narra su vida, sus matrimonios y secretos ocultos a una joven periodista.</lib:resumen>
+        <lib:categoria>Novela romántica / Ficción histórica</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">384</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2022</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#TaylorJenkinsReid"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#UmbrielEditores"/>
+    </lib:Libro>
 
-  <!-- INSTANCIAS ############################################################# -->
-  <bib:Autor rdf:about="#IsabelAllende">
-    <bib:nombrePersona>Isabel Allende</bib:nombrePersona>
-  </bib:Autor>
+    <!-- Libro 2 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#BajoLaMismaEstrella">
+        <lib:titulo>Bajo la misma estrella</lib:titulo>
+        <lib:isbn>978-84-15594-30-5</lib:isbn>
+        <lib:resumen>Dos adolescentes con cáncer se conocen en un grupo de apoyo y viven un intenso romance marcado por la enfermedad.</lib:resumen>
+        <lib:categoria>Novela romántica / Juvenil</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">304</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2012</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#JohnGreen"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#NubeDeTinta"/>
+    </lib:Libro>
 
-  <bib:Editorial rdf:about="#PlazaJanés">
-    <bib:nombreEditorial>Plaza y Janés</bib:nombreEditorial>
-  </bib:Editorial>
+    <!-- Libro 3 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#YoAntesDeTi">
+        <lib:titulo>Yo antes de ti</lib:titulo>
+        <lib:isbn>978-84-15750-80-0</lib:isbn>
+        <lib:resumen>Louisa Clark se convierte en cuidadora de Will Traynor, un joven tetrapléjico, desarrollando un amor transformador.</lib:resumen>
+        <lib:categoria>Novela romántica / Drama</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">496</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2014</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#JojoMoyes"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#SumaDeLetras"/>
+    </lib:Libro>
 
-  <bib:GeneroLiterario rdf:about="#RealismoMagico">
-    <rdfs:label>Realismo Mágico</rdfs:label>
-  </bib:GeneroLiterario>
+    <!-- Libro 4 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#OrgulloYPrejuicio">
+        <lib:titulo>Orgullo y prejuicio</lib:titulo>
+        <lib:isbn>978-84-376-0494-7</lib:isbn>
+        <lib:resumen>La historia de Elizabeth Bennet y el señor Darcy, marcada por malentendidos, orgullo y amor.</lib:resumen>
+        <lib:categoria>Novela romántica / Clásico</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">432</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">1813</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#JaneAusten"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#AlianzaEditorial"/>
+    </lib:Libro>
 
-  <bib:Libro rdf:about="#LaCasaDeLosEspiritus">
-    <bib:titulo>La casa de los espíritus</bib:titulo>
-    <bib:anio rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1982</bib:anio>
-    <bib:escritoPor rdf:resource="#IsabelAllende"/>
-    <bib:publicadoPor rdf:resource="#PlazaJanés"/>
-    <bib:perteneceAGenero rdf:resource="#RealismoMagico"/>
-  </bib:Libro>
+    <!-- Libro 5 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#UnCuentoPerfecto">
+        <lib:titulo>Un cuento perfecto</lib:titulo>
+        <lib:isbn>978-84-08-22645-0</lib:isbn>
+        <lib:resumen>Margot huye de su vida perfecta y conoce a David, con quien vivirá una historia de amor inesperada.</lib:resumen>
+        <lib:categoria>Novela romántica / Contemporánea</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">640</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2020</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#ElisabetBenavent"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#PenguinRandomHouse"/>
+    </lib:Libro>
 
-  <bib:Usuario rdf:about="#MariaPerez">
-    <rdfs:label>María Pérez</rdfs:label>
-  </bib:Usuario>
+    <!-- Libro 6 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#CallMeByYourName">
+        <lib:titulo>Call Me by Your Name</lib:titulo>
+        <lib:isbn>978-0-374-53155-6</lib:isbn>
+        <lib:resumen>En la Riviera italiana, un joven y un estudiante visitante viven un romance de verano inolvidable.</lib:resumen>
+        <lib:categoria>Novela romántica / Drama</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">256</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2007</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#AndreAciman"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#FarrarStrausGiroux"/>
+    </lib:Libro>
 
-  <bib:Prestamo rdf:about="#Prestamo001">
-    <bib:realizadoPor rdf:resource="#MariaPerez"/>
-    <bib:incluyeLibro rdf:resource="#LaCasaDeLosEspiritus"/>
-    <bib:fechaPrestamo rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-01</bib:fechaPrestamo>
-  </bib:Prestamo>
+    <!-- Libro 7 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#AntesDeDiciembre">
+        <lib:titulo>Antes de diciembre</lib:titulo>
+        <lib:isbn>978-84-18742-41-0</lib:isbn>
+        <lib:resumen>Jenna, en su primer año universitario, conoce a Jack, con quien vivirá un romance con fecha de caducidad.</lib:resumen>
+        <lib:categoria>Novela romántica / Juvenil</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">448</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2022</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#JoanaMarcus"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#Crossbooks"/>
+    </lib:Libro>
+
+    <!-- Libro 8 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#PosdataTeAmo">
+        <lib:titulo>Posdata: Te amo</lib:titulo>
+        <lib:isbn>978-84-08-07206-4</lib:isbn>
+        <lib:resumen>Holly recibe cartas de su difunto esposo que la ayudan a superar su duelo y seguir adelante.</lib:resumen>
+        <lib:categoria>Novela romántica / Drama</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">384</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2004</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#CeceliaAhern"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#EdicionesB"/>
+    </lib:Libro>
+
+    <!-- Libro 9 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#LaQuimicaDelAmor">
+        <lib:titulo>La química del amor</lib:titulo>
+        <lib:isbn>978-84-18845-50-0</lib:isbn>
+        <lib:resumen>Bee Königswasser enfrenta a su rival profesional Levi Ward mientras surge una inesperada conexión romántica.</lib:resumen>
+        <lib:categoria>Novela romántica / Comedia</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">384</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2023</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#AliHazelwood"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#Contraluz"/>
+    </lib:Libro>
+
+    <!-- Libro 10 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#LaHipotesisDelAmor">
+        <lib:titulo>La hipótesis del amor</lib:titulo>
+        <lib:isbn>978-84-18483-96-7</lib:isbn>
+        <lib:resumen>Olive Smith finge una relación con un profesor para probar un punto, pero termina involucrando sentimientos reales.</lib:resumen>
+        <lib:categoria>Novela romántica / Comedia</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">384</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2021</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#AliHazelwood"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#Contraluz"/>
+    </lib:Libro>
+
+    <!-- Libro 11 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#ElInstituto">
+        <lib:titulo>El Instituto</lib:titulo>
+        <lib:isbn>978-84-666-6679-7</lib:isbn>
+        <lib:resumen>Un grupo de niños con habilidades especiales son secuestrados y llevados a un instituto donde se realizan experimentos secretos.</lib:resumen>
+        <lib:categoria>Terror / Suspenso</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">624</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2019</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#StephenKing"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#PlazaJanés"/>
+    </lib:Libro>
+
+    <!-- Libro 12 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#LosAsesinosDelEmperador">
+        <lib:titulo>Los asesinos del emperador</lib:titulo>
+        <lib:isbn>978-84-666-4745-1</lib:isbn>
+        <lib:resumen>Una épica novela sobre el ascenso de Vespasiano y los inicios del Imperio Romano tras la caída de Nerón.</lib:resumen>
+        <lib:categoria>Histórica</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">1232</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">2011</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#SantiagoPosteguillo"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#Planeta"/>
+    </lib:Libro>
+
+    <!-- Libro 13 -->
+    <lib:Libro rdf:about="http://example.org/biblioteca#CumbresBorrascosas">
+        <lib:titulo>Cumbres borrascosas</lib:titulo>
+        <lib:isbn>978-84-376-0493-0</lib:isbn>
+        <lib:resumen>Una historia intensa de amor y venganza entre Heathcliff y Catherine en los páramos de Yorkshire.</lib:resumen>
+        <lib:categoria>Novela romántica / Gótica</lib:categoria>
+        <lib:paginas rdf:datatype="xsd:integer">416</lib:paginas>
+        <lib:edicion>1</lib:edicion>
+        <lib:anioedicion rdf:datatype="xsd:gYear">1847</lib:anioedicion>
+        <lib:tieneAutor rdf:resource="http://example.org/biblioteca#EmilyBronte"/>
+        <lib:publicadoPor rdf:resource="http://example.org/biblioteca#AlianzaEditorial"/>
+    </lib:Libro>
+
+    <!-- ==================== INSTANCIAS - AUTORES ==================== -->
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#TaylorJenkinsReid">
+        <lib:nombre>Taylor Jenkins Reid</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1983-12-20</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#JohnGreen">
+        <lib:nombre>John Green</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1977-08-24</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#JojoMoyes">
+        <lib:nombre>Jojo Moyes</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1969-08-04</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#JaneAusten">
+        <lib:nombre>Jane Austen</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1775-12-16</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#ElisabetBenavent">
+        <lib:nombre>Elísabet Benavent</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1984-07-03</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#AndreAciman">
+        <lib:nombre>André Aciman</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1951-01-02</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#JoanaMarcus">
+        <lib:nombre>Joana Marcús</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">2000-01-31</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#CeceliaAhern">
+        <lib:nombre>Cecelia Ahern</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1981-09-30</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#AliHazelwood">
+        <lib:nombre>Ali Hazelwood</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:gYear">1989</lib:fechaNac>
+        <lib:afiliacion>Independiente</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#StephenKing">
+        <lib:nombre>Stephen King</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1947-09-21</lib:fechaNac>
+        <lib:afiliacion>Escritor Independiente</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#SantiagoPosteguillo">
+        <lib:nombre>Santiago Posteguillo</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1967-09-01</lib:fechaNac>
+        <lib:afiliacion>Universitat Jaume I</lib:afiliacion>
+    </lib:Autor>
+
+    <lib:Autor rdf:about="http://example.org/biblioteca#EmilyBronte">
+        <lib:nombre>Emily Brontë</lib:nombre>
+        <lib:fechaNac rdf:datatype="xsd:date">1818-07-30</lib:fechaNac>
+        <lib:afiliacion>Escritora británica</lib:afiliacion>
+    </lib:Autor>
+
+    <!-- ==================== INSTANCIAS - EDITORIALES ==================== -->
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#UmbrielEditores">
+        <lib:nombre>Umbriel Editores</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </lib:Editorial>
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#NubeDeTinta">
+        <lib:nombre>Nube de Tinta</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </lib:Editorial>
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#SumaDeLetras">
+        <lib:nombre>Suma de Letras</lib:nombre>
+        <lib:direccion>Madrid, España</lib:direccion>
+    </lib:Editorial>
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#AlianzaEditorial">
+        <lib:nombre>Alianza Editorial</lib:nombre>
+        <lib:direccion>Madrid, España</lib:direccion>
+    </lib:Editorial>
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#PenguinRandomHouse">
+        <lib:nombre>Penguin Random House Grupo Editorial</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </lib:Editorial>
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#FarrarStrausGiroux">
+        <lib:nombre>Farrar, Straus and Giroux</lib:nombre>
+        <lib:direccion>Nueva York, EE.UU.</lib:direccion>
+    </lib:Editorial>
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#Crossbooks">
+        <lib:nombre>Crossbooks</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </lib:Editorial>
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#EdicionesB">
+        <lib:nombre>Ediciones B</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </lib:Editorial>
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#Contraluz">
+        <lib:nombre>Contraluz</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </lib:Editorial>
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#PlazaJanés">
+        <lib:nombre>Plaza &amp; Janés</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </lib:Editorial>
+
+    <lib:Editorial rdf:about="http://example.org/biblioteca#Planeta">
+        <lib:nombre>Editorial Planeta</lib:nombre>
+        <lib:direccion>Barcelona, España</lib:direccion>
+    </lib:Editorial>
+
 </rdf:RDF>

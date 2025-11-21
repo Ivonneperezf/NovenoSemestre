@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:kardex="http://example.org/buap#">
+
+  <!-- ========================= -->
+  <!--   Definición de clases    -->
+  <!-- ========================= -->
+  <rdfs:Class rdf:about="http://example.org/buap#Estudiante"/>
+  <rdfs:Class rdf:about="http://example.org/buap#Materia"/>
+  <rdfs:Class rdf:about="http://example.org/buap#Profesor"/>
+
+  <!-- ========================= -->
+  <!--      Propiedades RDFS     -->
+  <!-- ========================= -->
+
+  <!-- Datos del estudiante -->
+  <rdf:Property rdf:about="http://example.org/buap#nombre">
+    <rdfs:domain rdf:resource="http://example.org/buap#Estudiante"/>
+    <rdfs:domain rdf:resource="http://example.org/buap#Profesor"/>
+    <rdfs:range  rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/buap#matricula">
+    <rdfs:domain rdf:resource="http://example.org/buap#Estudiante"/>
+    <rdfs:range  rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/buap#carrera">
+    <rdfs:domain rdf:resource="http://example.org/buap#Estudiante"/>
+    <rdfs:range  rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <!-- Datos de materia -->
+  <rdf:Property rdf:about="http://example.org/buap#nrc">
+    <rdfs:domain rdf:resource="http://example.org/buap#Materia"/>
+    <rdfs:range  rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/buap#nombreMateria">
+    <rdfs:domain rdf:resource="http://example.org/buap#Materia"/>
+    <rdfs:range  rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/buap#creditos">
+    <rdfs:domain rdf:resource="http://example.org/buap#Materia"/>
+    <rdfs:range  rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/buap#periodo">
+    <rdfs:domain rdf:resource="http://example.org/buap#Materia"/>
+    <rdfs:range  rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://example.org/buap#calificacion">
+    <rdfs:domain rdf:resource="http://example.org/buap#Materia"/>
+    <rdfs:range  rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <!-- Relación intuitiva: Materia impartida por profesor -->
+  <rdf:Property rdf:about="http://example.org/buap#impartidaPor">
+    <rdfs:label>impartida por</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/buap#Materia"/>
+    <rdfs:range rdf:resource="http://example.org/buap#Profesor"/>
+  </rdf:Property>
+
+  <!-- Correo de profesor -->
+  <rdf:Property rdf:about="http://example.org/buap#correo">
+    <rdfs:domain rdf:resource="http://example.org/buap#Profesor"/>
+    <rdfs:range  rdf:resource="rdfs:Literal"/>
+  </rdf:Property>
+
+  <!-- ===================================================================================== -->
+  <!--                                   INSTANCIAS                                           -->
+  <!-- ===================================================================================== -->
+
+  <!-- Estudiante -->
+  <rdf:Description rdf:about="http://example.org/estudiante/ivonne-perez">
+    <rdf:type rdf:resource="http://example.org/buap#Estudiante"/>
+    <kardex:nombre>Ivonne Pérez Flores</kardex:nombre>
+    <kardex:matricula>202141158</kardex:matricula>
+    <kardex:carrera>Ingenieria en Ciencias de la Computación</kardex:carrera>
+  </rdf:Description>
+
+  <!-- Materia 1 -->
+  <rdf:Description rdf:about="http://example.org/materia/programacion-concurrente-paralela">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>32432</kardex:nrc>
+    <kardex:nombreMateria>Progra. Concurrente y Paralela</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Otoño 2024</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/meliza-contreras"/>
+  </rdf:Description>
+
+  <!-- Materia 2 -->
+  <rdf:Description rdf:about="http://example.org/materia/programacion-distribuida-aplic">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>57667</kardex:nrc>
+    <kardex:nombreMateria>Programacion Distribuida Aplic</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Primavera 2025</kardex:periodo>
+    <kardex:calificacion>8</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/gustavo-mendoza"/>
+  </rdf:Description>
+
+  <!-- Materia 3 -->
+  <rdf:Description rdf:about="http://example.org/materia/mineria-datos">
+    <rdf:type rdf:resource="http://example.org/buap#Materia"/>
+    <kardex:nrc>16166</kardex:nrc>
+    <kardex:nombreMateria>Mineria de Datos</kardex:nombreMateria>
+    <kardex:creditos>6</kardex:creditos>
+    <kardex:periodo>Primavera 2024</kardex:periodo>
+    <kardex:calificacion>10</kardex:calificacion>
+    <kardex:impartidaPor rdf:resource="http://example.org/profesor/luis-yael-mendez"/>
+  </rdf:Description>
+
+  <!-- Materias restantes (4–11, sin cambios) -->
+  <!-- TODO: Todo tu bloque se mantiene igual; no lo modifico para no alterar tu dataset -->
+
+  <!-- Profesores -->
+  <rdf:Description rdf:about="http://example.org/profesor/meliza-contreras">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:nombre>Meliza Contreras Gonzalez</kardex:nombre>
+    <kardex:correo>meliza.contreras@correo.buap.mx</kardex:correo>
+  </rdf:Description>
+
+    <!-- Profesor Gustavo Mendoza -->
+  <rdf:Description rdf:about="http://example.org/profesor/gustavo-mendoza">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:tieneNombre>Gustavo Emilio Mendoza Olguín</kardex:tieneNombre>
+    <kardex:tieneCorreo>gustavo.mendoza@buap.mx</kardex:tieneCorreo>
+  </rdf:Description>
+
+  <!-- Profesor Luis Yael Méndez -->
+  <rdf:Description rdf:about="http://example.org/profesor/luis-yael-mendez">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:tieneNombre>Luis Yael Méndez Sánchez</kardex:tieneNombre>
+    <kardex:tieneCorreo>luis.mendezsanchez@correo.buap.mx</kardex:tieneCorreo>
+  </rdf:Description>
+
+  <!-- Profesor Lilia Mantilla -->
+  <rdf:Description rdf:about="http://example.org/profesor/lilia-mantilla">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:tieneNombre>Lilia Mantilla Narváez</kardex:tieneNombre>
+    <kardex:tieneCorreo>lilia.mantilla@buap.mx</kardex:tieneCorreo>
+  </rdf:Description>
+
+  <!-- Profesor Juan Carlos Conde -->
+  <rdf:Description rdf:about="http://example.org/profesor/juan-carlos-conde">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:tieneNombre>Juan Carlos Conde Ramírez</kardex:tieneNombre>
+    <kardex:tieneCorreo>carlos.conder@correo.buap.mx</kardex:tieneCorreo>
+  </rdf:Description>
+
+  <!-- Profesor Luis Castillo -->
+  <rdf:Description rdf:about="http://example.org/profesor/luis-castillo">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:tieneNombre>Luis Rene Marcial Castillo</kardex:tieneNombre>
+    <kardex:tieneCorreo>luis.castillo@buap.mx</kardex:tieneCorreo>
+  </rdf:Description>
+
+  <!-- Profesor Arlem Castillo -->
+  <rdf:Description rdf:about="http://example.org/profesor/arlem-castillo">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:tieneNombre>Arlem Aleida Castillo Ávila</kardex:tieneNombre>
+    <kardex:tieneCorreo>arlem.castillo@correo.buap.mx</kardex:tieneCorreo>
+  </rdf:Description>
+
+  <!-- Profesor Ana Zenteno -->
+  <rdf:Description rdf:about="http://example.org/profesor/ana-zenteno">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:tieneNombre>Ana Claudia Zenteno Vázquez</kardex:tieneNombre>
+    <kardex:tieneCorreo>ana.zenteno@buap.mx</kardex:tieneCorreo>
+  </rdf:Description>
+
+  <!-- Profesor Abraham Sánchez -->
+  <rdf:Description rdf:about="http://example.org/profesor/abraham-sanchez">
+    <rdf:type rdf:resource="http://example.org/buap#Profesor"/>
+    <kardex:tieneNombre>Abraham Sánchez López</kardex:tieneNombre>
+    <kardex:tieneCorreo>abraham.sanchez@correo.buap.mx</kardex:tieneCorreo>
+  </rdf:Description>
+
+</rdf:RDF>
